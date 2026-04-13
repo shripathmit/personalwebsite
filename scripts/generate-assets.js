@@ -27,7 +27,7 @@ async function generateOgImage() {
   <rect fill="#141414" x="0" y="0" width="1200" height="4"/>
   <text x="600" y="260" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="52" font-weight="600" fill="#141414">Shridhar Pathak</text>
   <text x="600" y="320" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#5c5c5c">AI Engineering Leader · MIT Sloan MBA (2026)</text>
-  <text x="600" y="370" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2563eb">Moderna · Amazon Alexa · Stealth venture</text>
+  <text x="600" y="370" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#2d4a3e">Moderna · Amazon Alexa · Stealth venture</text>
   <text x="600" y="480" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#8c8c8c">shridharpathak.me</text>
 </svg>`;
   const out = path.join(root, "og-image.png");
