@@ -1,0 +1,24 @@
+{
+  "name": "shridhar-personal-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static portfolio — Express static server for Railway",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "PORT=3000 node server.js",
+    "deploy": "railway up --ci --service shridhar-personal-site",
+    "build:assets": "node scripts/generate-assets.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "compression": "^1.7.5",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0"
+  },
+  "devDependencies": {
+    "pdfkit": "^0.15.0",
+    "sharp": "^0.33.5"
+  }
+}

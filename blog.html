@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Blog — Shridhar Pathak. Thoughts on AI, building products, and what's next."
+    />
+    <title>Blog — Shridhar Pathak</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/blog.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__top">
+        <div class="site-header__brand">
+          <a href="/">Shridhar Pathak</a>
+        </div>
+        <div class="site-header__actions">
+          <button
+            type="button"
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle color theme"
+            title="Theme"
+          >
+            Theme
+          </button>
+        </div>
+      </div>
+      <nav class="site-header__nav" aria-label="Primary">
+        <ul class="site-header__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog.html" class="is-active">Blog</a></li>
+          <li><a href="mailto:shripathmit@gmail.com">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="section hero" style="border-top: none; margin-top: 0; padding-top: 0">
+        <h1>Blog</h1>
+        <p class="lede">
+          Occasional thoughts on AI, building things, and staying curious.
+        </p>
+      </section>
+
+      <article class="blog-post">
+        <p class="blog-post__date">April 4, 2026</p>
+        <h2 class="blog-post__title">Hello, world</h2>
+        <div class="blog-post__body">
+          <p>
+            I've always believed that the best way to learn is to stay open.
+            Open to new people, new problems, and the kind of opportunities that
+            don't fit neatly into a plan.
+          </p>
+          <p>
+            That mindset took me from building payment systems at Amazon to
+            shipping voice AI on Alexa to leading AI strategy at Moderna. And
+            now it has me as founder and advisor on a stealth enterprise agent
+            evaluation platform, while finishing my MBA at MIT Sloan (cross-registered
+            at Harvard Business School).
+          </p>
+          <p>
+            None of that was mapped out. Each step started with a conversation,
+            a question I couldn't stop thinking about, or a problem that felt
+            worth solving.
+          </p>
+          <p>
+            So this is a small corner of the internet where I'll share what I'm
+            working on, what I'm learning, and what's on my mind. If something
+            here sparks a thought, I'd love to hear from you.
+          </p>
+          <p>
+            I'm always ready to explore new opportunities. Let's talk.
+          </p>
+          <p>
+            <a href="mailto:shripathmit@gmail.com">shripathmit@gmail.com</a>
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/">Back to home</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent =
+        new Date().getFullYear();
+    </script>
+    <script>
+      var THEME_KEY = "portfolio-theme";
+      var themeBtn = document.getElementById("theme-toggle");
+      (function () {
+        var s = null;
+        try { s = localStorage.getItem(THEME_KEY); } catch (_) {}
+        if (s === "light") document.documentElement.setAttribute("data-theme", "light");
+        else if (s === "dark") document.documentElement.setAttribute("data-theme", "dark");
+      })();
+      if (themeBtn) {
+        themeBtn.addEventListener("click", function () {
+          var el = document.documentElement;
+          var s = null;
+          try { s = localStorage.getItem(THEME_KEY); } catch (_) {}
+          try {
+            if (s === null) {
+              localStorage.setItem(THEME_KEY, "light");
+              el.setAttribute("data-theme", "light");
+            } else if (s === "light") {
+              localStorage.setItem(THEME_KEY, "dark");
+              el.setAttribute("data-theme", "dark");
+            } else {
+              localStorage.removeItem(THEME_KEY);
+              el.removeAttribute("data-theme");
+            }
+          } catch (_) {}
+        });
+      }
+    </script>
+  </body>
+</html>

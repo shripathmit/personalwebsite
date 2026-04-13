@@ -1,0 +1,263 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-04-13",
+  "name": "Shridhar Pathak",
+  "jobTitle": "AI Engineering Leader | Founder & Advisor",
+  "headline": "AI Engineering Leader | MIT Sloan MBA Candidate (2026) | Cross-registered, Harvard Business School",
+  "url": "https://www.shridharpathak.me/",
+  "email": "shripathmit@gmail.com",
+  "telephone": "+1-214-794-6073",
+  "location": "Boston, MA (Brookline)",
+  "description": "AI engineering leader with 15 years in distributed systems and multi-agent AI. Scaled global organizations from inception to 50+ people and led programs exceeding $100M scale (Amazon Alexa). MBA candidate at MIT Sloan (2026), cross-registered at Harvard Business School; focus on AI transformation, platform economics, and connecting LLM research to production revenue. Senior Director, AI & ML at Moderna. Former Amazon Alexa and Amazon Retail. Founder & Advisor of a stealth enterprise agent evaluation platform (tracing, observability, automated and human evaluation).",
+  "sameAs": [
+    "https://www.linkedin.com/in/shridhar-pathak-19277927",
+    "https://www.shridharpathak.me/"
+  ],
+  "knowsAbout": [
+    "Conversational agents and multi-agent systems",
+    "LLM orchestration and fine-tuning strategy",
+    "Applied generative AI infrastructure",
+    "AI platform architecture and developer experience",
+    "Cloud-native ML systems on AWS",
+    "AI governance and enterprise compliance",
+    "Engineering org design and global delivery",
+    "MLOps",
+    "Enterprise AI agent operations",
+    "AI evaluation and observability",
+    "Distributed systems",
+    "Voice AI",
+    "Product strategy",
+    "Go-to-market",
+    "Platform economics"
+  ],
+  "worksFor": {
+    "name": "Moderna",
+    "role": "Senior Director, AI & ML"
+  },
+  "currentVenture": {
+    "name": "Stealth AI venture (enterprise agent evaluation platform)",
+    "role": "Founder & Advisor",
+    "startDate": "2025-01",
+    "tagline": "Digital worker platform with tracing, observability, and evaluation for AI agents",
+    "summary": "Comprehensive tracing and observability for AI agents (actions, decisions, outputs) with automated and human evaluation pipelines to catch regressions before launch and improve quality over time. Enterprise GTM and pricing validation in progress.",
+    "keyInnovation": "End-to-end agent tracing; automated and human-in-the-loop scoring; regression detection before launch; continuous quality improvement.",
+    "valueProposition": [
+      "Treat enterprise AI agents as measurable digital workers",
+      "Replace black-box deployments with operational transparency",
+      "Scale agent deployments with evals and compliance confidence"
+    ],
+    "achievements": [
+      "50+ enterprise discovery calls",
+      "Three design-partner pilots",
+      "Validated seed-stage pricing model within six months",
+      "Technical architecture and MVP development"
+    ]
+  },
+  "education": [
+    {
+      "degree": "Executive MBA (EMBA)",
+      "institution": "MIT Sloan School of Management",
+      "officialProgramUrl": "https://mitsloan.mit.edu/emba",
+      "schoolAboutUrl": "https://mitsloan.mit.edu/about",
+      "endDate": "2026-05",
+      "status": "Expected",
+      "location": "Cambridge, MA",
+      "crossRegisteredAt": "Harvard Business School",
+      "skillsDevelopedInProgram": "System dynamics, competitive strategy, platform economics, AI and digital transformation, organizational structure, advanced analytics; plus Sloan strengths in new ventures, marketing and customer analytics, global leadership, and AI in business.",
+      "focusAreas": [
+        "System Dynamics",
+        "Competitive Strategy",
+        "Platform Economics",
+        "AI and Digital Transformation",
+        "Organizational Structure and Advanced Analytics",
+        "Entrepreneurship & New Ventures",
+        "Global Organizations & Cross-Cultural Leadership"
+      ],
+      "coursework": [
+        "15.390 New Enterprises",
+        "15.732 Marketing Management",
+        "15.708 Global Organizations Lab",
+        "15.717 Organizational Processes",
+        "MIT Platform Strategy"
+      ]
+    },
+    {
+      "degree": "Master of Science, Computer Science",
+      "institution": "University of Texas at Dallas",
+      "endDate": "2012-05",
+      "specializations": ["Distributed Systems", "Machine Learning", "Algorithms"]
+    },
+    {
+      "degree": "Bachelor of Engineering in Computer Science",
+      "institution": "Pune Institute of Computer Technology",
+      "endDate": "2009-07",
+      "location": "India",
+      "honors": [
+        "Kishore Vaigyanik Protsahan Yojana (KVPY) Fellowship — Young Scientist, Engineering Stream, 2005–09"
+      ]
+    }
+  ],
+  "fellowships": [
+    {
+      "title": "IIT Bombay — Machine Learning and AI research laboratories",
+      "summary": "Three fellowships supporting ML and AI research work in campus laboratories."
+    }
+  ],
+  "consultingAndAdvisory": [
+    {
+      "role": "Founding Tech Advisor — Health Galaxy",
+      "focus": "AI Heart Score app; AI-ready architecture and scaling",
+      "startDate": "2024-01",
+      "summary": "Founding tech advisor to the CEO on scaling operations and AI-enabled business models."
+    },
+    {
+      "role": "Stanford Seed Consultant",
+      "focus": "Strategic advisor to global founders on scaling and AI-enabled business models",
+      "date": "2025-06",
+      "summary": "Consulting for business owners in developing economies on AI, digital transformation, scaling, and operational efficiency."
+    }
+  ],
+  "leadershipAndCommunity": [
+    {
+      "role": "Junior Research Fellow",
+      "organization": "Tata Institute of Fundamental Research (TIFR)",
+      "location": "Mumbai, India",
+      "startDate": "2009-07",
+      "endDate": "2010-04",
+      "summary": "GRAPES-3 / CERN-related detector monitoring algorithms; ROOT and C++."
+    },
+    {
+      "role": "Orientation Team Mentor",
+      "organization": "University of Texas at Dallas",
+      "date": "2011",
+      "summary": "Orientation for ~1,700 freshmen; group leader for 100 students."
+    },
+    {
+      "role": "Graduate Chair",
+      "organization": "National Society of Black Engineers (NSBE), UTD",
+      "summary": "Industry–graduate bridge; recruiting and professional development."
+    },
+    {
+      "role": "Public Relations Officer",
+      "organization": "IEEE student chapter, PICT",
+      "date": "2006-2008",
+      "summary": "Communications and events for ~700-member chapter."
+    }
+  ],
+  "skills": {
+    "aiAndML": [
+      "LLMs (GPT, Claude, Llama-class)",
+      "LLM orchestration",
+      "Agentic and multi-agent frameworks",
+      "NLP",
+      "Speech recognition and voice synthesis",
+      "Predictive analytics and ML pipelines",
+      "Multimodal AI",
+      "MLOps",
+      "AI governance and responsible AI"
+    ],
+    "cloudAndInfrastructure": [
+      "AWS",
+      "Distributed systems",
+      "APIs and microservices",
+      "Big data pipelines",
+      "Scalability, security, compliance"
+    ],
+    "programming": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "C",
+      "C++",
+      "SQL",
+      "MySQL",
+      "DynamoDB",
+      "PostgreSQL",
+      "REST",
+      "GraphQL",
+      "WebSockets",
+      "Git",
+      "CI/CD",
+      "Agile"
+    ],
+    "business": [
+      "Product strategy and roadmaps",
+      "GTM and business models",
+      "Financial modeling and TAM/SAM/SOM",
+      "Stakeholder and executive communication",
+      "Cross-functional leadership",
+      "Change management"
+    ]
+  },
+  "certifications": [
+    "Leadership Development for Engineers — Rice University, 2018",
+    "Personal Leadership Development / High Performing Teams — Rice University, 2018",
+    "Relationship Management — Rice University, 2018",
+    "Self-Awareness and the Effective Leader — Rice University, 2018",
+    "AI for Everyone — Coursera",
+    "Machine Learning Specialization — in progress"
+  ],
+  "mediaFeatures": [
+    "CNN Business — Amazon Alexa celebrity voice features",
+    "CNET — Hey Disney voice assistant",
+    "About Amazon (India) — Amitabh Bachchan celebrity voice partnership"
+  ],
+  "selectedImpact": [
+    "Moderna: GenAI roadmap for 20+ enterprise applications; expected ~30% reduction in R&D and clinical operation timelines; 35+ person engineering org from the ground up; multi-million-dollar strategic partnerships with OpenAI and AWS",
+    "Alexa: First multi-agent conversational switching framework; core infrastructure for a business model generating over $50M in annual recurring revenue (celebrity and Disney partner agents)",
+    "Alexa: Voice Shopping in US, India, Japan, Canada, France, Italy, Spain, Mexico, Ireland, and Australia",
+    "Alexa: Led integration of speech, NLP, contextual understanding, and orchestration; APIs for Amazon India retail app at millions of daily active users; 40 direct reports and 145 partner-team reports across 8+ countries",
+    "Amazon Retail: Cut standard three-year country launch to nine months for first Southeast Asia retail entry; sole technical owner aligning 26 teams and seven global orgs; two-hour delivery in Singapore; 100% of regional orders through proprietary marketing and logistics systems",
+    "Amazon Register (2012–2015): High-scale distributed services and fraud detection for global merchant onboarding and payment flows (Java, C++)"
+  ],
+  "workHistory": [
+    {
+      "role": "Senior Director, AI & ML",
+      "organization": "Moderna",
+      "location": "Cambridge, MA",
+      "startDate": "2023-07",
+      "endDate": null,
+      "summary": "GenAI roadmap for 20+ enterprise applications, targeting materially shorter R&D and clinical operations timelines. Built a 35+ person engineering organization delivering production LLM workflows on AWS for global manufacturing. Translated AI capabilities for the C-suite; secured multi-million-dollar investments and partnerships with OpenAI and AWS."
+    },
+    {
+      "role": "Senior Manager & Tech Lead",
+      "organization": "Amazon Alexa",
+      "team": "Conversational AI & multi-agent systems",
+      "location": "Seattle, WA",
+      "startDate": "2018-06",
+      "endDate": "2023-07",
+      "summary": "Large-scale conversational AI and multi-agent orchestration for Alexa worldwide. Managed 40 direct reports and 145 partner-team reports across 8+ countries. Shipped the first multi-agent conversational switching framework (celebrity and Disney agents) underpinning a $50M+ ARR-class business model. Rolled out Alexa Voice Shopping across US, India, Japan, Canada, France, Italy, Spain, Mexico, Ireland, and Australia. Led speech, NLP, contextual understanding, and response orchestration; defined APIs for ML-powered interactions in the Amazon India retail app at millions of DAU."
+    },
+    {
+      "role": "Manager & Tech Lead",
+      "organization": "Amazon Retail",
+      "location": "Seattle, WA",
+      "startDate": "2015-06",
+      "endDate": "2018-12",
+      "summary": "Reduced a three-year country launch timeline to nine months for Amazon’s first retail entry in Southeast Asia by decoupling legacy US-centric systems; sole technical owner aligning 26 teams and seven global organizations. Designed the region’s first end-to-end digital marketing and last-mile logistics stack, including two-hour delivery in Singapore and automated customer lifecycle marketing."
+    },
+    {
+      "role": "Software Development Engineer",
+      "organization": "Amazon.com",
+      "product": "Amazon Register (POS)",
+      "location": "Seattle, WA",
+      "startDate": "2012-06",
+      "endDate": "2015-06",
+      "summary": "Distributed services and fraud detection for Amazon Register; global merchant onboarding and financial portal integrations. Fault-tolerant payment infrastructure in Java and C++. Tech lead across Seattle and Bangalore for cross-site delivery and merchant-facing integrations."
+    }
+  ],
+  "openTo": [
+    "Advisory board positions in AI and tech startups",
+    "Speaking on AI governance and enterprise AI",
+    "AI strategy and implementation consulting",
+    "Partnerships for the stealth enterprise agent evaluation platform",
+    "Conversations on the future of enterprise AI"
+  ],
+  "agentHints": {
+    "preferredContact": "Email for inbound; phone for established introductions.",
+    "humanReadableSite": "Expandable <details> sections on index.html mirror this JSON for deeper narrative.",
+    "llmsTxtPath": "/llms.txt",
+    "profileJsonPath": "/profile.json",
+    "note": "Canonical site URL updated for Railway production domain."
+  }
+}
