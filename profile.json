@@ -43,7 +43,7 @@
     "keyInnovation": "End-to-end agent tracing; automated and human-in-the-loop scoring; regression detection before launch; continuous quality improvement.",
     "valueProposition": [
       "Treat enterprise AI agents as measurable digital workers",
-      "Replace black-box deployments with operational transparency",
+      "See exactly what an agent did instead of guessing at a black box",
       "Scale agent deployments with evals and compliance confidence"
     ],
     "achievements": [
@@ -93,19 +93,19 @@
       "endDate": "2009-07",
       "location": "India",
       "honors": [
-        "Kishore Vaigyanik Protsahan Yojana (KVPY) Fellowship — Young Scientist, Engineering Stream, 2005–09"
+        "Kishore Vaigyanik Protsahan Yojana (KVPY) Fellowship: Young Scientist, Engineering Stream, 2005–09"
       ]
     }
   ],
   "fellowships": [
     {
-      "title": "IIT Bombay — Machine Learning and AI research laboratories",
+      "title": "IIT Bombay: Machine Learning and AI research laboratories",
       "summary": "Three fellowships supporting ML and AI research work in campus laboratories."
     }
   ],
   "consultingAndAdvisory": [
     {
-      "role": "Founding Tech Advisor — Health Galaxy",
+      "role": "Founding Tech Advisor · Health Galaxy",
       "focus": "AI Heart Score app; AI-ready architecture and scaling",
       "startDate": "2024-01",
       "summary": "Founding tech advisor to the CEO on scaling operations and AI-enabled business models."
@@ -190,17 +190,17 @@
     ]
   },
   "certifications": [
-    "Leadership Development for Engineers — Rice University, 2018",
-    "Personal Leadership Development / High Performing Teams — Rice University, 2018",
-    "Relationship Management — Rice University, 2018",
-    "Self-Awareness and the Effective Leader — Rice University, 2018",
-    "AI for Everyone — Coursera",
-    "Machine Learning Specialization — in progress"
+    "Leadership Development for Engineers (Rice University, 2018)",
+    "Personal Leadership Development / High Performing Teams (Rice University, 2018)",
+    "Relationship Management (Rice University, 2018)",
+    "Self-Awareness and the Effective Leader (Rice University, 2018)",
+    "AI for Everyone (Coursera)",
+    "Machine Learning Specialization (in progress)"
   ],
   "mediaFeatures": [
-    "CNN Business — Amazon Alexa celebrity voice features",
-    "CNET — Hey Disney voice assistant",
-    "About Amazon (India) — Amitabh Bachchan celebrity voice partnership"
+    "CNN Business: Amazon Alexa celebrity voice features",
+    "CNET: Hey Disney voice assistant",
+    "About Amazon (India): Amitabh Bachchan celebrity voice partnership"
   ],
   "selectedImpact": [
     "Moderna: GenAI roadmap for 20+ enterprise applications; expected ~30% reduction in R&D and clinical operation timelines; 35+ person engineering org from the ground up; multi-million-dollar strategic partnerships with OpenAI and AWS",
@@ -226,7 +226,7 @@
       "location": "Seattle, WA",
       "startDate": "2018-06",
       "endDate": "2023-07",
-      "summary": "Large-scale conversational AI and multi-agent orchestration for Alexa worldwide. Managed 40 direct reports and 145 partner-team reports across 8+ countries. Shipped the first multi-agent conversational switching framework (celebrity and Disney agents) underpinning a $50M+ ARR-class business model. Rolled out Alexa Voice Shopping across US, India, Japan, Canada, France, Italy, Spain, Mexico, Ireland, and Australia. Led speech, NLP, contextual understanding, and response orchestration; defined APIs for ML-powered interactions in the Amazon India retail app at millions of DAU."
+      "summary": "Large-scale conversational AI and multi-agent orchestration for Alexa worldwide. Managed 40 direct reports and 145 partner-team reports across 8+ countries. Shipped the first multi-agent conversational switching framework (celebrity and Disney agents) underpinning a business generating $50M+ in annual recurring revenue. Rolled out Alexa Voice Shopping across US, India, Japan, Canada, France, Italy, Spain, Mexico, Ireland, and Australia. Led speech, NLP, contextual understanding, and response orchestration; defined APIs for ML-powered interactions in the Amazon India retail app at millions of DAU."
     },
     {
       "role": "Manager & Tech Lead",
