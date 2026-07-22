@@ -2414,3 +2414,73 @@ body.blog-page .section.hero .lede {
     padding: 0.35rem 0.15rem;
   }
 }
+
+/* Blog: Substack subscribe CTA, series header, per-post source link */
+body.blog-page .blog-subscribe {
+  margin: clamp(1rem, 2.5vw, 1.5rem) 0 0;
+}
+
+body.blog-page .blog-subscribe__btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--lux-fs-caption);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--accent);
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--lux-line);
+  border-radius: 999px;
+  transition: background-color 0.18s ease, border-color 0.18s ease,
+    color 0.18s ease;
+}
+
+body.blog-page .blog-subscribe__btn:hover,
+body.blog-page .blog-subscribe__btn:focus-visible {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent-hover);
+}
+
+body.blog-page .blog-series {
+  max-width: var(--lux-copy-max);
+  margin: clamp(1.75rem, 4vw, 2.75rem) 0 clamp(1rem, 2.5vw, 1.5rem);
+  padding-top: clamp(1.25rem, 3vw, 1.75rem);
+  border-top: 1px solid var(--lux-line);
+}
+
+body.blog-page .blog-series__label {
+  font-family: var(--font-mono);
+  font-size: var(--lux-fs-caption);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 0.5rem;
+}
+
+body.blog-page .blog-series__title {
+  font-family: var(--font-serif);
+  font-size: var(--lux-fs-section);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: var(--lux-leading-snug);
+  margin: 0 0 0.6rem;
+}
+
+body.blog-page .blog-series__note {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* the series header already draws the divider above post 1 */
+body.blog-page .blog-series + .blog-post {
+  border-top: none;
+  padding-top: 0;
+}
+
+body.blog-page .blog-post__source {
+  margin-top: clamp(1rem, 2.5vw, 1.4rem);
+  font-family: var(--font-mono);
+  font-size: var(--lux-fs-caption);
+  letter-spacing: 0.04em;
+}

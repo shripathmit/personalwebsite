@@ -6,7 +6,7 @@
 
 **Shridhar Pathak**, AI engineering leader. MIT Sloan MBA candidate (expected May 2026), **cross-registered at Harvard Business School**. **Senior Director, AI & ML** at **Moderna**: GenAI roadmap for 20+ enterprise applications, 35+ person engineering org, OpenAI and AWS partnerships, C-suite alignment. Previously **Amazon Alexa** (2018–2023): multi-agent conversational AI (a platform generating $50M+ in annual recurring revenue), Voice Shopping across ten countries, India retail app at millions of DAU, 40 DR / 145 partner-team reports across 8+ countries. **Amazon Retail** (2015–2018): Southeast Asia launch velocity, Singapore two-hour delivery, Project Nautilus-style marketing and logistics. **Amazon Register** SDE (2012–2015). **Founder & Advisor**, **stealth enterprise agent evaluation platform** (since 2025): tracing, observability, automated and human evaluation; 50+ enterprise discovery calls, three design-partner pilots, validated seed pricing. **Founding Tech Advisor, Health Galaxy**. **Stanford Seed Consultant**.
 
-**Location:** Boston, MA (Brookline). **Email:** shripathmit@gmail.com. **Phone:** +1-214-794-6073. **LinkedIn:** https://www.linkedin.com/in/shridhar-pathak-19277927
+**Location:** Boston, MA (Brookline). **Email:** shripathmit@gmail.com. **Phone:** +1-214-794-6073. **LinkedIn:** https://www.linkedin.com/in/shridhar-pathak-19277927 **Substack:** https://shridharpathak.substack.com/
 
 **Live site:** https://www.shridharpathak.me/ (staging: https://shridhar-personal-site-production.up.railway.app)
 
@@ -17,6 +17,11 @@
 ## Human-readable page
 
 - `/`: minimal layout; each topic shows a **2–3 line preview** when collapsed; **expand** (`<details>`) for full lists and narrative (summary, current venture, impact, each role, education coursework, skills, certifications, leadership, media, philosophy, etc.).
+
+## Blog
+
+- `/blog.html`: full text of all posts, mirrored from Substack. Currently a four-part series, "The Evolution of a Software Developer" (July 2026), plus "Hello World..." (June 2026) and an opening note (April 2026).
+- Canonical source and subscription: https://shridharpathak.substack.com/ (RSS at `/feed`).
 
 ## Contact policy
 
