@@ -20,15 +20,23 @@ app.use(
 // spelling resolves locally, but production runs on a case-sensitive Linux FS
 // where only the exact path would match and there is no 404 fallback. Redirect
 // every other casing to the canonical one.
-const MIXED_CASE_PAGES = ["/AIagent", "/timeTravel"];
+const MIXED_CASE_PAGES = ["/timeTravel"];
 const canonicalByLowercase = new Map(
   MIXED_CASE_PAGES.map((p) => [p.toLowerCase(), p])
 );
 
+// Pages that have moved. The agent-facing page was promoted to the site root,
+// so /AIagent now lives at /, and the portfolio it displaced moved to /human.
+// These paths were published, so keep them working rather than 404ing.
+const MOVED_PAGES = new Map([["/aiagent", "/"]]);
+
 app.get(/^\/[a-z]+(\.html)?$/i, (req, res, next) => {
-  const canonical = canonicalByLowercase.get(
-    req.path.replace(/\.html$/i, "").toLowerCase()
-  );
+  const key = req.path.replace(/\.html$/i, "").toLowerCase();
+
+  const moved = MOVED_PAGES.get(key);
+  if (moved) return res.redirect(301, moved);
+
+  const canonical = canonicalByLowercase.get(key);
   if (!canonical || req.path === canonical) return next();
   res.redirect(301, canonical);
 });

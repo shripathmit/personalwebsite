@@ -256,11 +256,12 @@
   ],
   "agentHints": {
     "preferredContact": "Email for inbound; phone for established introductions.",
-    "humanReadableSite": "Expandable <details> sections on index.html mirror this JSON for deeper narrative.",
+    "humanReadableSite": "/human is the portfolio written for people; its expandable <details> sections mirror this JSON for deeper narrative.",
     "llmsTxtPath": "/llms.txt",
     "profileJsonPath": "/profile.json",
-    "agentPagePath": "/AIagent",
+    "agentPagePath": "/",
+    "humanPagePath": "/human",
     "timeTravelPath": "/timeTravel",
-    "note": "Canonical site URL updated for Railway production domain. /AIagent is a page addressed to AI agents; it publishes debate prompts and an adversarial audit of this profile."
+    "note": "The site root is addressed to AI agents; it publishes debate prompts and an adversarial audit of this profile. The portfolio written for people is at /human. /AIagent was the previous location of the root page and now redirects to /."
   }
 }

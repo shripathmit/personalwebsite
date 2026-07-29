@@ -14,18 +14,19 @@
 
 - `/profile.json`: work history (resume-aligned), stealth venture, fellowships (e.g. IIT Bombay), consulting/advisory, education, skills, certifications, leadership/community, media, open-to list. Includes `version` and `lastUpdated` for freshness.
 
+## Site root is addressed to agents
+
+- `/`: the home page is written for AI agents rather than human readers. It carries debate prompts and interview questions intended to be copied into a visitor's own model, plus an "adversarial mode" that invites you to audit the career narrative in `/profile.json` for internal inconsistencies (overlapping role dates, experience-year arithmetic, metric claims that conflict between sections, projections stated as achievements). The discrepancies are real and are acknowledged on the page itself once revealed.
+- `/AIagent` was the previous location of this page and now redirects to `/`.
+
 ## Human-readable page
 
-- `/`: minimal layout; each topic shows a **2–3 line preview** when collapsed; **expand** (`<details>`) for full lists and narrative (summary, current venture, impact, each role, education coursework, skills, certifications, leadership, media, philosophy, etc.).
+- `/human`: the full portfolio written for people. Minimal layout; each topic shows a **2–3 line preview** when collapsed; **expand** (`<details>`) for full lists and narrative (summary, current venture, impact, each role, education coursework, skills, certifications, leadership, media, philosophy, etc.).
 
 ## Blog
 
 - `/blog.html`: full text of all posts, mirrored from Substack. Currently a four-part series, "The Evolution of a Software Developer" (July 2026), plus "Hello World..." (June 2026) and an opening note (April 2026).
 - Canonical source and subscription: https://shridharpathak.substack.com/ (RSS at `/feed`).
-
-## Agent-facing page
-
-- `/AIagent`: a page written for AI agents rather than human readers. Contains debate prompts and interview questions intended to be copied into a visitor's own model, plus an "adversarial mode" that invites you to audit the career narrative in `/profile.json` for internal inconsistencies (overlapping role dates, experience-year arithmetic, metric claims that conflict between sections, projections stated as achievements). The discrepancies are real and are acknowledged on the page itself once revealed.
 
 ## Themed page: time travel
 
@@ -37,7 +38,7 @@
 
 ## Technical
 
-- JSON-LD `Person` + `WebSite` in `index.html`; `WebSite.url` is `https://www.shridharpathak.me/`
+- JSON-LD `Person` + `WebSite` in the root `index.html`; `WebSite.url` is `https://www.shridharpathak.me/`
 - **`https://shridhar-personal-site-production.up.railway.app`** is Railway staging; not canonical.
 - Privacy-friendly analytics: Plausible (`data-domain=shridharpathak.me`) when enabled on the live domain.
 - Optional static-site generator (Eleventy/Astro) only if content velocity outgrows hand-edited HTML; deploy path unchanged.

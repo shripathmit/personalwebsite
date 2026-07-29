@@ -301,6 +301,7 @@
       ["llms.txt", h.llmsTxtPath],
       ["profile.json", h.profileJsonPath],
       ["Agent page", h.agentPagePath, "link"],
+      ["Human page", h.humanPagePath, "link"],
       ["Time travel", h.timeTravelPath, "link"],
       ["Note", h.note]
     ];
