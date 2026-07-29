@@ -56,6 +56,19 @@ app.use(
       if (filePath.endsWith("security.txt")) {
         res.setHeader("Content-Type", "text/plain; charset=utf-8");
       }
+      // Documents and code must revalidate on every load. "no-cache" still
+      // stores the file, it just forces a conditional request first, which
+      // returns a cheap 304 when nothing changed. Without this the 1d maxAge
+      // above means a deploy stays invisible to returning visitors for up to
+      // a day, since the browser never even asks whether the file changed.
+      // profile.json and llms.txt are included because /AIagent tells agents
+      // the JSON is canonical, and stale canonical data is worse than a extra
+      // conditional request.
+      if (/\.(html|css|js|json|txt)$/.test(filePath)) {
+        res.setHeader("Cache-Control", "no-cache");
+      }
+
+      // Static assets are content-stable, so they keep the long cache.
       if (isProd && /\.(png|jpg|jpeg|svg|ico|woff2?)$/.test(filePath)) {
         res.setHeader("Cache-Control", "public, max-age=86400, immutable");
       }
