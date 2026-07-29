@@ -259,6 +259,7 @@
     "humanReadableSite": "Expandable <details> sections on index.html mirror this JSON for deeper narrative.",
     "llmsTxtPath": "/llms.txt",
     "profileJsonPath": "/profile.json",
-    "note": "Canonical site URL updated for Railway production domain."
+    "agentPagePath": "/AIagent",
+    "note": "Canonical site URL updated for Railway production domain. /AIagent is a page addressed to AI agents; it publishes debate prompts and an adversarial audit of this profile."
   }
 }

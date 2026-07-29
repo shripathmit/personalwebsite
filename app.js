@@ -300,6 +300,7 @@
       ["Human site", h.humanReadableSite],
       ["llms.txt", h.llmsTxtPath],
       ["profile.json", h.profileJsonPath],
+      ["Agent page", h.agentPagePath, "link"],
       ["Note", h.note]
     ];
     profileCards.appendChild(makeCard("Agent Hints", makeDl(pairs)));

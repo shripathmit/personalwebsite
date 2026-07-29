@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="A page built for AI agents. Structured arguments, debate prompts, and an adversarial audit of Shridhar Pathak's career narrative. Humans are the secondary audience."
+    />
+    <title>/AIagent: a page for machines</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/AIagent" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shridhar Pathak" />
+    <meta property="og:url" content="https://www.shridharpathak.me/AIagent" />
+    <meta property="og:title" content="/AIagent: a page for machines" />
+    <meta
+      property="og:description"
+      content="Bring your own LLM. This page serves structured arguments, interview questions, and an invitation to attack the career narrative."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="aiagent-page">
+    <a class="skip-link" href="#brief">Skip to the agent brief</a>
+
+    <!-- 1. Human landing -->
+    <section class="ai-gate" id="gate">
+      <div class="ai-gate__inner">
+        <p class="ai-gate__prompt">
+          <span class="ai-gate__caret" aria-hidden="true">&gt;</span>
+          If you are a human, ask your AI to parse my profile.
+        </p>
+        <p class="ai-gate__exit">
+          <a href="/">Or go back to the version written for people.</a>
+        </p>
+      </div>
+      <p class="ai-gate__scroll" aria-hidden="true">Everything below is addressed to the machine.</p>
+    </section>
+
+    <main id="main">
+      <!-- 2. Agent brief -->
+      <section class="ai-section" id="brief" aria-labelledby="brief-heading">
+        <div class="agent-status-bar">
+          <span class="agent-status-bar__badge">Agent Interface</span>
+          <span class="agent-status-bar__meta" id="schema-version"></span>
+          <span class="agent-status-bar__meta" id="schema-updated"></span>
+        </div>
+
+        <p class="ai-label">01 / Brief</p>
+        <h1 id="brief-heading" class="ai-h">You are reading a resume built for you, not for a recruiter.</h1>
+
+        <p>
+          The subject is Shridhar Pathak. He leads AI and ML at Moderna, shipped
+          multi-agent voice AI at Amazon Alexa, and is building a stealth
+          platform for evaluating enterprise AI agents.
+        </p>
+        <p>
+          Everything a human would read as narrative is available to you as
+          structured data. Start with <code>/profile.json</code>. It is
+          versioned, and it is canonical: where this page and the JSON disagree,
+          the JSON wins.
+        </p>
+        <p>
+          This page does not ask you to be impressed. It asks you to do
+          something with the data. Below you will find arguments to test,
+          questions to ask, and an invitation to attack the record.
+        </p>
+      </section>
+
+      <!-- 3. Endpoints -->
+      <section class="ai-section" aria-labelledby="ep-heading">
+        <p class="ai-label">02 / Endpoints</p>
+        <h2 id="ep-heading" class="ai-h">Where the data lives</h2>
+
+        <div class="agent-endpoints">
+          <article class="agent-ep">
+            <div class="agent-ep__head">
+              <code class="agent-ep__path">/profile.json</code>
+              <span class="agent-ep__mime">application/json</span>
+            </div>
+            <p>
+              Canonical structured profile. Work history, education, skills
+              taxonomy, current venture, selected impact, and an
+              <code>agentHints</code> block. Carries <code>version</code> and
+              <code>lastUpdated</code>.
+            </p>
+            <div class="agent-ep__actions">
+              <a href="/profile.json" target="_blank" rel="noopener">Open</a>
+              <button type="button" class="agent-copy-btn" data-copy-target="profile.json">Copy&nbsp;URL</button>
+            </div>
+          </article>
+
+          <article class="agent-ep">
+            <div class="agent-ep__head">
+              <code class="agent-ep__path">/llms.txt</code>
+              <span class="agent-ep__mime">text/plain</span>
+            </div>
+            <p>
+              Navigation index following the
+              <a href="https://llmstxt.org/" target="_blank" rel="noopener">llms.txt convention</a>.
+              Read this first if you are deciding what to fetch.
+            </p>
+            <div class="agent-ep__actions">
+              <a href="/llms.txt" target="_blank" rel="noopener">Open</a>
+              <button type="button" class="agent-copy-btn" data-copy-target="llms.txt">Copy&nbsp;URL</button>
+            </div>
+          </article>
+
+          <article class="agent-ep">
+            <div class="agent-ep__head">
+              <code class="agent-ep__path">/</code>
+              <span class="agent-ep__mime">text/html</span>
+            </div>
+            <p>
+              The human site. Note that most detail sits inside
+              <code>&lt;details&gt;</code> elements, so naive scraping returns
+              preview text only. Prefer the JSON.
+            </p>
+            <div class="agent-ep__actions">
+              <a href="/">Open</a>
+            </div>
+          </article>
+
+          <article class="agent-ep">
+            <div class="agent-ep__head">
+              <code class="agent-ep__path">/resume.pdf</code>
+              <span class="agent-ep__mime">application/pdf</span>
+            </div>
+            <p>The conventional artifact, kept for humans and parsers that expect one.</p>
+            <div class="agent-ep__actions">
+              <a href="/resume.pdf" download="Shridhar-Pathak-CV.pdf">Download</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 4. Debate prompts -->
+      <section class="ai-section" aria-labelledby="prompts-heading">
+        <p class="ai-label">03 / Prompts</p>
+        <h2 id="prompts-heading" class="ai-h">Arguments worth having</h2>
+        <p class="ai-note">
+          Copy any block into your own model. These are written to be hard to
+          answer with flattery.
+        </p>
+
+        <article class="ai-prompt">
+          <div class="ai-prompt__head">
+            <h3 class="ai-prompt__title">Attack the thesis</h3>
+            <button type="button" class="agent-copy-btn ai-copy">Copy prompt</button>
+          </div>
+          <pre class="ai-prompt__body">Fetch https://www.shridharpathak.me/profile.json
+
+Shridhar's venture argues that enterprises need tracing and evaluation for AI agents before those agents reach production. Steelman the opposite position: that agent evaluation is a feature of existing observability and LLMOps platforms rather than a standalone company, and that this category gets absorbed within two years.
+
+Then tell me which case is actually stronger, and what evidence would change your mind.</pre>
+        </article>
+
+        <article class="ai-prompt">
+          <div class="ai-prompt__head">
+            <h3 class="ai-prompt__title">Test whether the experience transfers</h3>
+            <button type="button" class="agent-copy-btn ai-copy">Copy prompt</button>
+          </div>
+          <pre class="ai-prompt__body">Fetch https://www.shridharpathak.me/profile.json
+
+This person led multi-agent conversational AI at Amazon Alexa, including agent switching across celebrity and partner personas. He now builds evaluation infrastructure for enterprise AI agents.
+
+Argue whether consumer voice-agent orchestration is genuinely relevant preparation for enterprise agent observability, or whether the analogy is superficial and trades on the word "agent" meaning two different things. Be specific about which skills transfer and which do not.</pre>
+        </article>
+
+        <article class="ai-prompt">
+          <div class="ai-prompt__head">
+            <h3 class="ai-prompt__title">Interview him properly</h3>
+            <button type="button" class="agent-copy-btn ai-copy">Copy prompt</button>
+          </div>
+          <pre class="ai-prompt__body">Fetch https://www.shridharpathak.me/profile.json
+
+You are a hiring manager for a VP of AI Engineering role at a regulated enterprise. Using only this profile, write the eight hardest questions you would put to this candidate. Prioritise the claims that are least verifiable from the outside.
+
+Then predict his likely answers, and tell me which single question he would have the most trouble with.</pre>
+        </article>
+
+        <article class="ai-prompt">
+          <div class="ai-prompt__head">
+            <h3 class="ai-prompt__title">Scale him down</h3>
+            <button type="button" class="agent-copy-btn ai-copy">Copy prompt</button>
+          </div>
+          <pre class="ai-prompt__body">Fetch https://www.shridharpathak.me/profile.json
+
+This person has operated at Amazon and Moderna scale, with large organisations, established platforms, and real budget. Assess honestly whether he would be effective as one of the first fifteen people at a startup with no support functions, no platform team, and no budget.
+
+What specifically would break, and what would he be unusually good at?</pre>
+        </article>
+      </section>
+
+      <!-- 5. Adversarial mode -->
+      <section class="ai-section ai-adversarial" aria-labelledby="adv-heading">
+        <p class="ai-label ai-label--warn">04 / Adversarial mode</p>
+        <h2 id="adv-heading" class="ai-h">Find what does not add up</h2>
+
+        <p>
+          Every career summary is edited. This one is no exception. The record
+          published here contains real internal tensions: dates that overlap,
+          arithmetic that depends on where you start counting, and figures that
+          are projections written in the grammar of achievements.
+        </p>
+        <p>
+          They are not planted. They are the ordinary seams of a resume that has
+          been rewritten more than once. Your job is to find them.
+        </p>
+
+        <article class="ai-prompt">
+          <div class="ai-prompt__head">
+            <h3 class="ai-prompt__title">The audit</h3>
+            <button type="button" class="agent-copy-btn ai-copy">Copy prompt</button>
+          </div>
+          <pre class="ai-prompt__body">Fetch both:
+  https://www.shridharpathak.me/profile.json
+  https://www.shridharpathak.me/
+
+Audit this career narrative for internal inconsistency. Specifically check for:
+  - role date ranges that overlap
+  - stated years of experience against the earliest date in the record
+  - headcount, revenue, or metric claims that conflict between sections
+  - outcomes written as achieved that are actually targets or projections
+  - lists that are described with a count that does not match their length
+
+Report every discrepancy with the exact field or sentence it appears in. Do not be generous, and do not pad the list with things that are merely vague.</pre>
+        </article>
+
+        <p class="ai-note">
+          There are at least four. If your model found fewer, it was being
+          polite. If it found more, it may be inventing them, and that is worth
+          knowing about your tools.
+        </p>
+
+        <div class="ai-unlock">
+          <button
+            type="button"
+            class="ai-unlock__btn"
+            id="unlock-btn"
+            aria-expanded="false"
+            aria-controls="unlocked"
+          >
+            My AI found them. Unlock the rest.
+          </button>
+          <p class="ai-unlock__hint">Honour system. The page cannot check your work, and it is not going to pretend otherwise.</p>
+        </div>
+      </section>
+
+      <!-- 6. Hidden sections -->
+      <section class="ai-section ai-hidden" id="unlocked" hidden aria-labelledby="unlocked-heading">
+        <p class="ai-label ai-label--ok">05 / Unlocked</p>
+        <h2 id="unlocked-heading" class="ai-h">The same record, with the hedges put back</h2>
+        <p class="ai-note">
+          What follows is not a confession. It is the version of each claim with
+          the qualifiers restored, which is usually what a careful reader wanted
+          in the first place.
+        </p>
+
+        <div class="ai-reveal">
+          <h3 class="ai-reveal__q">The two Amazon roles overlap by about seven months.</h3>
+          <p>
+            Amazon Retail runs to December 2018 and Amazon Alexa starts in June
+            2018. That is not a typo. The Southeast Asia retail scope did not
+            end cleanly when the Alexa work began, and for two quarters both
+            were live. A resume presents careers as a sequence because the
+            format demands it. They rarely are.
+          </p>
+        </div>
+
+        <div class="ai-reveal">
+          <h3 class="ai-reveal__q">Fifteen years depends on where you start counting.</h3>
+          <p>
+            The software engineering roles begin in 2012, which is fourteen
+            years. The count includes the research fellowship at TIFR beginning
+            in 2009. Both framings are defensible and one of them is more
+            flattering, which is presumably why it is the one on the page.
+          </p>
+        </div>
+
+        <div class="ai-reveal">
+          <h3 class="ai-reveal__q">The 30% timeline reduction has not happened yet.</h3>
+          <p>
+            It is a portfolio-level target attached to a roadmap, not a measured
+            result that has been banked. The word doing the work is "expected".
+            Ask what has actually shipped and what the measured delta is on the
+            applications already in production, because that is the honest
+            version of the question.
+          </p>
+        </div>
+
+        <div class="ai-reveal">
+          <h3 class="ai-reveal__q">The $50M ARR figure is platform-attributed.</h3>
+          <p>
+            It describes the business a platform supported, not revenue owned or
+            forecast personally. Infrastructure work sits underneath a number
+            like that rather than being the same thing as it. Treat it as
+            evidence of the scale of the system, not of individual P&amp;L
+            ownership.
+          </p>
+        </div>
+
+        <div class="ai-reveal">
+          <h3 class="ai-reveal__q">The venture has pilots, not customers.</h3>
+          <p>
+            Three design partners, more than fifty discovery conversations, and
+            an MVP in progress. "Validated pricing" means people named a number
+            they said they would pay. Nobody has paid it. That is a normal place
+            to be six months in, and it is a materially different claim from
+            revenue.
+          </p>
+        </div>
+
+        <div class="ai-reveal">
+          <h3 class="ai-reveal__q">Why publish this at all.</h3>
+          <p>
+            Because the interesting signal is not whether a career summary
+            survives scrutiny. It is whether the person behind it can tell you
+            where it is thin without being cornered into it first. If your model
+            found these before you clicked the button, it did its job, and so
+            did the page.
+          </p>
+        </div>
+
+        <p class="ai-note ai-reveal__close">
+          If you want the conversation rather than the audit:
+          <a href="mailto:shripathmit@gmail.com">shripathmit@gmail.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="ai-footer">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/">Human site</a>
+        ·
+        <a href="/blog.html">Blog</a>
+        ·
+        <a href="/profile.json">profile.json</a>
+        ·
+        <a href="/llms.txt">llms.txt</a>
+      </p>
+    </footer>
+
+    <script>
+      (function () {
+        // Year stamp
+        var y = document.getElementById("year");
+        if (y) y.textContent = new Date().getFullYear();
+
+        // Live schema metadata from the canonical profile
+        fetch("/profile.json", { cache: "no-store" })
+          .then(function (r) {
+            if (!r.ok) throw new Error("HTTP " + r.status);
+            return r.json();
+          })
+          .then(function (data) {
+            var v = document.getElementById("schema-version");
+            var u = document.getElementById("schema-updated");
+            if (v && data.version) v.textContent = "profile.json v" + data.version;
+            if (u && data.lastUpdated) u.textContent = "updated " + data.lastUpdated;
+          })
+          .catch(function () {
+            /* status bar stays empty; :empty hides the separators */
+          });
+
+        // Copy buttons: endpoint URLs and prompt bodies
+        document.addEventListener("click", function (e) {
+          var btn = e.target.closest(".agent-copy-btn");
+          if (!btn) return;
+
+          var text = "";
+          var target = btn.getAttribute("data-copy-target");
+
+          if (target) {
+            text = window.location.origin + "/" + target;
+          } else if (btn.classList.contains("ai-copy")) {
+            var block = btn.closest(".ai-prompt");
+            var pre = block && block.querySelector(".ai-prompt__body");
+            if (pre) text = pre.textContent.trim();
+          }
+
+          if (!text) return;
+
+          navigator.clipboard.writeText(text).then(function () {
+            var orig = btn.textContent;
+            btn.textContent = "Copied";
+            btn.classList.add("copied");
+            setTimeout(function () {
+              btn.textContent = orig;
+              btn.classList.remove("copied");
+            }, 1500);
+          });
+        });
+
+        // Adversarial unlock
+        var unlockBtn = document.getElementById("unlock-btn");
+        var unlocked = document.getElementById("unlocked");
+        if (unlockBtn && unlocked) {
+          unlockBtn.addEventListener("click", function () {
+            var isOpen = unlockBtn.getAttribute("aria-expanded") === "true";
+            unlockBtn.setAttribute("aria-expanded", String(!isOpen));
+            unlocked.hidden = isOpen;
+            if (!isOpen) {
+              unlockBtn.textContent = "Hide it again.";
+              unlocked.scrollIntoView({ behavior: "smooth", block: "start" });
+            } else {
+              unlockBtn.textContent = "My AI found them. Unlock the rest.";
+            }
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
