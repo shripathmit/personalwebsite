@@ -301,6 +301,7 @@
       ["llms.txt", h.llmsTxtPath],
       ["profile.json", h.profileJsonPath],
       ["Agent page", h.agentPagePath, "link"],
+      ["Time travel", h.timeTravelPath, "link"],
       ["Note", h.note]
     ];
     profileCards.appendChild(makeCard("Agent Hints", makeDl(pairs)));

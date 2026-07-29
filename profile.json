@@ -260,6 +260,7 @@
     "llmsTxtPath": "/llms.txt",
     "profileJsonPath": "/profile.json",
     "agentPagePath": "/AIagent",
+    "timeTravelPath": "/timeTravel",
     "note": "Canonical site URL updated for Railway production domain. /AIagent is a page addressed to AI agents; it publishes debate prompts and an adversarial audit of this profile."
   }
 }

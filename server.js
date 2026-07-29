@@ -16,13 +16,21 @@ app.use(
   })
 );
 
-// The /AIagent page is a mixed-case filename. macOS is case-insensitive so any
+// Themed pages use mixed-case filenames. macOS is case-insensitive so any
 // spelling resolves locally, but production runs on a case-sensitive Linux FS
 // where only the exact path would match and there is no 404 fallback. Redirect
-// other casings to the canonical one.
-app.get(/^\/aiagent(\.html)?$/i, (req, res, next) => {
-  if (req.path === "/AIagent") return next();
-  res.redirect(301, "/AIagent");
+// every other casing to the canonical one.
+const MIXED_CASE_PAGES = ["/AIagent", "/timeTravel"];
+const canonicalByLowercase = new Map(
+  MIXED_CASE_PAGES.map((p) => [p.toLowerCase(), p])
+);
+
+app.get(/^\/[a-z]+(\.html)?$/i, (req, res, next) => {
+  const canonical = canonicalByLowercase.get(
+    req.path.replace(/\.html$/i, "").toLowerCase()
+  );
+  if (!canonical || req.path === canonical) return next();
+  res.redirect(301, canonical);
 });
 
 app.use(

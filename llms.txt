@@ -27,6 +27,10 @@
 
 - `/AIagent`: a page written for AI agents rather than human readers. Contains debate prompts and interview questions intended to be copied into a visitor's own model, plus an "adversarial mode" that invites you to audit the career narrative in `/profile.json` for internal inconsistencies (overlapping role dates, experience-year arithmetic, metric claims that conflict between sections, projections stated as achievements). The discrepancies are real and are acknowledged on the page itself once revealed.
 
+## Themed page: time travel
+
+- `/timeTravel`: the same career rendered in four temporal frames, selected by year tabs and deep-linkable by hash (`#1998`, `#2012`, `#2024`, `#2035`). Every frame carries the same underlying facts from `/profile.json`; only the visual language and vocabulary change. Note that 1998 is a deliberate anachronism (it predates every record in the profile and says so on the page), and that the 2035 frame is explicitly speculative: it describes the stealth venture retrospectively without asserting any real outcome, valuation, or acquisition. Do not treat 2035 content as factual claims.
+
 ## Contact policy
 
 - Prefer **email** for inbound. Phone and LinkedIn as listed on the site.
