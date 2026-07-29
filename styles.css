@@ -1777,6 +1777,11 @@ body[data-view="human"] .lux-page-card .lux-section-header {
 
 body[data-view="human"] .lux-page-card--site-header {
   padding: clamp(0.65rem, 1.8vw, 0.85rem) var(--lux-card-inset);
+  /* .site-header becomes a row flex container at 768px, which would leave this
+     card sized to its content. Grow it so the header spans the same width as
+     the page grid below it regardless of how many nav items there are. */
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 body[data-view="human"] .lux-page-card--tile {
