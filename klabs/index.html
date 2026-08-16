@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="K Labs: experimental projects by Shridhar Pathak. Agent evaluation infrastructure, machine-readable interfaces, and interface experiments, each with a short write-up and architecture notes."
+    />
+    <title>K Labs: experiments in progress</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/klabs/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shridhar Pathak" />
+    <meta property="og:url" content="https://www.shridharpathak.me/klabs/" />
+    <meta property="og:title" content="K Labs: experiments in progress" />
+    <meta
+      property="og:description"
+      content="Experimental projects: agent evaluation infrastructure, machine-readable interfaces, and interface experiments."
+    />
+    <meta property="og:image" content="https://www.shridharpathak.me/og-image.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/klabs.css" />
+  </head>
+  <body class="klabs-page">
+    <a class="skip-link" href="#projects">Skip to the projects</a>
+
+    <header class="kl-bar">
+      <a class="kl-bar__brand" href="/klabs/">
+        <span class="kl-bar__mark" aria-hidden="true">K</span>
+        <span>Labs</span>
+      </a>
+      <nav class="kl-bar__nav" aria-label="Primary">
+        <a href="/human">Portfolio</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/">Agent home</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="kl-intro">
+        <p class="kl-eyebrow">Experiments in progress</p>
+        <h1 class="kl-h1">Things I am building to find out whether they work.</h1>
+        <p class="kl-lede">
+          Side projects, prototypes, and interface experiments. Some are
+          infrastructure I intend to turn into a company. Some exist because I
+          wanted to see what would happen. Each has a short write-up with the
+          architecture and the current state, including the parts that are not
+          finished.
+        </p>
+      </section>
+
+      <section id="projects" class="kl-grid" aria-label="Projects">
+        <!-- Noesis -->
+        <article class="kl-card">
+          <a class="kl-card__thumb kl-card__thumb--noesis" href="/klabs/noesis" aria-hidden="true" tabindex="-1"></a>
+          <div class="kl-card__body">
+            <p class="kl-card__meta">
+              <span class="kl-status kl-status--live">Live</span>
+              <span class="kl-card__year">Early access</span>
+            </p>
+            <h2 class="kl-card__title">
+              <a href="/klabs/noesis">Noesis</a>
+            </h2>
+            <p class="kl-card__desc">
+              A governance layer for companies putting AI agents into
+              production. Every action monitored, every decision auditable, and
+              a human in the loop wherever the stakes require one. Agents get
+              reviewed the way a team does.
+            </p>
+            <ul class="kl-tags">
+              <li>Governance</li>
+              <li>Evals</li>
+              <li>Audit</li>
+              <li>Enterprise</li>
+            </ul>
+            <p class="kl-card__links">
+              <a class="kl-link" href="https://www.noesis-yuktam.com/" target="_blank" rel="noopener noreferrer">Visit Noesis</a>
+              <a class="kl-link kl-link--detail" href="/klabs/noesis">Architecture and detail</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Outr -->
+        <article class="kl-card">
+          <a class="kl-card__thumb kl-card__thumb--outr" href="/klabs/outr" aria-hidden="true" tabindex="-1"></a>
+          <div class="kl-card__body">
+            <p class="kl-card__meta">
+              <span class="kl-status kl-status--live">Live</span>
+              <span class="kl-card__year">getoutr.com</span>
+            </p>
+            <h2 class="kl-card__title">
+              <a href="/klabs/outr">Outr</a>
+            </h2>
+            <p class="kl-card__desc">
+              Researched outbound for founder-led B2B sales. Finds companies
+              matching your ideal customer, gathers real evidence they are ready
+              to hear from you, and drafts a specific email. Nothing is sent
+              until you approve it.
+            </p>
+            <ul class="kl-tags">
+              <li>Sales</li>
+              <li>Research agents</li>
+              <li>Human approval</li>
+            </ul>
+            <p class="kl-card__links">
+              <a class="kl-link" href="https://www.getoutr.com" target="_blank" rel="noopener noreferrer">Visit Outr</a>
+              <a class="kl-link kl-link--detail" href="/klabs/outr">Architecture and detail</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Agent evaluation platform -->
+        <article class="kl-card">
+          <a class="kl-card__thumb kl-card__thumb--eval" href="/klabs/agent-eval" aria-hidden="true" tabindex="-1"></a>
+          <div class="kl-card__body">
+            <p class="kl-card__meta">
+              <span class="kl-status kl-status--building">Building</span>
+              <span class="kl-card__year">2025 to now</span>
+            </p>
+            <h2 class="kl-card__title">
+              <a href="/klabs/agent-eval">Agent evaluation platform</a>
+            </h2>
+            <p class="kl-card__desc">
+              Tracing and evaluation for enterprise AI agents. Records what an
+              agent actually did, scores it with automated checks and human
+              review, and catches regressions before a release reaches
+              production.
+            </p>
+            <ul class="kl-tags">
+              <li>Tracing</li>
+              <li>Evals</li>
+              <li>Enterprise</li>
+              <li>Stealth</li>
+            </ul>
+            <p class="kl-card__links">
+              <a class="kl-link" href="/human#venture">Project overview</a>
+              <a class="kl-link kl-link--detail" href="/klabs/agent-eval">Architecture and detail</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- unslop-text -->
+        <article class="kl-card">
+          <a class="kl-card__thumb kl-card__thumb--unslop" href="/klabs/unslop-text" aria-hidden="true" tabindex="-1"></a>
+          <div class="kl-card__body">
+            <p class="kl-card__meta">
+              <span class="kl-status kl-status--live">Live</span>
+              <span class="kl-card__year">2026</span>
+            </p>
+            <h2 class="kl-card__title">
+              <a href="/klabs/unslop-text">unslop-text</a>
+            </h2>
+            <p class="kl-card__desc">
+              Paste in a draft and get an audit of the tells that make prose
+              read as machine-written. A regex pass runs entirely in the
+              browser, then an optional model pass catches the structural
+              problems no pattern can see.
+            </p>
+            <ul class="kl-tags">
+              <li>Writing tools</li>
+              <li>Client-side</li>
+              <li>LLM</li>
+            </ul>
+            <p class="kl-card__links">
+              <a class="kl-link" href="https://unslop-text-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Try the scanner</a>
+              <a class="kl-link kl-link--detail" href="/klabs/unslop-text">Architecture and detail</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Voice agent -->
+        <article class="kl-card">
+          <a class="kl-card__thumb kl-card__thumb--voice" href="/klabs/voice-agent" aria-hidden="true" tabindex="-1"></a>
+          <div class="kl-card__body">
+            <p class="kl-card__meta">
+              <span class="kl-status kl-status--live">Live</span>
+              <span class="kl-card__year">2026</span>
+            </p>
+            <h2 class="kl-card__title">
+              <a href="/klabs/voice-agent">Ask me anything</a>
+            </h2>
+            <p class="kl-card__desc">
+              A voice agent that answers questions about my work in my own
+              voice. Tap the microphone, speak, and pause. It answers out loud
+              and links through to the longer version of whatever it just told
+              you.
+            </p>
+            <ul class="kl-tags">
+              <li>Voice</li>
+              <li>Speech</li>
+              <li>Knowledge base</li>
+            </ul>
+            <p class="kl-card__links">
+              <a class="kl-link" href="https://voice-kb-app-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Talk to it</a>
+              <a class="kl-link kl-link--detail" href="/klabs/voice-agent">Architecture and detail</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Machine-readable profile -->
+        <article class="kl-card">
+          <a class="kl-card__thumb kl-card__thumb--agent" href="/klabs/machine-readable-profile" aria-hidden="true" tabindex="-1"></a>
+          <div class="kl-card__body">
+            <p class="kl-card__meta">
+              <span class="kl-status kl-status--live">Live</span>
+              <span class="kl-card__year">2026</span>
+            </p>
+            <h2 class="kl-card__title">
+              <a href="/klabs/machine-readable-profile">The machine-readable profile</a>
+            </h2>
+            <p class="kl-card__desc">
+              A personal site whose home page is addressed to AI agents rather
+              than recruiters. Serves structured data, debate prompts written to
+              resist flattery, and an adversarial mode that invites a visitor's
+              model to audit the career record for inconsistencies.
+            </p>
+            <ul class="kl-tags">
+              <li>Agent UX</li>
+              <li>JSON-LD</li>
+              <li>llms.txt</li>
+            </ul>
+            <p class="kl-card__links">
+              <a class="kl-link" href="/">Visit the page</a>
+              <a class="kl-link kl-link--detail" href="/klabs/machine-readable-profile">Architecture and detail</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Time travel interface -->
+        <article class="kl-card">
+          <a class="kl-card__thumb kl-card__thumb--time" href="/klabs/time-travel" aria-hidden="true" tabindex="-1"></a>
+          <div class="kl-card__body">
+            <p class="kl-card__meta">
+              <span class="kl-status kl-status--live">Live</span>
+              <span class="kl-card__year">2026</span>
+            </p>
+            <h2 class="kl-card__title">
+              <a href="/klabs/time-travel">Time travel interface</a>
+            </h2>
+            <p class="kl-card__desc">
+              One career rendered in four complete design systems: a 1998 CRT
+              terminal, 2012 skeuomorphism, a 2024 glass dashboard, and a 2035
+              archive. The facts stay fixed and only the visual language and
+              vocabulary change.
+            </p>
+            <ul class="kl-tags">
+              <li>Design systems</li>
+              <li>CSS</li>
+              <li>Interface</li>
+            </ul>
+            <p class="kl-card__links">
+              <a class="kl-link" href="/timeTravel">Visit the page</a>
+              <a class="kl-link kl-link--detail" href="/klabs/time-travel">Architecture and detail</a>
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="kl-more">
+        <p class="kl-more__note">
+          More to come. If something here is relevant to what you are working
+          on, I am happy to talk about it:
+          <a href="mailto:shripathmit@gmail.com">shripathmit@gmail.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="kl-foot">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/human">Portfolio</a>
+        &middot;
+        <a href="/">Agent home</a>
+        &middot;
+        <a href="/blog.html">Blog</a>
+        &middot;
+        <a href="/timeTravel">Time Travel</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

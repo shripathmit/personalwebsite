@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Ask me anything: a voice agent that answers questions about Shridhar Pathak's work out loud, and links through to the longer version."
+    />
+    <title>Ask me anything: K Labs</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/klabs/voice-agent" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Ask me anything: K Labs" />
+    <meta property="og:url" content="https://www.shridharpathak.me/klabs/voice-agent" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/klabs.css" />
+  </head>
+  <body class="klabs-page">
+    <a class="skip-link" href="#detail">Skip to content</a>
+
+    <header class="kl-bar">
+      <a class="kl-bar__brand" href="/klabs/">
+        <span class="kl-bar__mark" aria-hidden="true">K</span>
+        <span>Labs</span>
+      </a>
+      <nav class="kl-bar__nav" aria-label="Primary">
+        <a href="/human">Portfolio</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/">Agent home</a>
+      </nav>
+    </header>
+
+    <main id="detail">
+      <div class="kl-detail-head">
+        <a class="kl-back" href="/klabs/">Back to K Labs</a>
+        <p class="kl-card__meta">
+          <span class="kl-status kl-status--live">Live</span>
+          <span class="kl-card__year">2026</span>
+        </p>
+        <h1 class="kl-h1">Ask me anything</h1>
+        <p class="kl-detail-lede">
+          A voice agent that answers questions about my work. Tap the
+          microphone, speak, then pause. It answers out loud, and offers to take
+          you to the longer version of whatever it just said.
+        </p>
+        <div class="kl-actions">
+          <a class="kl-btn kl-btn--primary" href="https://voice-kb-app-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Talk to it</a>
+        </div>
+      </div>
+
+      <section class="kl-section">
+        <p class="kl-section__label">The idea</p>
+        <h2 class="kl-h2">A resume you can interrupt</h2>
+        <p>
+          Reading a portfolio is a linear act. You start at the top and work
+          down through whatever order someone else decided. A conversation is
+          not like that. You ask the thing you actually wanted to know, and if
+          the answer is thin you push on it.
+        </p>
+        <p>
+          Voice removes even the typing. The interaction is closer to catching
+          someone at a conference than to browsing a site, which is a better fit
+          for the questions people actually have about a career.
+        </p>
+        <p>
+          It pairs naturally with the rest of this site. The
+          <a href="/">agent-facing home page</a> hands a visitor's model
+          structured data to reason over. This does the same job for a person
+          who would rather just ask.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Architecture</p>
+        <h2 class="kl-h2">Speech in, grounded answer out</h2>
+
+        <figure class="kl-diagram">
+          <svg viewBox="0 0 720 236" role="img" aria-labelledby="va-title va-desc">
+            <title id="va-title">Voice agent flow</title>
+            <desc id="va-desc">
+              Speech is captured in the browser and transcribed. The question is
+              matched against a knowledge base built from the career record. An
+              answer is generated from what was retrieved, spoken back to the
+              listener, and accompanied by a link through to the longer written
+              version.
+            </desc>
+            <defs>
+              <marker id="v1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f6f5c" />
+              </marker>
+              <marker id="v2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b94a1" />
+              </marker>
+            </defs>
+
+            <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">
+              <!-- Speak -->
+              <rect x="16" y="80" width="112" height="58" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="72" y="104" text-anchor="middle" fill="#16181d" font-weight="500">Speak</text>
+              <text x="72" y="120" text-anchor="middle" fill="#646b78" font-size="10">tap, talk, pause</text>
+
+              <!-- Transcribe -->
+              <rect x="158" y="80" width="118" height="58" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="217" y="104" text-anchor="middle" fill="#0f6f5c" font-weight="500">Transcribe</text>
+              <text x="217" y="120" text-anchor="middle" fill="#646b78" font-size="10">speech to text</text>
+
+              <!-- Retrieve -->
+              <rect x="306" y="66" width="130" height="86" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="371" y="92" text-anchor="middle" fill="#0f6f5c" font-weight="500">Retrieve</text>
+              <text x="371" y="110" text-anchor="middle" fill="#646b78" font-size="10">knowledge base</text>
+              <text x="371" y="123" text-anchor="middle" fill="#646b78" font-size="10">built from the</text>
+              <text x="371" y="136" text-anchor="middle" fill="#646b78" font-size="10">career record</text>
+
+              <!-- Answer -->
+              <rect x="466" y="80" width="118" height="58" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="525" y="104" text-anchor="middle" fill="#0f6f5c" font-weight="500">Answer</text>
+              <text x="525" y="120" text-anchor="middle" fill="#646b78" font-size="10">grounded in what</text>
+              <text x="525" y="132" text-anchor="middle" fill="#646b78" font-size="10">was retrieved</text>
+
+              <!-- Speak back -->
+              <rect x="614" y="42" width="92" height="52" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="660" y="64" text-anchor="middle" fill="#16181d" font-weight="500">Spoken</text>
+              <text x="660" y="79" text-anchor="middle" fill="#646b78" font-size="10">out loud</text>
+
+              <!-- Read more -->
+              <rect x="614" y="122" width="92" height="52" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="660" y="144" text-anchor="middle" fill="#16181d" font-weight="500">Full story</text>
+              <text x="660" y="159" text-anchor="middle" fill="#646b78" font-size="10">link through</text>
+
+              <!-- Arrows -->
+              <line x1="128" y1="109" x2="156" y2="109" stroke="#0f6f5c" marker-end="url(#v1)" />
+              <line x1="276" y1="109" x2="304" y2="109" stroke="#0f6f5c" marker-end="url(#v1)" />
+              <line x1="436" y1="109" x2="464" y2="109" stroke="#0f6f5c" marker-end="url(#v1)" />
+              <path d="M 584 100 L 600 100 L 600 68 L 612 68" fill="none" stroke="#8b94a1" marker-end="url(#v2)" />
+              <path d="M 584 118 L 600 118 L 600 148 L 612 148" fill="none" stroke="#8b94a1" marker-end="url(#v2)" />
+            </g>
+          </svg>
+          <figcaption class="kl-figcaption">
+            The link back to the written version is deliberate. A spoken answer
+            is short by necessity, so the interface hands you somewhere to go
+            when the short answer is not enough.
+          </figcaption>
+        </figure>
+
+        <p class="kl-note">
+          The flow above describes the interaction as it behaves from the
+          outside. Worth extending with the actual speech and model providers,
+          the retrieval approach, and how the knowledge base is built and
+          refreshed.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Detail</p>
+        <h2 class="kl-h2">At a glance</h2>
+        <table class="kl-spec">
+          <tbody>
+            <tr><th>Interaction</th><td>Push to talk. Speak, pause, and it answers.</td></tr>
+            <tr><th>Answers</th><td>Grounded in a knowledge base built from the career record.</td></tr>
+            <tr><th>Output</th><td>Spoken response plus a link through to the longer written version.</td></tr>
+            <tr><th>Hosting</th><td>Railway.</td></tr>
+            <tr><th>Stage</th><td>Live.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="kl-foot">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/klabs/">K Labs</a>
+        &middot;
+        <a href="/human">Portfolio</a>
+        &middot;
+        <a href="/">Agent home</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

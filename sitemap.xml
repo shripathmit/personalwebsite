@@ -21,6 +21,46 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.shridharpathak.me/klabs/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.shridharpathak.me/klabs/noesis</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.shridharpathak.me/klabs/outr</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.shridharpathak.me/klabs/unslop-text</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.shridharpathak.me/klabs/voice-agent</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.shridharpathak.me/klabs/agent-eval</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.shridharpathak.me/klabs/machine-readable-profile</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.shridharpathak.me/klabs/time-travel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.shridharpathak.me/profile.json</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

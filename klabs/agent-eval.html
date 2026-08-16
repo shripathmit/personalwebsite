@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Agent evaluation platform: tracing and evaluation for enterprise AI agents. Architecture, approach, and current status."
+    />
+    <title>Agent evaluation platform: K Labs</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/klabs/agent-eval" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Agent evaluation platform: K Labs" />
+    <meta property="og:url" content="https://www.shridharpathak.me/klabs/agent-eval" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/klabs.css" />
+  </head>
+  <body class="klabs-page">
+    <a class="skip-link" href="#detail">Skip to content</a>
+
+    <header class="kl-bar">
+      <a class="kl-bar__brand" href="/klabs/">
+        <span class="kl-bar__mark" aria-hidden="true">K</span>
+        <span>Labs</span>
+      </a>
+      <nav class="kl-bar__nav" aria-label="Primary">
+        <a href="/human">Portfolio</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/">Agent home</a>
+      </nav>
+    </header>
+
+    <main id="detail">
+      <div class="kl-detail-head">
+        <a class="kl-back" href="/klabs/">Back to K Labs</a>
+        <p class="kl-card__meta">
+          <span class="kl-status kl-status--building">Building</span>
+          <span class="kl-card__year">2025 to now &middot; Founder and advisor</span>
+        </p>
+        <h1 class="kl-h1">Agent evaluation platform</h1>
+        <p class="kl-detail-lede">
+          Enterprises are deploying AI agents that take real actions, and most
+          of them cannot answer a basic question afterwards: what did it
+          actually do, and was that good? This is infrastructure for answering
+          both.
+        </p>
+        <div class="kl-actions">
+          <a class="kl-btn kl-btn--primary" href="mailto:shripathmit@gmail.com">Talk about it</a>
+          <a class="kl-btn" href="/human#venture">Overview on the portfolio</a>
+        </div>
+      </div>
+
+      <section class="kl-section">
+        <p class="kl-section__label">The problem</p>
+        <h2 class="kl-h2">Agents are being shipped without a way to judge them</h2>
+        <p>
+          A traditional service either returns the right value or it does not,
+          and a test suite settles the question. An agent chooses a path. It
+          decides which tool to call, how to interpret an ambiguous instruction,
+          and when to stop. Two runs of the same prompt can differ, and both can
+          be defensible.
+        </p>
+        <p>
+          That breaks the usual release process. Teams cannot tell whether a new
+          model version, a changed prompt, or a new tool made the system better
+          or quietly worse, because there is no stable definition of better and
+          no record of what the agent did on the way to its answer.
+        </p>
+        <p>
+          In a regulated environment the problem is sharper still. If you cannot
+          reconstruct why an agent did something, you cannot approve it for a
+          workflow that touches patients, payments, or filings.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Architecture</p>
+        <h2 class="kl-h2">Capture, evaluate, then gate the release</h2>
+
+        <figure class="kl-diagram">
+          <svg viewBox="0 0 720 330" role="img" aria-labelledby="arch-title arch-desc">
+            <title id="arch-title">Agent evaluation platform architecture</title>
+            <desc id="arch-desc">
+              Agent runtimes are instrumented and emit traces of every action,
+              decision, and output. Traces land in a store, which feeds both
+              automated evaluators and a human review queue. Their scores
+              combine into a comparison layer that detects regressions between
+              versions, which in turn gates the release pipeline and surfaces in
+              a dashboard.
+            </desc>
+
+            <defs>
+              <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b94a1" />
+              </marker>
+              <marker id="ah-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f6f5c" />
+              </marker>
+            </defs>
+
+            <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">
+              <!-- Stage labels -->
+              <text x="88" y="22" fill="#646b78" letter-spacing="1.4">1 CAPTURE</text>
+              <text x="330" y="22" fill="#646b78" letter-spacing="1.4">2 EVALUATE</text>
+              <text x="566" y="22" fill="#646b78" letter-spacing="1.4">3 GATE</text>
+
+              <!-- Column dividers -->
+              <line x1="290" y1="34" x2="290" y2="310" stroke="#e3e6ea" stroke-dasharray="3 4" />
+              <line x1="530" y1="34" x2="530" y2="310" stroke="#e3e6ea" stroke-dasharray="3 4" />
+
+              <!-- Customer agent runtime -->
+              <rect x="24" y="52" width="160" height="52" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="104" y="74" text-anchor="middle" fill="#16181d" font-weight="500">Customer agents</text>
+              <text x="104" y="90" text-anchor="middle" fill="#646b78" font-size="10">in their own runtime</text>
+
+              <!-- SDK -->
+              <rect x="24" y="132" width="160" height="46" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="104" y="152" text-anchor="middle" fill="#0f6f5c" font-weight="500">Instrumentation</text>
+              <text x="104" y="167" text-anchor="middle" fill="#646b78" font-size="10">SDK / middleware</text>
+
+              <!-- Trace store -->
+              <rect x="24" y="212" width="160" height="60" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="104" y="234" text-anchor="middle" fill="#0f6f5c" font-weight="500">Trace store</text>
+              <text x="104" y="249" text-anchor="middle" fill="#646b78" font-size="10">actions, decisions,</text>
+              <text x="104" y="262" text-anchor="middle" fill="#646b78" font-size="10">tool calls, outputs</text>
+
+              <!-- Automated evaluators -->
+              <rect x="318" y="66" width="180" height="60" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="408" y="88" text-anchor="middle" fill="#0f6f5c" font-weight="500">Automated evaluators</text>
+              <text x="408" y="103" text-anchor="middle" fill="#646b78" font-size="10">rules, model-graded,</text>
+              <text x="408" y="116" text-anchor="middle" fill="#646b78" font-size="10">golden sets</text>
+
+              <!-- Human review -->
+              <rect x="318" y="152" width="180" height="56" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="408" y="174" text-anchor="middle" fill="#0f6f5c" font-weight="500">Human review</text>
+              <text x="408" y="189" text-anchor="middle" fill="#646b78" font-size="10">sampled queue, rubric</text>
+
+              <!-- Scoring -->
+              <rect x="318" y="234" width="180" height="52" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="408" y="255" text-anchor="middle" fill="#16181d" font-weight="500">Combined score</text>
+              <text x="408" y="270" text-anchor="middle" fill="#646b78" font-size="10">per version, per task</text>
+
+              <!-- Regression -->
+              <rect x="556" y="94" width="146" height="60" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="629" y="116" text-anchor="middle" fill="#0f6f5c" font-weight="500">Version compare</text>
+              <text x="629" y="131" text-anchor="middle" fill="#646b78" font-size="10">regression detection</text>
+
+              <!-- CI gate -->
+              <rect x="556" y="182" width="146" height="52" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="629" y="203" text-anchor="middle" fill="#16181d" font-weight="500">Release gate</text>
+              <text x="629" y="218" text-anchor="middle" fill="#646b78" font-size="10">block on regression</text>
+
+              <!-- Dashboard -->
+              <rect x="556" y="258" width="146" height="46" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="629" y="279" text-anchor="middle" fill="#16181d" font-weight="500">Dashboard</text>
+              <text x="629" y="294" text-anchor="middle" fill="#646b78" font-size="10">drill into any trace</text>
+
+              <!-- Arrows: capture column -->
+              <line x1="104" y1="104" x2="104" y2="130" stroke="#0f6f5c" marker-end="url(#ah-a)" />
+              <line x1="104" y1="178" x2="104" y2="210" stroke="#0f6f5c" marker-end="url(#ah-a)" />
+
+              <!-- Store to evaluators -->
+              <path d="M 184 236 L 250 236 L 250 96 L 316 96" fill="none" stroke="#8b94a1" marker-end="url(#ah)" />
+              <path d="M 184 242 L 250 242 L 250 180 L 316 180" fill="none" stroke="#8b94a1" marker-end="url(#ah)" />
+
+              <!-- Evaluators to score -->
+              <path d="M 408 126 L 408 140" fill="none" stroke="#8b94a1" />
+              <path d="M 408 208 L 408 232" fill="none" stroke="#8b94a1" marker-end="url(#ah)" />
+
+              <!-- Score to compare -->
+              <path d="M 498 250 L 528 250 L 528 124 L 554 124" fill="none" stroke="#0f6f5c" marker-end="url(#ah-a)" />
+
+              <!-- Compare to gate + dashboard -->
+              <line x1="629" y1="154" x2="629" y2="180" stroke="#8b94a1" marker-end="url(#ah)" />
+              <line x1="629" y1="234" x2="629" y2="256" stroke="#8b94a1" marker-end="url(#ah)" />
+            </g>
+          </svg>
+          <figcaption class="kl-figcaption">
+            The load-bearing idea is the middle column. Automated checks are
+            cheap and cover breadth; human review is expensive and covers
+            judgement. Neither alone is enough, so both feed one score that a
+            release can be gated on.
+          </figcaption>
+        </figure>
+
+        <p>
+          Capture has to be low friction or nobody instruments anything, so the
+          trace format records what the agent did rather than requiring teams to
+          restructure how they built it. Evaluation is deliberately two-track.
+          Gating is where the value actually lands: a score nobody acts on is a
+          report, not infrastructure.
+        </p>
+
+        <p class="kl-note">
+          This diagram describes the approach at the level already public in
+          <a href="/profile.json">profile.json</a> and on the portfolio. It is
+          not the internal design document, and implementation detail is
+          deliberately absent while the work is in stealth. Shridhar should
+          review and extend this before it is treated as a technical
+          description.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Position</p>
+        <h2 class="kl-h2">Why this is not just a feature of an observability tool</h2>
+        <p>
+          The obvious objection, and the one worth taking seriously, is that
+          this becomes a checkbox inside an existing LLM observability or MLOps
+          platform within a couple of years. Tracing on its own probably does.
+        </p>
+        <p>
+          The part that resists absorption is the evaluation layer: rubrics that
+          encode what a specific enterprise means by a good outcome, a human
+          review workflow that survives audit, and the comparison logic that
+          turns all of it into a release decision. That is closer to a quality
+          system than a dashboard, and quality systems tend to be bought
+          deliberately rather than inherited from whichever vendor already had
+          the traces.
+        </p>
+        <p>
+          The bet is not settled. The
+          <a href="/">agent-facing home page</a> publishes a prompt that asks a
+          visitor's own model to argue the opposite case.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Status</p>
+        <h2 class="kl-h2">Where it actually is</h2>
+        <table class="kl-spec">
+          <tbody>
+            <tr>
+              <th>Stage</th>
+              <td>MVP in progress. Stealth.</td>
+            </tr>
+            <tr>
+              <th>Validation</th>
+              <td>More than 50 enterprise discovery conversations.</td>
+            </tr>
+            <tr>
+              <th>Design partners</th>
+              <td>Three pilots underway.</td>
+            </tr>
+            <tr>
+              <th>Pricing</th>
+              <td>
+                Seed-stage pricing validated within six months, meaning
+                prospects named a number they said they would pay. Nobody has
+                paid it yet.
+              </td>
+            </tr>
+            <tr>
+              <th>Revenue</th>
+              <td>None. This is pre-revenue by design at this stage.</td>
+            </tr>
+            <tr>
+              <th>Role</th>
+              <td>Founder and advisor, alongside the day job at Moderna.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Next</p>
+        <h2 class="kl-h2">Open questions</h2>
+        <ul>
+          <li>
+            How much instrumentation will a team accept before they decide it is
+            not worth it. This is the difference between a product and a
+            science project.
+          </li>
+          <li>
+            Whether rubric authoring can be made cheap enough that a domain
+            expert writes them rather than an engineer.
+          </li>
+          <li>
+            Whether regression detection can be made trustworthy enough that a
+            team lets it block a deploy, which is the point at which this stops
+            being optional.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="kl-foot">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/klabs/">K Labs</a>
+        &middot;
+        <a href="/human">Portfolio</a>
+        &middot;
+        <a href="/">Agent home</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

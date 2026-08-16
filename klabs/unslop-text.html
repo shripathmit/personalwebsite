@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="unslop-text: a two-pass audit for prose that reads as machine-written. A regex scanner in the browser, plus an optional model pass for the structural tells no pattern can catch."
+    />
+    <title>unslop-text: K Labs</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/klabs/unslop-text" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="unslop-text: K Labs" />
+    <meta property="og:url" content="https://www.shridharpathak.me/klabs/unslop-text" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/klabs.css" />
+  </head>
+  <body class="klabs-page">
+    <a class="skip-link" href="#detail">Skip to content</a>
+
+    <header class="kl-bar">
+      <a class="kl-bar__brand" href="/klabs/">
+        <span class="kl-bar__mark" aria-hidden="true">K</span>
+        <span>Labs</span>
+      </a>
+      <nav class="kl-bar__nav" aria-label="Primary">
+        <a href="/human">Portfolio</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/">Agent home</a>
+      </nav>
+    </header>
+
+    <main id="detail">
+      <div class="kl-detail-head">
+        <a class="kl-back" href="/klabs/">Back to K Labs</a>
+        <p class="kl-card__meta">
+          <span class="kl-status kl-status--live">Live</span>
+          <span class="kl-card__year">2026</span>
+        </p>
+        <h1 class="kl-h1">unslop-text</h1>
+        <p class="kl-detail-lede">
+          Paste a draft in and find out what gives it away as machine-written.
+          Two passes, because the two kinds of tell need completely different
+          machinery to catch.
+        </p>
+        <div class="kl-actions">
+          <a class="kl-btn kl-btn--primary" href="https://unslop-text-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Try the scanner</a>
+        </div>
+      </div>
+
+      <section class="kl-section">
+        <p class="kl-section__label">The idea</p>
+        <h2 class="kl-h2">There are two kinds of tell and only one is mechanical</h2>
+        <p>
+          Some giveaways are fixed strings. Particular punctuation, a small set
+          of overused words, a handful of stock constructions. A regular
+          expression catches those perfectly, instantly, and without sending
+          your draft anywhere.
+        </p>
+        <p>
+          The rest are structural. Rhythm that never varies. Sycophancy.
+          Saying very little at considerable length. Those are cited by readers
+          just as often, sometimes more, and no pattern can detect them because
+          the problem is not which words appear but how the whole thing moves.
+        </p>
+        <p>
+          So the tool is honest about the split. A clean mechanical scan means
+          the lexical layer is clean. It does not mean the writing reads as
+          human, and the interface says so rather than letting a green score
+          imply otherwise.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Architecture</p>
+        <h2 class="kl-h2">Local first, model second</h2>
+
+        <figure class="kl-diagram">
+          <svg viewBox="0 0 720 290" role="img" aria-labelledby="us-title us-desc">
+            <title id="us-title">unslop-text two-pass architecture</title>
+            <desc id="us-desc">
+              Pasted text stays in the browser for pass A, a regex scanner that
+              produces ranked findings and a slop score with no network request.
+              Pass B is optional and sends the draft through the application's
+              own server, which holds the API key, to a model for a structural
+              read. Results from both passes combine into one report.
+            </desc>
+            <defs>
+              <marker id="u1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f6f5c" />
+              </marker>
+              <marker id="u2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b94a1" />
+              </marker>
+            </defs>
+
+            <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">
+              <!-- Browser boundary -->
+              <rect x="16" y="34" width="400" height="180" rx="10" fill="none" stroke="#0f6f5c" stroke-dasharray="5 4" />
+              <text x="30" y="52" fill="#0f6f5c" font-size="10" letter-spacing="1.2">BROWSER &middot; NOTHING LEAVES THIS BOX</text>
+
+              <!-- Paste -->
+              <rect x="36" y="72" width="130" height="56" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="101" y="96" text-anchor="middle" fill="#16181d" font-weight="500">Your draft</text>
+              <text x="101" y="112" text-anchor="middle" fill="#646b78" font-size="10">pasted in</text>
+
+              <!-- Pass A -->
+              <rect x="200" y="60" width="190" height="80" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="295" y="84" text-anchor="middle" fill="#0f6f5c" font-weight="500">Pass A: regex scan</text>
+              <text x="295" y="101" text-anchor="middle" fill="#646b78" font-size="10">fixed-string tells,</text>
+              <text x="295" y="114" text-anchor="middle" fill="#646b78" font-size="10">ranked by how often</text>
+              <text x="295" y="127" text-anchor="middle" fill="#646b78" font-size="10">readers cite them</text>
+
+              <!-- Findings -->
+              <rect x="200" y="156" width="190" height="44" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="295" y="175" text-anchor="middle" fill="#16181d" font-weight="500">Findings + slop score</text>
+              <text x="295" y="190" text-anchor="middle" fill="#646b78" font-size="10">severity filters, per-item fix</text>
+
+              <!-- Server -->
+              <rect x="462" y="60" width="112" height="80" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="518" y="88" text-anchor="middle" fill="#0f6f5c" font-weight="500">App server</text>
+              <text x="518" y="105" text-anchor="middle" fill="#646b78" font-size="10">holds the API key</text>
+              <text x="518" y="118" text-anchor="middle" fill="#646b78" font-size="10">never the browser</text>
+
+              <!-- Model -->
+              <rect x="608" y="60" width="96" height="80" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="656" y="88" text-anchor="middle" fill="#16181d" font-weight="500">Model</text>
+              <text x="656" y="105" text-anchor="middle" fill="#646b78" font-size="10">structural</text>
+              <text x="656" y="118" text-anchor="middle" fill="#646b78" font-size="10">read</text>
+
+              <!-- Pass B result -->
+              <rect x="462" y="176" width="242" height="56" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="583" y="198" text-anchor="middle" fill="#0f6f5c" font-weight="500">Pass B: structural audit</text>
+              <text x="583" y="215" text-anchor="middle" fill="#646b78" font-size="10">rhythm, sycophancy, length without content</text>
+
+              <!-- Arrows -->
+              <line x1="166" y1="100" x2="198" y2="100" stroke="#0f6f5c" marker-end="url(#u1)" />
+              <line x1="295" y1="140" x2="295" y2="154" stroke="#0f6f5c" marker-end="url(#u1)" />
+              <path d="M 390 100 L 460 100" fill="none" stroke="#8b94a1" marker-end="url(#u2)" />
+              <line x1="574" y1="100" x2="606" y2="100" stroke="#8b94a1" marker-end="url(#u2)" />
+              <path d="M 656 140 L 656 164 L 583 164 L 583 174" fill="none" stroke="#8b94a1" marker-end="url(#u2)" />
+
+              <text x="425" y="92" text-anchor="middle" fill="#646b78" font-size="9">optional</text>
+            </g>
+          </svg>
+          <figcaption class="kl-figcaption">
+            Pass A never touches the network, which matters when the thing being
+            audited is an unpublished draft. Pass B is opt-in, and the key stays
+            server-side so the browser never holds a credential.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Detail</p>
+        <h2 class="kl-h2">At a glance</h2>
+        <table class="kl-spec">
+          <tbody>
+            <tr><th>Pass A</th><td>Regex scanner, runs entirely in the tab. No network request, nothing stored.</td></tr>
+            <tr><th>Pass B</th><td>Optional model-based structural read, proxied through the app's own server.</td></tr>
+            <tr><th>Key handling</th><td>API key server-side only. Never exposed to the browser.</td></tr>
+            <tr><th>Output</th><td>Ranked findings with severity filters, a slop score, and a suggested fix per item.</td></tr>
+            <tr><th>Companion</th><td>Shares its audit with a Claude skill of the same name.</td></tr>
+            <tr><th>Stage</th><td>Live.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="kl-foot">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/klabs/">K Labs</a>
+        &middot;
+        <a href="/human">Portfolio</a>
+        &middot;
+        <a href="/">Agent home</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

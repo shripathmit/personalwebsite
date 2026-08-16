@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Outr: researched outbound for founder-led B2B sales. Finds matching companies, gathers evidence they are ready to buy, and drafts the email for your approval."
+    />
+    <title>Outr: K Labs</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/klabs/outr" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Outr: K Labs" />
+    <meta property="og:url" content="https://www.shridharpathak.me/klabs/outr" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/klabs.css" />
+  </head>
+  <body class="klabs-page">
+    <a class="skip-link" href="#detail">Skip to content</a>
+
+    <header class="kl-bar">
+      <a class="kl-bar__brand" href="/klabs/">
+        <span class="kl-bar__mark" aria-hidden="true">K</span>
+        <span>Labs</span>
+      </a>
+      <nav class="kl-bar__nav" aria-label="Primary">
+        <a href="/human">Portfolio</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/">Agent home</a>
+      </nav>
+    </header>
+
+    <main id="detail">
+      <div class="kl-detail-head">
+        <a class="kl-back" href="/klabs/">Back to K Labs</a>
+        <p class="kl-card__meta">
+          <span class="kl-status kl-status--live">Live</span>
+          <span class="kl-card__year">getoutr.com</span>
+        </p>
+        <h1 class="kl-h1">Outr</h1>
+        <p class="kl-detail-lede">
+          Outbound that is actually researched, for founders selling their own
+          product. It finds the right companies, finds a real reason to write to
+          each one, and drafts the email. You approve every send.
+        </p>
+        <div class="kl-actions">
+          <a class="kl-btn kl-btn--primary" href="https://www.getoutr.com" target="_blank" rel="noopener noreferrer">Visit Outr</a>
+        </div>
+      </div>
+
+      <section class="kl-section">
+        <p class="kl-section__label">The problem</p>
+        <h2 class="kl-h2">Good outreach takes hours nobody has</h2>
+        <p>
+          Researching a company enough to write something specific takes real
+          time. Writing something that does not sound like the other two hundred
+          emails in the same inbox takes longer. Founders either do it badly or
+          do not do it at all, and both outcomes look the same from the
+          recipient's side.
+        </p>
+        <p>
+          The obvious automation makes it worse. Volume tools solved the sending
+          problem and made the reading problem everyone else's. The interesting
+          constraint is doing the research well while keeping a person in
+          control of what actually goes out.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Architecture</p>
+        <h2 class="kl-h2">Research first, approval last</h2>
+
+        <figure class="kl-diagram">
+          <svg viewBox="0 0 720 268" role="img" aria-labelledby="ou-title ou-desc">
+            <title id="ou-title">Outr pipeline</title>
+            <desc id="ou-desc">
+              A product profile defines the ideal customer. A matching step
+              finds candidate companies. Each is researched for recent evidence
+              such as hiring pushes, funding rounds, and launches. A drafting
+              step writes a short email grounded in that evidence. The founder
+              reviews each draft next to the evidence behind it, and only an
+              approved draft is sent.
+            </desc>
+            <defs>
+              <marker id="o1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f6f5c" />
+              </marker>
+            </defs>
+
+            <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">
+              <!-- Product profile -->
+              <rect x="16" y="98" width="118" height="62" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="75" y="122" text-anchor="middle" fill="#16181d" font-weight="500">Product</text>
+              <text x="75" y="136" text-anchor="middle" fill="#16181d" font-weight="500">profile</text>
+              <text x="75" y="151" text-anchor="middle" fill="#646b78" font-size="10">who you sell to</text>
+
+              <!-- Match -->
+              <rect x="164" y="98" width="118" height="62" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="223" y="126" text-anchor="middle" fill="#0f6f5c" font-weight="500">Match</text>
+              <text x="223" y="142" text-anchor="middle" fill="#646b78" font-size="10">companies fitting</text>
+              <text x="223" y="154" text-anchor="middle" fill="#646b78" font-size="10">the ICP</text>
+
+              <!-- Research -->
+              <rect x="312" y="82" width="130" height="94" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="377" y="106" text-anchor="middle" fill="#0f6f5c" font-weight="500">Research</text>
+              <text x="377" y="124" text-anchor="middle" fill="#646b78" font-size="10">hiring pushes</text>
+              <text x="377" y="138" text-anchor="middle" fill="#646b78" font-size="10">funding rounds</text>
+              <text x="377" y="152" text-anchor="middle" fill="#646b78" font-size="10">launches</text>
+              <text x="377" y="167" text-anchor="middle" fill="#646b78" font-size="10">recent and real</text>
+
+              <!-- Draft -->
+              <rect x="472" y="98" width="118" height="62" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="531" y="126" text-anchor="middle" fill="#0f6f5c" font-weight="500">Draft</text>
+              <text x="531" y="142" text-anchor="middle" fill="#646b78" font-size="10">short, specific,</text>
+              <text x="531" y="154" text-anchor="middle" fill="#646b78" font-size="10">grounded in evidence</text>
+
+              <!-- Human approval -->
+              <rect x="620" y="82" width="84" height="94" rx="8" fill="#fdf6e3" stroke="#c99b34" stroke-width="2" />
+              <text x="662" y="112" text-anchor="middle" fill="#8a5c0f" font-weight="600">You</text>
+              <text x="662" y="130" text-anchor="middle" fill="#8a5c0f" font-size="10">review the</text>
+              <text x="662" y="143" text-anchor="middle" fill="#8a5c0f" font-size="10">draft beside</text>
+              <text x="662" y="156" text-anchor="middle" fill="#8a5c0f" font-size="10">its evidence</text>
+
+              <!-- Gate label -->
+              <text x="662" y="204" text-anchor="middle" fill="#8a5c0f" font-size="10" font-weight="600">nothing sends</text>
+              <text x="662" y="217" text-anchor="middle" fill="#8a5c0f" font-size="10" font-weight="600">without approval</text>
+
+              <!-- Arrows -->
+              <line x1="134" y1="129" x2="162" y2="129" stroke="#0f6f5c" marker-end="url(#o1)" />
+              <line x1="282" y1="129" x2="310" y2="129" stroke="#0f6f5c" marker-end="url(#o1)" />
+              <line x1="442" y1="129" x2="470" y2="129" stroke="#0f6f5c" marker-end="url(#o1)" />
+              <line x1="590" y1="129" x2="618" y2="129" stroke="#0f6f5c" marker-end="url(#o1)" />
+
+              <!-- Evidence carried to review -->
+              <path d="M 377 176 L 377 200 L 620 200 L 620 176" fill="none" stroke="#8b94a1" stroke-dasharray="3 3" />
+              <text x="470" y="216" text-anchor="middle" fill="#646b78" font-size="10">the evidence travels with the draft</text>
+            </g>
+          </svg>
+          <figcaption class="kl-figcaption">
+            The dashed line is the point. The evidence that justified an email
+            is shown next to the email, so approving is a judgement rather than
+            a rubber stamp.
+          </figcaption>
+        </figure>
+
+        <p class="kl-note">
+          Compiled from the public Outr site. The pipeline reflects the product
+          as described there rather than its internal implementation. Worth
+          extending with the real data sources, model choices, and scoring
+          before treating it as a technical reference.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Detail</p>
+        <h2 class="kl-h2">At a glance</h2>
+        <table class="kl-spec">
+          <tbody>
+            <tr><th>Category</th><td>Outbound sales research and drafting.</td></tr>
+            <tr><th>User</th><td>Founders doing their own B2B sales.</td></tr>
+            <tr><th>Signals used</th><td>Hiring activity, funding, product launches, other recent public evidence.</td></tr>
+            <tr><th>Safety model</th><td>Human approval before any send. No autonomous sending.</td></tr>
+            <tr><th>Stage</th><td>Live.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="kl-foot">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/klabs/">K Labs</a>
+        &middot;
+        <a href="/human">Portfolio</a>
+        &middot;
+        <a href="/">Agent home</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Noesis: a governance layer for companies putting AI agents into production. Monitoring, auditability, human-in-the-loop, and continuous evaluation."
+    />
+    <title>Noesis: K Labs</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/klabs/noesis" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Noesis: K Labs" />
+    <meta property="og:url" content="https://www.shridharpathak.me/klabs/noesis" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/klabs.css" />
+  </head>
+  <body class="klabs-page">
+    <a class="skip-link" href="#detail">Skip to content</a>
+
+    <header class="kl-bar">
+      <a class="kl-bar__brand" href="/klabs/">
+        <span class="kl-bar__mark" aria-hidden="true">K</span>
+        <span>Labs</span>
+      </a>
+      <nav class="kl-bar__nav" aria-label="Primary">
+        <a href="/human">Portfolio</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/">Agent home</a>
+      </nav>
+    </header>
+
+    <main id="detail">
+      <div class="kl-detail-head">
+        <a class="kl-back" href="/klabs/">Back to K Labs</a>
+        <p class="kl-card__meta">
+          <span class="kl-status kl-status--live">Live</span>
+          <span class="kl-card__year">Early access &middot; noesis-yuktam.com</span>
+        </p>
+        <h1 class="kl-h1">Noesis</h1>
+        <p class="kl-detail-lede">
+          Agents already send email, move money, change records, and ship code,
+          thousands of times a day and faster than anyone can review. Noesis is
+          the layer that lets a company prove what they did.
+        </p>
+        <div class="kl-actions">
+          <a class="kl-btn kl-btn--primary" href="https://www.noesis-yuktam.com/" target="_blank" rel="noopener noreferrer">Visit Noesis</a>
+          <a class="kl-btn" href="mailto:shripathmit@gmail.com">Get in touch</a>
+        </div>
+      </div>
+
+      <section class="kl-section">
+        <p class="kl-section__label">The problem</p>
+        <h2 class="kl-h2">Adoption is not the hard part any more</h2>
+        <p>
+          Frameworks made it easy to put agents into a workflow. What they did
+          not solve is the question an executive asks immediately afterwards:
+          can you show me what it did, and can you prove it was allowed to.
+        </p>
+        <p>
+          That question is not answered by a log file. It needs a record of
+          every action tied to a decision, a way to judge whether the outcome
+          was any good, and a defensible place where a human signed off when the
+          stakes were high enough to require one.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Architecture</p>
+        <h2 class="kl-h2">Monitor, review, gate</h2>
+
+        <figure class="kl-diagram">
+          <svg viewBox="0 0 720 320" role="img" aria-labelledby="no-title no-desc">
+            <title id="no-title">Noesis governance architecture</title>
+            <desc id="no-desc">
+              Agents running in the customer's existing stack emit actions and
+              decisions into a monitoring layer. That record feeds a
+              four-dimension agent review covering outcomes, risk and trust,
+              operations, and collaboration, alongside continuous evaluation
+              suites with trend lines. High-stakes actions route to a human
+              approval step, and everything lands in an auditable trail.
+            </desc>
+            <defs>
+              <marker id="n1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f6f5c" />
+              </marker>
+              <marker id="n2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b94a1" />
+              </marker>
+            </defs>
+
+            <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">
+              <text x="30" y="20" fill="#646b78" letter-spacing="1.4">YOUR STACK</text>
+              <text x="286" y="20" fill="#646b78" letter-spacing="1.4">NOESIS</text>
+              <text x="580" y="20" fill="#646b78" letter-spacing="1.4">PROOF</text>
+              <line x1="256" y1="30" x2="256" y2="304" stroke="#e3e6ea" stroke-dasharray="3 4" />
+              <line x1="546" y1="30" x2="546" y2="304" stroke="#e3e6ea" stroke-dasharray="3 4" />
+
+              <!-- Agents -->
+              <rect x="24" y="118" width="200" height="66" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="124" y="144" text-anchor="middle" fill="#16181d" font-weight="500">Your AI agents</text>
+              <text x="124" y="160" text-anchor="middle" fill="#646b78" font-size="10">email, payments, records,</text>
+              <text x="124" y="173" text-anchor="middle" fill="#646b78" font-size="10">code, in your own runtime</text>
+
+              <!-- Monitoring -->
+              <rect x="286" y="44" width="228" height="54" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="400" y="66" text-anchor="middle" fill="#0f6f5c" font-weight="500">Action monitoring</text>
+              <text x="400" y="82" text-anchor="middle" fill="#646b78" font-size="10">every action and decision recorded</text>
+
+              <!-- 360 review -->
+              <rect x="286" y="116" width="228" height="76" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="400" y="138" text-anchor="middle" fill="#0f6f5c" font-weight="500">360 degree agent review</text>
+              <text x="400" y="155" text-anchor="middle" fill="#646b78" font-size="10">Outcomes &middot; Risk and Trust</text>
+              <text x="400" y="169" text-anchor="middle" fill="#646b78" font-size="10">Operations &middot; Collaboration</text>
+              <text x="400" y="183" text-anchor="middle" fill="#646b78" font-size="10">reviewed like a team member</text>
+
+              <!-- Evals -->
+              <rect x="286" y="210" width="228" height="54" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="400" y="232" text-anchor="middle" fill="#0f6f5c" font-weight="500">Continuous evaluation</text>
+              <text x="400" y="248" text-anchor="middle" fill="#646b78" font-size="10">eval suites, trend lines over time</text>
+
+              <!-- Human in the loop -->
+              <rect x="576" y="60" width="124" height="60" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="638" y="84" text-anchor="middle" fill="#16181d" font-weight="500">Human</text>
+              <text x="638" y="99" text-anchor="middle" fill="#646b78" font-size="10">in the loop where</text>
+              <text x="638" y="112" text-anchor="middle" fill="#646b78" font-size="10">stakes demand it</text>
+
+              <!-- Audit -->
+              <rect x="576" y="140" width="124" height="60" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="638" y="164" text-anchor="middle" fill="#16181d" font-weight="500">Audit trail</text>
+              <text x="638" y="179" text-anchor="middle" fill="#646b78" font-size="10">every decision</text>
+              <text x="638" y="192" text-anchor="middle" fill="#646b78" font-size="10">reconstructable</text>
+
+              <!-- Dashboard -->
+              <rect x="576" y="220" width="124" height="54" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="638" y="242" text-anchor="middle" fill="#16181d" font-weight="500">Executive view</text>
+              <text x="638" y="257" text-anchor="middle" fill="#646b78" font-size="10">value, not vibes</text>
+
+              <!-- Arrows -->
+              <path d="M 224 140 L 250 140 L 250 71 L 284 71" fill="none" stroke="#0f6f5c" marker-end="url(#n1)" />
+              <path d="M 224 152 L 250 152 L 250 154 L 284 154" fill="none" stroke="#0f6f5c" marker-end="url(#n1)" />
+              <line x1="400" y1="98" x2="400" y2="114" stroke="#8b94a1" marker-end="url(#n2)" />
+              <line x1="400" y1="192" x2="400" y2="208" stroke="#8b94a1" marker-end="url(#n2)" />
+
+              <path d="M 514 71 L 540 71 L 540 90 L 574 90" fill="none" stroke="#8b94a1" marker-end="url(#n2)" />
+              <path d="M 514 154 L 540 154 L 540 170 L 574 170" fill="none" stroke="#8b94a1" marker-end="url(#n2)" />
+              <path d="M 514 237 L 540 237 L 540 247 L 574 247" fill="none" stroke="#8b94a1" marker-end="url(#n2)" />
+            </g>
+          </svg>
+          <figcaption class="kl-figcaption">
+            The framing that does the work is the middle box. Reviewing an agent
+            on outcomes and risk, rather than on latency and token count, is
+            what turns a monitoring tool into something an executive can sign
+            off on.
+          </figcaption>
+        </figure>
+
+        <p>
+          It is designed to sit alongside the stack a company already runs
+          rather than replacing it, which matters because nobody rebuilds their
+          agent infrastructure to adopt a governance product.
+        </p>
+
+        <p class="kl-note">
+          This page was compiled from the public Noesis site. The diagram
+          reflects the product as it is described there, not the internal
+          design. Worth extending with the real component boundaries and data
+          model before treating it as a technical reference.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Detail</p>
+        <h2 class="kl-h2">At a glance</h2>
+        <table class="kl-spec">
+          <tbody>
+            <tr><th>Category</th><td>AI agent governance and evaluation.</td></tr>
+            <tr><th>Buyer</th><td>Executives accountable for agents already running in production.</td></tr>
+            <tr><th>Review model</th><td>Outcomes and Risk and Trust lead, backed by Operations and Collaboration.</td></tr>
+            <tr><th>Evaluation</th><td>Continuous eval suites with trend lines rather than one-off scores.</td></tr>
+            <tr><th>Integration</th><td>Works with the existing stack; onboarding measured in minutes.</td></tr>
+            <tr><th>Stage</th><td>Early access, shipping weekly.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="kl-foot">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/klabs/">K Labs</a>
+        &middot;
+        <a href="/human">Portfolio</a>
+        &middot;
+        <a href="/">Agent home</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

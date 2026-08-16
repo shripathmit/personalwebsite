@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Time travel interface: one career rendered in four complete design systems. Architecture, design decisions, and current status."
+    />
+    <title>Time travel interface: K Labs</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/klabs/time-travel" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Time travel interface: K Labs" />
+    <meta property="og:url" content="https://www.shridharpathak.me/klabs/time-travel" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/klabs.css" />
+  </head>
+  <body class="klabs-page">
+    <a class="skip-link" href="#detail">Skip to content</a>
+
+    <header class="kl-bar">
+      <a class="kl-bar__brand" href="/klabs/">
+        <span class="kl-bar__mark" aria-hidden="true">K</span>
+        <span>Labs</span>
+      </a>
+      <nav class="kl-bar__nav" aria-label="Primary">
+        <a href="/human">Portfolio</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/">Agent home</a>
+      </nav>
+    </header>
+
+    <main id="detail">
+      <div class="kl-detail-head">
+        <a class="kl-back" href="/klabs/">Back to K Labs</a>
+        <p class="kl-card__meta">
+          <span class="kl-status kl-status--live">Live</span>
+          <span class="kl-card__year">2026 &middot; /timeTravel</span>
+        </p>
+        <h1 class="kl-h1">Time travel interface</h1>
+        <p class="kl-detail-lede">
+          The same career rendered in four complete design systems, selected by
+          year. The facts are identical in every frame. Only the visual language
+          and the vocabulary change, which turns out to be the whole argument.
+        </p>
+        <div class="kl-actions">
+          <a class="kl-btn kl-btn--primary" href="/timeTravel">Visit the page</a>
+          <a class="kl-btn" href="/timeTravel#1998">Jump to 1998</a>
+          <a class="kl-btn" href="/timeTravel#2035">Jump to 2035</a>
+        </div>
+      </div>
+
+      <section class="kl-section">
+        <p class="kl-section__label">The idea</p>
+        <h2 class="kl-h2">A career is not static, it is read from a moment</h2>
+        <p>
+          A resume pretends to be a neutral record. It is not. It is written in
+          the vocabulary of the moment it was written in, and the same facts
+          would have been framed completely differently ten years earlier or ten
+          years later.
+        </p>
+        <p>
+          So this makes that literal. Pick a year and the entire interface
+          becomes that year: a CRT terminal in 1998, skeuomorphic iOS in 2012, a
+          glass dashboard in 2024, and a sparse archival retrospective in 2035
+          where the whole career is described in the past tense by something
+          that has finished observing it.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Architecture</p>
+        <h2 class="kl-h2">One attribute swaps the entire visual language</h2>
+
+        <figure class="kl-diagram">
+          <svg viewBox="0 0 720 292" role="img" aria-labelledby="tt-title tt-desc">
+            <title id="tt-title">Time travel interface architecture</title>
+            <desc id="tt-desc">
+              Year tabs and the URL hash both set a data-era attribute on the
+              body element. Four scoped CSS blocks key off that attribute, each
+              defining a complete theme, and only the matching era section is
+              displayed.
+            </desc>
+            <defs>
+              <marker id="t1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f6f5c" />
+              </marker>
+            </defs>
+
+            <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">
+              <!-- Inputs -->
+              <rect x="24" y="56" width="148" height="46" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="98" y="76" text-anchor="middle" fill="#16181d" font-weight="500">Year tabs</text>
+              <text x="98" y="91" text-anchor="middle" fill="#646b78" font-size="10">click, arrows, Home/End</text>
+
+              <rect x="24" y="132" width="148" height="46" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="98" y="152" text-anchor="middle" fill="#16181d" font-weight="500">URL hash</text>
+              <text x="98" y="167" text-anchor="middle" fill="#646b78" font-size="10">#1998 deep link, back</text>
+
+              <!-- State -->
+              <rect x="248" y="94" width="184" height="60" rx="8" fill="#ffffff" stroke="#0f6f5c" stroke-width="2" />
+              <text x="340" y="120" text-anchor="middle" fill="#0f6f5c" font-weight="600">body[data-era]</text>
+              <text x="340" y="137" text-anchor="middle" fill="#646b78" font-size="10">the only piece of state</text>
+
+              <!-- Themes -->
+              <rect x="512" y="18" width="184" height="44" rx="8" fill="#050705" stroke="#050705" />
+              <text x="604" y="38" text-anchor="middle" fill="#33ff6a" font-weight="500">1998 CRT terminal</text>
+              <text x="604" y="52" text-anchor="middle" fill="#2a9d5a" font-size="10">mono, scanlines, ASCII</text>
+
+              <rect x="512" y="76" width="184" height="44" rx="8" fill="#d8d3ca" stroke="#b3b0a8" />
+              <text x="604" y="96" text-anchor="middle" fill="#2f2f31" font-weight="500">2012 skeuomorphic</text>
+              <text x="604" y="110" text-anchor="middle" fill="#5c5c60" font-size="10">linen, gloss, bevels</text>
+
+              <rect x="512" y="134" width="184" height="44" rx="8" fill="#0a0d12" stroke="#0a0d12" />
+              <text x="604" y="154" text-anchor="middle" fill="#e8ecf3" font-weight="500">2024 glass dashboard</text>
+              <text x="604" y="168" text-anchor="middle" fill="#8ab4ff" font-size="10">blur, metric tiles</text>
+
+              <rect x="512" y="192" width="184" height="44" rx="8" fill="#f2f1ee" stroke="#d2d7de" />
+              <text x="604" y="212" text-anchor="middle" fill="#16161a" font-weight="500">2035 archive</text>
+              <text x="604" y="226" text-anchor="middle" fill="#646b78" font-size="10">sparse, thin, past tense</text>
+
+              <!-- Shared facts -->
+              <rect x="248" y="196" width="184" height="52" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="340" y="217" text-anchor="middle" fill="#16181d" font-weight="500">Same facts</text>
+              <text x="340" y="232" text-anchor="middle" fill="#646b78" font-size="10">sourced from profile.json</text>
+
+              <!-- Arrows in -->
+              <path d="M 172 79 L 210 79 L 210 118 L 246 118" fill="none" stroke="#0f6f5c" marker-end="url(#t1)" />
+              <path d="M 172 155 L 210 155 L 210 130 L 246 130" fill="none" stroke="#0f6f5c" marker-end="url(#t1)" />
+
+              <!-- Arrows out -->
+              <path d="M 432 112 L 472 112 L 472 40 L 510 40" fill="none" stroke="#0f6f5c" marker-end="url(#t1)" />
+              <path d="M 432 118 L 472 118 L 472 98 L 510 98" fill="none" stroke="#0f6f5c" marker-end="url(#t1)" />
+              <path d="M 432 130 L 472 130 L 472 156 L 510 156" fill="none" stroke="#0f6f5c" marker-end="url(#t1)" />
+              <path d="M 432 136 L 472 136 L 472 214 L 510 214" fill="none" stroke="#0f6f5c" marker-end="url(#t1)" />
+
+              <!-- Facts feed -->
+              <path d="M 340 196 L 340 156" fill="none" stroke="#8b94a1" stroke-dasharray="3 3" />
+            </g>
+          </svg>
+          <figcaption class="kl-figcaption">
+            All four era sections exist in the DOM at once. CSS decides which is
+            visible and what everything looks like, so switching years is a
+            single attribute write and one paint.
+          </figcaption>
+        </figure>
+
+        <p>
+          There is no JavaScript rendering and no component framework. The
+          script does three things: set the attribute, keep the URL hash in
+          sync, and handle keyboard navigation across the tablist. Everything
+          else is CSS keyed off <code>body[data-era]</code>, in a stylesheet
+          loaded only by this page so the other pages carry none of its weight.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Decisions</p>
+        <h2 class="kl-h2">The interesting problems were not technical</h2>
+        <ul>
+          <li>
+            <strong>Two of the original years were wrong.</strong> The first
+            draft put Amazon Retail in 2012, but 2012 was Amazon Register.
+            Corrected, which conveniently also lands on the peak year of
+            skeuomorphic iOS.
+          </li>
+          <li>
+            <strong>1998 predates the entire record.</strong> Rather than
+            quietly fudging it, the terminal opens by warning that the record
+            contains timestamps beyond its epoch and displays them anyway. The
+            anachronism became the joke instead of the bug.
+          </li>
+          <li>
+            <strong>2035 asserts nothing.</strong> The venture appears as the
+            company that eventually became part of how enterprises learned to
+            trust machines. Evocative, and carefully free of any invented
+            acquisition, valuation, or outcome for a real business.
+          </li>
+          <li>
+            <strong>It has to survive an audit.</strong> This page sits one URL
+            from an agent-facing page that invites models to hunt for
+            inconsistencies, so the dates had to be right.
+          </li>
+        </ul>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Stack</p>
+        <h2 class="kl-h2">What it runs on</h2>
+        <table class="kl-spec">
+          <tbody>
+            <tr><th>Rendering</th><td>Static HTML. All four eras in the DOM, CSS controls visibility.</td></tr>
+            <tr><th>State</th><td>A single data-era attribute on body, mirrored to the URL hash.</td></tr>
+            <tr><th>Styling</th><td>Four scoped theme blocks in a page-local stylesheet.</td></tr>
+            <tr><th>Accessibility</th><td>Tablist semantics, roving tabindex, arrow and Home/End keys, reduced-motion support.</td></tr>
+            <tr><th>Script</th><td>Roughly 50 lines, inline. No dependencies.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="kl-foot">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/klabs/">K Labs</a>
+        &middot;
+        <a href="/human">Portfolio</a>
+        &middot;
+        <a href="/">Agent home</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

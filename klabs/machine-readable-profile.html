@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="The machine-readable profile: a personal site whose home page is addressed to AI agents. Architecture, design decisions, and current status."
+    />
+    <title>The machine-readable profile: K Labs</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/klabs/machine-readable-profile" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="The machine-readable profile: K Labs" />
+    <meta property="og:url" content="https://www.shridharpathak.me/klabs/machine-readable-profile" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/klabs.css" />
+  </head>
+  <body class="klabs-page">
+    <a class="skip-link" href="#detail">Skip to content</a>
+
+    <header class="kl-bar">
+      <a class="kl-bar__brand" href="/klabs/">
+        <span class="kl-bar__mark" aria-hidden="true">K</span>
+        <span>Labs</span>
+      </a>
+      <nav class="kl-bar__nav" aria-label="Primary">
+        <a href="/human">Portfolio</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/">Agent home</a>
+      </nav>
+    </header>
+
+    <main id="detail">
+      <div class="kl-detail-head">
+        <a class="kl-back" href="/klabs/">Back to K Labs</a>
+        <p class="kl-card__meta">
+          <span class="kl-status kl-status--live">Live</span>
+          <span class="kl-card__year">2026 &middot; shridharpathak.me</span>
+        </p>
+        <h1 class="kl-h1">The machine-readable profile</h1>
+        <p class="kl-detail-lede">
+          A personal site that treats AI agents as the primary audience and
+          people as the secondary one. The home page is a near-empty screen that
+          tells a human to go ask their model, and everything below it is
+          written for the model.
+        </p>
+        <div class="kl-actions">
+          <a class="kl-btn kl-btn--primary" href="/">Visit the page</a>
+          <a class="kl-btn" href="/profile.json">See profile.json</a>
+          <a class="kl-btn" href="/llms.txt">See llms.txt</a>
+        </div>
+      </div>
+
+      <section class="kl-section">
+        <p class="kl-section__label">The idea</p>
+        <h2 class="kl-h2">Increasingly, the first reader is not a person</h2>
+        <p>
+          Recruiters paste profiles into a model. Candidates research companies
+          through one. Agents will read a site before a human ever sees it. Most
+          personal sites are still built entirely for the human and leave the
+          machine to scrape prose out of collapsed accordions.
+        </p>
+        <p>
+          So this one inverts the priority. The canonical record is structured
+          data. The prose is a rendering of it. And rather than asking a visitor
+          to be impressed, the page hands their model something to do: arguments
+          to stress-test, interview questions written to resist flattery, and an
+          invitation to audit the career record for inconsistencies.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Architecture</p>
+        <h2 class="kl-h2">One dataset, several renderings</h2>
+
+        <figure class="kl-diagram">
+          <svg viewBox="0 0 720 300" role="img" aria-labelledby="mrp-title mrp-desc">
+            <title id="mrp-title">Machine-readable profile architecture</title>
+            <desc id="mrp-desc">
+              profile.json is the canonical record. It is rendered into the
+              agent-facing home page, the human portfolio, the llms.txt index,
+              and JSON-LD in the document head. A static Express server serves
+              all of them with no build step.
+            </desc>
+            <defs>
+              <marker id="m1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f6f5c" />
+              </marker>
+              <marker id="m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b94a1" />
+              </marker>
+            </defs>
+
+            <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">
+              <!-- Canonical source -->
+              <rect x="24" y="112" width="164" height="72" rx="8" fill="#ffffff" stroke="#0f6f5c" stroke-width="2" />
+              <text x="106" y="140" text-anchor="middle" fill="#0f6f5c" font-weight="600">profile.json</text>
+              <text x="106" y="157" text-anchor="middle" fill="#646b78" font-size="10">canonical record</text>
+              <text x="106" y="171" text-anchor="middle" fill="#646b78" font-size="10">versioned, dated</text>
+
+              <!-- Renderings -->
+              <rect x="286" y="26" width="176" height="52" rx="8" fill="#0b0c0e" stroke="#0b0c0e" />
+              <text x="374" y="47" text-anchor="middle" fill="#7dd3a8" font-weight="500">/ agent home</text>
+              <text x="374" y="63" text-anchor="middle" fill="#8b94a1" font-size="10">prompts, adversarial mode</text>
+
+              <rect x="286" y="94" width="176" height="52" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="374" y="115" text-anchor="middle" fill="#16181d" font-weight="500">/human portfolio</text>
+              <text x="374" y="131" text-anchor="middle" fill="#646b78" font-size="10">narrative for people</text>
+
+              <rect x="286" y="162" width="176" height="52" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="374" y="183" text-anchor="middle" fill="#16181d" font-weight="500">/llms.txt</text>
+              <text x="374" y="199" text-anchor="middle" fill="#646b78" font-size="10">index agents read first</text>
+
+              <rect x="286" y="230" width="176" height="52" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="374" y="251" text-anchor="middle" fill="#16181d" font-weight="500">JSON-LD</text>
+              <text x="374" y="267" text-anchor="middle" fill="#646b78" font-size="10">Person + WebSite, in head</text>
+
+              <!-- Server -->
+              <rect x="546" y="112" width="150" height="72" rx="8" fill="#ffffff" stroke="#0f6f5c" />
+              <text x="621" y="138" text-anchor="middle" fill="#0f6f5c" font-weight="500">Express static</text>
+              <text x="621" y="154" text-anchor="middle" fill="#646b78" font-size="10">no build step,</text>
+              <text x="621" y="167" text-anchor="middle" fill="#646b78" font-size="10">no framework</text>
+
+              <!-- Fan out -->
+              <path d="M 188 138 L 236 138 L 236 52 L 284 52" fill="none" stroke="#0f6f5c" marker-end="url(#m1)" />
+              <path d="M 188 145 L 236 145 L 236 120 L 284 120" fill="none" stroke="#0f6f5c" marker-end="url(#m1)" />
+              <path d="M 188 152 L 236 152 L 236 188 L 284 188" fill="none" stroke="#0f6f5c" marker-end="url(#m1)" />
+              <path d="M 188 159 L 236 159 L 236 256 L 284 256" fill="none" stroke="#0f6f5c" marker-end="url(#m1)" />
+
+              <!-- Fan in to server -->
+              <path d="M 462 52 L 510 52 L 510 138 L 544 138" fill="none" stroke="#8b94a1" marker-end="url(#m2)" />
+              <path d="M 462 120 L 510 120 L 510 145 L 544 145" fill="none" stroke="#8b94a1" marker-end="url(#m2)" />
+              <path d="M 462 188 L 510 188 L 510 152 L 544 152" fill="none" stroke="#8b94a1" marker-end="url(#m2)" />
+              <path d="M 462 256 L 510 256 L 510 159 L 544 159" fill="none" stroke="#8b94a1" marker-end="url(#m2)" />
+            </g>
+          </svg>
+          <figcaption class="kl-figcaption">
+            The rule that keeps this honest: where the prose and the JSON
+            disagree, the JSON wins, and the page says so out loud.
+          </figcaption>
+        </figure>
+
+        <p>
+          There is no framework and no build step. Static HTML and CSS, one
+          small Express server for routing and headers, and a page-local script
+          per page rather than a shared bundle. Each themed page opts out of the
+          global stylesheet's view system with its own body class, so a visitor
+          arriving with stale state cannot break the layout.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Decisions</p>
+        <h2 class="kl-h2">Three choices worth explaining</h2>
+        <ul>
+          <li>
+            <strong>The adversarial mode is honour-system.</strong> A static
+            page cannot verify that a model actually found the inconsistencies,
+            and pretending otherwise would be theatre. So the button says so
+            plainly.
+          </li>
+          <li>
+            <strong>The inconsistencies are real.</strong> Two Amazon roles
+            overlap by about seven months, the years of experience depend on
+            where you start counting, and one headline figure is a target rather
+            than a banked result. Nothing was planted. The unlocked section
+            restores the hedges rather than confessing to anything.
+          </li>
+          <li>
+            <strong>Documents revalidate rather than cache.</strong> Everything
+            served as HTML, CSS, JS, JSON, or text ships with no-cache, so an
+            agent reading profile.json never gets a day-old copy and a deploy is
+            visible immediately.
+          </li>
+        </ul>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Stack</p>
+        <h2 class="kl-h2">What it runs on</h2>
+        <table class="kl-spec">
+          <tbody>
+            <tr><th>Frontend</th><td>Hand-written HTML and CSS. No framework, no build.</td></tr>
+            <tr><th>Server</th><td>Express with helmet and compression, serving static files.</td></tr>
+            <tr><th>Hosting</th><td>Railway, deployed from the CLI.</td></tr>
+            <tr><th>Agent surface</th><td>profile.json, llms.txt, JSON-LD, robots.txt.</td></tr>
+            <tr><th>Caching</th><td>no-cache on documents and data; long immutable cache on images and fonts.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="kl-foot">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/klabs/">K Labs</a>
+        &middot;
+        <a href="/human">Portfolio</a>
+        &middot;
+        <a href="/">Agent home</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -86,7 +86,11 @@
       "degree": "Master of Science, Computer Science",
       "institution": "University of Texas at Dallas",
       "endDate": "2012-05",
-      "specializations": ["Distributed Systems", "Machine Learning", "Algorithms"]
+      "specializations": [
+        "Distributed Systems",
+        "Machine Learning",
+        "Algorithms"
+      ]
     },
     {
       "degree": "Bachelor of Engineering in Computer Science",
@@ -262,6 +266,7 @@
     "agentPagePath": "/",
     "humanPagePath": "/human",
     "timeTravelPath": "/timeTravel",
+    "projectsPath": "/klabs/",
     "note": "The site root is addressed to AI agents; it publishes debate prompts and an adversarial audit of this profile. The portfolio written for people is at /human. /AIagent was the previous location of the root page and now redirects to /."
   }
 }
