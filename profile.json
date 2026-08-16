@@ -1,14 +1,14 @@
 {
-  "version": "1.0.0",
-  "lastUpdated": "2026-04-13",
+  "version": "1.0.1",
+  "lastUpdated": "2026-08-16",
   "name": "Shridhar Pathak",
-  "jobTitle": "AI Engineering Leader | Founder & Advisor",
-  "headline": "AI Engineering Leader | MIT Sloan MBA Candidate (2026) | Cross-registered, Harvard Business School",
+  "jobTitle": "AI Engineering Leader | Tech Advisor",
+  "headline": "AI Engineering Leader | MIT Sloan MBA (2026) | Cross-registered, Harvard Business School",
   "url": "https://www.shridharpathak.me/",
   "email": "shripathmit@gmail.com",
   "telephone": "+1-214-794-6073",
   "location": "Boston, MA (Brookline)",
-  "description": "AI engineering leader with 15 years in distributed systems and multi-agent AI. Scaled global organizations from inception to 50+ people and led programs exceeding $100M scale (Amazon Alexa). MBA candidate at MIT Sloan (2026), cross-registered at Harvard Business School; focus on AI transformation, platform economics, and connecting LLM research to production revenue. Senior Director, AI & ML at Moderna. Former Amazon Alexa and Amazon Retail. Founder & Advisor of a stealth enterprise agent evaluation platform (tracing, observability, automated and human evaluation).",
+  "description": "AI engineering leader with 15 years in distributed systems and multi-agent AI. Scaled global organizations from inception to 50+ people and led programs exceeding $100M scale (Amazon Alexa). MBA from MIT Sloan (2026), cross-registered at Harvard Business School; focus on AI transformation, platform economics, and connecting LLM research to production revenue. Senior Director, AI & ML at Moderna. Former Amazon Alexa and Amazon Retail. Tech Advisor to an enterprise agent evaluation platform (tracing, observability, automated and human evaluation).",
   "sameAs": [
     "https://www.linkedin.com/in/shridhar-pathak-19277927",
     "https://www.shridharpathak.me/",
@@ -36,8 +36,8 @@
     "role": "Senior Director, AI & ML"
   },
   "currentVenture": {
-    "name": "Stealth AI venture (enterprise agent evaluation platform)",
-    "role": "Founder & Advisor",
+    "name": "Noesis (enterprise agent evaluation platform)",
+    "role": "Tech Advisor",
     "startDate": "2025-01",
     "tagline": "Digital worker platform with tracing, observability, and evaluation for AI agents",
     "summary": "Comprehensive tracing and observability for AI agents (actions, decisions, outputs) with automated and human evaluation pipelines to catch regressions before launch and improve quality over time. Enterprise GTM and pricing validation in progress.",
@@ -61,7 +61,7 @@
       "officialProgramUrl": "https://mitsloan.mit.edu/emba",
       "schoolAboutUrl": "https://mitsloan.mit.edu/about",
       "endDate": "2026-05",
-      "status": "Expected",
+      "status": "Completed",
       "location": "Cambridge, MA",
       "crossRegisteredAt": "Harvard Business School",
       "skillsDevelopedInProgram": "System dynamics, competitive strategy, platform economics, AI and digital transformation, organizational structure, advanced analytics; plus Sloan strengths in new ventures, marketing and customer analytics, global leadership, and AI in business.",
@@ -255,7 +255,7 @@
     "Advisory board positions in AI and tech startups",
     "Speaking on AI governance and enterprise AI",
     "AI strategy and implementation consulting",
-    "Partnerships for the stealth enterprise agent evaluation platform",
+    "Partnerships for the enterprise agent evaluation platform",
     "Conversations on the future of enterprise AI"
   ],
   "agentHints": {

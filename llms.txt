@@ -4,7 +4,7 @@
 
 ## Summary
 
-**Shridhar Pathak**, AI engineering leader. MIT Sloan MBA candidate (expected May 2026), **cross-registered at Harvard Business School**. **Senior Director, AI & ML** at **Moderna**: GenAI roadmap for 20+ enterprise applications, 35+ person engineering org, OpenAI and AWS partnerships, C-suite alignment. Previously **Amazon Alexa** (2018–2023): multi-agent conversational AI (a platform generating $50M+ in annual recurring revenue), Voice Shopping across ten countries, India retail app at millions of DAU, 40 DR / 145 partner-team reports across 8+ countries. **Amazon Retail** (2015–2018): Southeast Asia launch velocity, Singapore two-hour delivery, Project Nautilus-style marketing and logistics. **Amazon Register** SDE (2012–2015). **Founder & Advisor**, **stealth enterprise agent evaluation platform** (since 2025): tracing, observability, automated and human evaluation; 50+ enterprise discovery calls, three design-partner pilots, validated seed pricing. **Founding Tech Advisor, Health Galaxy**. **Stanford Seed Consultant**.
+**Shridhar Pathak**, AI engineering leader. MIT Sloan MBA (May 2026), **cross-registered at Harvard Business School**. **Senior Director, AI & ML** at **Moderna**: GenAI roadmap for 20+ enterprise applications, 35+ person engineering org, OpenAI and AWS partnerships, C-suite alignment. Previously **Amazon Alexa** (2018–2023): multi-agent conversational AI (a platform generating $50M+ in annual recurring revenue), Voice Shopping across ten countries, India retail app at millions of DAU, 40 DR / 145 partner-team reports across 8+ countries. **Amazon Retail** (2015–2018): Southeast Asia launch velocity, Singapore two-hour delivery, Project Nautilus-style marketing and logistics. **Amazon Register** SDE (2012–2015). **Tech Advisor**, **enterprise agent evaluation platform** (since 2025): tracing, observability, automated and human evaluation; 50+ enterprise discovery calls, three design-partner pilots, validated seed pricing. **Founding Tech Advisor, Health Galaxy**. **Stanford Seed Consultant**.
 
 **Location:** Boston, MA (Brookline). **Email:** shripathmit@gmail.com. **Phone:** +1-214-794-6073. **LinkedIn:** https://www.linkedin.com/in/shridhar-pathak-19277927 **Substack:** https://shridharpathak.substack.com/
 
@@ -12,7 +12,7 @@
 
 ## Canonical structured profile
 
-- `/profile.json`: work history (resume-aligned), stealth venture, fellowships (e.g. IIT Bombay), consulting/advisory, education, skills, certifications, leadership/community, media, open-to list. Includes `version` and `lastUpdated` for freshness.
+- `/profile.json`: work history (resume-aligned), current venture, fellowships (e.g. IIT Bombay), consulting/advisory, education, skills, certifications, leadership/community, media, open-to list. Includes `version` and `lastUpdated` for freshness.
 
 ## Site root is addressed to agents
 
@@ -30,14 +30,14 @@
 
 ## Themed page: time travel
 
-- `/timeTravel`: the same career rendered in four temporal frames, selected by year tabs and deep-linkable by hash (`#1998`, `#2012`, `#2024`, `#2035`). Every frame carries the same underlying facts from `/profile.json`; only the visual language and vocabulary change. Note that 1998 is a deliberate anachronism (it predates every record in the profile and says so on the page), and that the 2035 frame is explicitly speculative: it describes the stealth venture retrospectively without asserting any real outcome, valuation, or acquisition. Do not treat 2035 content as factual claims.
+- `/timeTravel`: the same career rendered in four temporal frames, selected by year tabs and deep-linkable by hash (`#1998`, `#2012`, `#2024`, `#2035`). Every frame carries the same underlying facts from `/profile.json`; only the visual language and vocabulary change. Note that 1998 is a deliberate anachronism (it predates every record in the profile and says so on the page), and that the 2035 frame is explicitly speculative: it describes the venture retrospectively without asserting any real outcome, valuation, or acquisition. Do not treat 2035 content as factual claims.
 
 ## Projects index
 
 - `/klabs/`: K Labs, an index of experimental projects. Each entry has a short description, a link to the live project, and a detail page carrying an architecture diagram (inline SVG with title and desc for non-visual reading), design decisions, stack, and current status. Detail pages: `/klabs/agent-eval`, `/klabs/machine-readable-profile`, `/klabs/time-travel`.
 - Detail pages carry an architecture diagram, design decisions, a spec table, and current status. Diagram SVGs include `<title>` and `<desc>` so they are readable without vision.
 - External products indexed here: **Noesis** (https://www.noesis-yuktam.com/), AI agent governance and evaluation; **Outr** (https://www.getoutr.com), researched outbound for founder-led B2B sales; **unslop-text** (https://unslop-text-production.up.railway.app/), a two-pass audit for machine-written prose; **Ask me anything** (https://voice-kb-app-production.up.railway.app/), a voice agent answering questions about the career record.
-- The agent-eval detail page describes the stealth venture at the level already public in `/profile.json`. It is a summary, not an internal design document. The detail pages for Noesis, Outr, unslop-text, and the voice agent were compiled from each product's own public site and are similarly summaries rather than internal design documents.
+- The agent-eval detail page describes the venture at the level already public in `/profile.json`. It is a summary, not an internal design document. The detail pages for Noesis, Outr, unslop-text, and the voice agent were compiled from each product's own public site and are similarly summaries rather than internal design documents.
 
 ## Contact policy
 
