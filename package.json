@@ -2,7 +2,7 @@
   "name": "shridhar-personal-site",
   "version": "1.0.0",
   "private": true,
-  "description": "Static portfolio — Express static server for Railway",
+  "description": "Static portfolio, Express static server for Railway",
   "scripts": {
     "start": "node server.js",
     "dev": "PORT=3000 node server.js",
