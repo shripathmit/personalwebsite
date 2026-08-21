@@ -34,7 +34,7 @@
 
 ## Projects index
 
-- `/klabs/`: K Labs, an index of experimental projects. Each entry has a short description, a link to the live project, and a detail page carrying an architecture diagram (inline SVG with title and desc for non-visual reading), design decisions, stack, and current status. Detail pages: `/klabs/agent-eval`, `/klabs/machine-readable-profile`, `/klabs/time-travel`.
+- `/klabs/`: kReative Labs, an index of experimental projects. Each entry has a short description, a link to the live project, and a detail page carrying an architecture diagram (inline SVG with title and desc for non-visual reading), design decisions, stack, and current status. Detail pages: `/klabs/agent-eval`, `/klabs/machine-readable-profile`, `/klabs/time-travel`.
 - Detail pages carry an architecture diagram, design decisions, a spec table, and current status. Diagram SVGs include `<title>` and `<desc>` so they are readable without vision.
 - External products indexed here: **Noesis** (https://www.noesis-yuktam.com/), AI agent governance and evaluation; **Outr** (https://www.getoutr.com), researched outbound for founder-led B2B sales; **unslop-text** (https://unslop-text-production.up.railway.app/), a two-pass audit for machine-written prose; **Ask me anything** (https://voice-kb-app-production.up.railway.app/), a voice agent answering questions about the career record.
 - The agent-eval detail page describes the venture at the level already public in `/profile.json`. It is a summary, not an internal design document. The detail pages for Noesis, Outr, unslop-text, and the voice agent were compiled from each product's own public site and are similarly summaries rather than internal design documents.
