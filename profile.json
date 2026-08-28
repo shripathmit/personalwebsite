@@ -1,6 +1,6 @@
 {
-  "version": "1.0.1",
-  "lastUpdated": "2026-08-16",
+  "version": "1.0.2",
+  "lastUpdated": "2026-08-28",
   "name": "Shridhar Pathak",
   "jobTitle": "AI Engineering Leader | Tech Advisor",
   "headline": "AI Engineering Leader | MIT Sloan MBA (2026) | Cross-registered, Harvard Business School",
@@ -8,11 +8,12 @@
   "email": "shripathmit@gmail.com",
   "telephone": "+1-214-794-6073",
   "location": "Boston, MA (Brookline)",
-  "description": "AI engineering leader with 15 years in distributed systems and multi-agent AI. Scaled global organizations from inception to 50+ people and led programs exceeding $100M scale (Amazon Alexa). MBA from MIT Sloan (2026), cross-registered at Harvard Business School; focus on AI transformation, platform economics, and connecting LLM research to production revenue. Senior Director, AI & ML at Moderna. Former Amazon Alexa and Amazon Retail. Tech Advisor to an enterprise agent evaluation platform (tracing, observability, automated and human evaluation).",
+  "description": "AI engineering leader with 15 years in distributed systems and multi-agent AI. Scaled global organizations from inception to 50+ people and led programs exceeding $100M scale (Amazon Alexa). MBA from MIT Sloan (2026), cross-registered at Harvard Business School; focus on AI transformation, platform economics, and connecting LLM research to production revenue. Senior Director, AI & ML at Moderna. Former Amazon Alexa and Amazon Retail. Tech Advisor to an enterprise agent workforce platform (Policy-as-Code and runtime supervision for AI agents).",
   "sameAs": [
     "https://www.linkedin.com/in/shridhar-pathak-19277927",
     "https://www.shridharpathak.me/",
-    "https://shridharpathak.substack.com/"
+    "https://shridharpathak.substack.com/",
+    "https://github.com/shripathmit"
   ],
   "knowsAbout": [
     "Conversational agents and multi-agent systems",
@@ -36,16 +37,16 @@
     "role": "Senior Director, AI & ML"
   },
   "currentVenture": {
-    "name": "Noesis (enterprise agent evaluation platform)",
+    "name": "Noesis (Enterprise Agent Workforce Platform)",
     "role": "Tech Advisor",
     "startDate": "2025-01",
-    "tagline": "Digital worker platform with tracing, observability, and evaluation for AI agents",
-    "summary": "Comprehensive tracing and observability for AI agents (actions, decisions, outputs) with automated and human evaluation pipelines to catch regressions before launch and improve quality over time. Enterprise GTM and pricing validation in progress.",
-    "keyInnovation": "End-to-end agent tracing; automated and human-in-the-loop scoring; regression detection before launch; continuous quality improvement.",
+    "tagline": "Workforce management layer for enterprise-scale AI agents, positioning them as a managed digital workforce",
+    "summary": "Advises on a workforce management layer for enterprise-scale AI agents. Policy-as-Code and runtime supervision frameworks provide real-time monitoring, intervention, and compliance for LLM-driven multi-agent systems. Enterprise GTM and pricing validation in progress.",
+    "keyInnovation": "Policy-as-Code and runtime supervision for LLM-driven multi-agent systems, with real-time monitoring, intervention, and compliance built in.",
     "valueProposition": [
-      "Treat enterprise AI agents as measurable digital workers",
-      "See exactly what an agent did instead of guessing at a black box",
-      "Scale agent deployments with evals and compliance confidence"
+      "Treat enterprise AI agents as a managed digital workforce",
+      "Real-time monitoring and intervention instead of guessing at a black box",
+      "Policy-as-Code compliance built into agent orchestration"
     ],
     "achievements": [
       "50+ enterprise discovery calls",
@@ -211,9 +212,9 @@
     "Moderna: GenAI roadmap for 20+ enterprise applications; expected ~30% reduction in R&D and clinical operation timelines; 35+ person engineering org from the ground up; multi-million-dollar strategic partnerships with OpenAI and AWS",
     "Alexa: First multi-agent conversational switching framework; core infrastructure for a business model generating over $50M in annual recurring revenue (celebrity and Disney partner agents)",
     "Alexa: Voice Shopping in US, India, Japan, Canada, France, Italy, Spain, Mexico, Ireland, and Australia",
-    "Alexa: Led integration of speech, NLP, contextual understanding, and orchestration; APIs for Amazon India retail app at millions of daily active users; 40 direct reports and 145 partner-team reports across 8+ countries",
+    "Alexa: Led integration of speech, NLP, contextual understanding, and orchestration; APIs for Amazon India retail app at millions of daily active users; 35+ direct reports and 110+ partner-team reports across 8+ countries",
     "Amazon Retail: Cut standard three-year country launch to nine months for first Southeast Asia retail entry; sole technical owner aligning 26 teams and seven global orgs; two-hour delivery in Singapore; 100% of regional orders through proprietary marketing and logistics systems",
-    "Amazon Register (2012–2015): High-scale distributed services and fraud detection for global merchant onboarding and payment flows (Java, C++)"
+    "Amazon Register (2012–2016): High-scale distributed services and fraud detection for global merchant onboarding and payment flows (Java, C++)"
   ],
   "workHistory": [
     {
@@ -229,15 +230,32 @@
       "organization": "Amazon Alexa",
       "team": "Conversational AI & multi-agent systems",
       "location": "Seattle, WA",
-      "startDate": "2018-06",
+      "startDate": "2022",
       "endDate": "2023-07",
-      "summary": "Large-scale conversational AI and multi-agent orchestration for Alexa worldwide. Managed 40 direct reports and 145 partner-team reports across 8+ countries. Shipped the first multi-agent conversational switching framework (celebrity and Disney agents) underpinning a business generating $50M+ in annual recurring revenue. Rolled out Alexa Voice Shopping across US, India, Japan, Canada, France, Italy, Spain, Mexico, Ireland, and Australia. Led speech, NLP, contextual understanding, and response orchestration; defined APIs for ML-powered interactions in the Amazon India retail app at millions of DAU."
+      "summary": "Senior engineering leader for large-scale conversational AI and multi-agent orchestration across Alexa, managing 35+ direct reports and 110+ partner-team reports across 8+ countries. Architected and launched Alexa's first multi-agent conversational switching framework (celebrity and Disney partner agents), underpinning a business generating $50M+ in annual recurring revenue. Built and scaled multi-disciplinary teams of 35+ engineers across regions, driving cross-org alignment across Alexa AI, retail, device, and international engineering."
+    },
+    {
+      "role": "Principal Technical Program Manager",
+      "organization": "Amazon Alexa",
+      "location": "Seattle, WA",
+      "startDate": "2020",
+      "endDate": "2022",
+      "summary": "Led the multi-agent conversational AI framework's rollout for monetization and engagement measurement across celebrity personalities. Launched Alexa Voice Shopping across ten countries: US, India, Japan, Canada, France, Italy, Spain, Mexico, Ireland, and Australia. Led integration of speech recognition, NLP, contextual understanding, and response orchestration; defined APIs for ML-powered interactions in the Amazon India retail app at millions of daily active users."
+    },
+    {
+      "role": "Senior Technical Program Manager",
+      "organization": "Amazon Alexa",
+      "team": "Alexa India",
+      "location": "Seattle, WA",
+      "startDate": "2018-06",
+      "endDate": "2020",
+      "summary": "Founding technical member of the Alexa India Retail team, building the organization from scratch to 16+ engineers and analysts. Architected the APIs and ML endpoints that integrated Alexa voice shopping into the Amazon India retail app, enabling millions of users to shop by voice."
     },
     {
       "role": "Manager & Tech Lead",
       "organization": "Amazon Retail",
       "location": "Seattle, WA",
-      "startDate": "2015-06",
+      "startDate": "2016",
       "endDate": "2018-12",
       "summary": "Reduced a three-year country launch timeline to nine months for Amazon’s first retail entry in Southeast Asia by decoupling legacy US-centric systems; sole technical owner aligning 26 teams and seven global organizations. Designed the region’s first end-to-end digital marketing and last-mile logistics stack, including two-hour delivery in Singapore and automated customer lifecycle marketing."
     },
@@ -247,7 +265,7 @@
       "product": "Amazon Register (POS)",
       "location": "Seattle, WA",
       "startDate": "2012-06",
-      "endDate": "2015-06",
+      "endDate": "2016",
       "summary": "Distributed services and fraud detection for Amazon Register; global merchant onboarding and financial portal integrations. Fault-tolerant payment infrastructure in Java and C++. Tech lead across Seattle and Bangalore for cross-site delivery and merchant-facing integrations."
     }
   ],
@@ -255,7 +273,7 @@
     "Advisory board positions in AI and tech startups",
     "Speaking on AI governance and enterprise AI",
     "AI strategy and implementation consulting",
-    "Partnerships for the enterprise agent evaluation platform",
+    "Partnerships for the enterprise agent workforce platform",
     "Conversations on the future of enterprise AI"
   ],
   "agentHints": {
