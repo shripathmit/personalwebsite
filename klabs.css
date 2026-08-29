@@ -250,9 +250,10 @@ body.klabs-page .kl-tags li {
 body.klabs-page .kl-card__links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  align-items: baseline;
+  gap: 0.35rem 1.25rem;
   margin: auto 0 0;
-  padding-top: 0.85rem;
+  padding-top: 0.9rem;
   border-top: 1px solid var(--kl-line);
 }
 
@@ -263,15 +264,28 @@ body.klabs-page .kl-link {
 }
 
 body.klabs-page .kl-link:not(.kl-link--detail) {
+  flex-basis: 100%;
+  font-size: 1.0625rem;
   font-weight: 700;
-}
-
-body.klabs-page .kl-link::after {
-  content: " \2192";
-}
-
-body.klabs-page .kl-link:hover {
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: var(--kl-ink);
   text-decoration: underline;
+  text-decoration-color: var(--kl-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+body.klabs-page .kl-link:not(.kl-link--detail)::after {
+  content: "";
+}
+
+body.klabs-page .kl-link:not(.kl-link--detail):hover {
+  color: var(--kl-accent);
+}
+
+body.klabs-page .kl-link.kl-link--detail::after {
+  content: " \2192";
 }
 
 body.klabs-page .kl-link--detail {
@@ -280,6 +294,7 @@ body.klabs-page .kl-link--detail {
 
 body.klabs-page .kl-link--detail:hover {
   color: var(--kl-accent);
+  text-decoration: underline;
 }
 
 /* ─────────── Generated thumbnails ───────────
