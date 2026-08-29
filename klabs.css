@@ -262,6 +262,10 @@ body.klabs-page .kl-link {
   text-decoration: none;
 }
 
+body.klabs-page .kl-link:not(.kl-link--detail) {
+  font-weight: 700;
+}
+
 body.klabs-page .kl-link::after {
   content: " \2192";
 }
