@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "y601p4lvkf");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Aura: a personal AI clone. Clone your voice, load a private knowledge base, then ask it questions and hear the answers back in your own voice."
+    />
+    <title>Aura: kReative Labs</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/klabs/aura" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Aura: kReative Labs" />
+    <meta property="og:url" content="https://www.shridharpathak.me/klabs/aura" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/klabs.css" />
+  </head>
+  <body class="klabs-page">
+    <a class="skip-link" href="#detail">Skip to content</a>
+
+    <header class="kl-bar">
+      <a class="kl-bar__brand" href="/klabs/">
+        <span class="kl-bar__mark" aria-hidden="true">k</span>
+        <span>kReative Labs</span>
+      </a>
+      <nav class="kl-bar__nav" aria-label="Primary">
+        <a href="/human">Portfolio</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/">Agent home</a>
+      </nav>
+    </header>
+
+    <main id="detail">
+      <div class="kl-detail-head">
+        <a class="kl-back" href="/klabs/">Back to kReative Labs</a>
+        <p class="kl-card__meta">
+          <span class="kl-status kl-status--building">Building</span>
+          <span class="kl-card__year">2026</span>
+        </p>
+        <h1 class="kl-h1">Aura</h1>
+        <p class="kl-detail-lede">
+          A personal AI clone. Clone your voice from a handful of audio
+          samples, feed it a private knowledge base, then ask it questions and
+          hear the answers back in your own voice.
+        </p>
+      </div>
+
+      <section class="kl-section">
+        <p class="kl-section__label">The idea</p>
+        <h2 class="kl-h2">A voice, a memory, and a way to ask it things</h2>
+        <p>
+          Three separate problems have to work together for a persona to feel
+          like more than a chatbot with a filter on it: the voice has to sound
+          like you, the answers have to be grounded in what you actually know
+          rather than what a base model guesses, and both have to run without
+          demanding infrastructure a single person would not normally stand
+          up.
+        </p>
+        <p>
+          Aura keeps each piece as small as the problem allows. Voice cloning
+          is one API call to a provider built for it. Retrieval is BM25
+          computed in-process against SQLite, no vector database or embedding
+          key required, because a personal knowledge base does not need one.
+          A ghost mode setting instructs the persona to withhold identifying
+          details when that matters more than completeness.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Architecture</p>
+        <h2 class="kl-h2">Three inputs, one persona</h2>
+
+        <figure class="kl-diagram">
+          <svg viewBox="0 0 720 300" role="img" aria-labelledby="au-title au-desc">
+            <title id="au-title">Aura architecture</title>
+            <desc id="au-desc">
+              Audio samples go to the ElevenLabs Instant Voice Clone endpoint
+              and produce a voice ID, auto-assigned to the persona. Documents
+              are chunked on paragraph boundaries and stored in SQLite, with
+              BM25 retrieval computed in-process at query time. A question
+              triggers retrieval, then a system prompt built from persona
+              configuration, retrieved chunks, and standing rules is sent to
+              Claude, which streams a cited reply over server-sent events. The
+              reply can optionally be rendered through the cloned voice for
+              spoken output.
+            </desc>
+            <defs>
+              <marker id="au1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#9b7fe8" />
+              </marker>
+              <marker id="au2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b94a1" />
+              </marker>
+            </defs>
+
+            <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">
+              <!-- Audio samples -->
+              <rect x="16" y="24" width="140" height="56" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="86" y="48" text-anchor="middle" fill="#16181d" font-weight="500">Audio samples</text>
+              <text x="86" y="63" text-anchor="middle" fill="#646b78" font-size="10">recorded or uploaded</text>
+
+              <!-- ElevenLabs -->
+              <rect x="200" y="16" width="150" height="72" rx="8" fill="#ffffff" stroke="#9b7fe8" />
+              <text x="275" y="40" text-anchor="middle" fill="#7a5fd0" font-weight="500">ElevenLabs</text>
+              <text x="275" y="56" text-anchor="middle" fill="#646b78" font-size="10">instant voice clone</text>
+              <text x="275" y="70" text-anchor="middle" fill="#646b78" font-size="10">-&gt; voice ID</text>
+
+              <!-- Documents -->
+              <rect x="16" y="124" width="140" height="56" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="86" y="148" text-anchor="middle" fill="#16181d" font-weight="500">Documents</text>
+              <text x="86" y="163" text-anchor="middle" fill="#646b78" font-size="10">PDF, text, code</text>
+
+              <!-- SQLite / BM25 -->
+              <rect x="200" y="116" width="150" height="72" rx="8" fill="#ffffff" stroke="#9b7fe8" />
+              <text x="275" y="140" text-anchor="middle" fill="#7a5fd0" font-weight="500">SQLite + BM25</text>
+              <text x="275" y="156" text-anchor="middle" fill="#646b78" font-size="10">chunked ~1200 chars,</text>
+              <text x="275" y="170" text-anchor="middle" fill="#646b78" font-size="10">retrieval in-process</text>
+
+              <!-- Question -->
+              <rect x="16" y="224" width="140" height="56" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="86" y="248" text-anchor="middle" fill="#16181d" font-weight="500">Your question</text>
+              <text x="86" y="263" text-anchor="middle" fill="#646b78" font-size="10">typed in</text>
+
+              <!-- Persona / Claude -->
+              <rect x="398" y="100" width="164" height="104" rx="8" fill="#fdf6ff" stroke="#7a5fd0" stroke-width="2" />
+              <text x="480" y="128" text-anchor="middle" fill="#5a3fb0" font-weight="600">Persona</text>
+              <text x="480" y="146" text-anchor="middle" fill="#5a3fb0" font-size="10">config + retrieved chunks</text>
+              <text x="480" y="160" text-anchor="middle" fill="#5a3fb0" font-size="10">+ standing rules</text>
+              <text x="480" y="178" text-anchor="middle" fill="#5a3fb0" font-size="10">-&gt; Claude, streamed reply</text>
+              <text x="480" y="194" text-anchor="middle" fill="#5a3fb0" font-size="10">cited inline, ghost mode aware</text>
+
+              <!-- Spoken output -->
+              <rect x="606" y="60" width="98" height="72" rx="8" fill="#ffffff" stroke="#9b7fe8" />
+              <text x="655" y="88" text-anchor="middle" fill="#7a5fd0" font-weight="500">Spoken</text>
+              <text x="655" y="104" text-anchor="middle" fill="#646b78" font-size="10">reply in</text>
+              <text x="655" y="117" text-anchor="middle" fill="#646b78" font-size="10">cloned voice</text>
+
+              <!-- Text output -->
+              <rect x="606" y="172" width="98" height="72" rx="8" fill="#ffffff" stroke="#9b7fe8" />
+              <text x="655" y="200" text-anchor="middle" fill="#7a5fd0" font-weight="500">Text</text>
+              <text x="655" y="216" text-anchor="middle" fill="#646b78" font-size="10">streamed,</text>
+              <text x="655" y="229" text-anchor="middle" fill="#646b78" font-size="10">cited [1] [2]</text>
+
+              <!-- Arrows -->
+              <line x1="156" y1="52" x2="198" y2="52" stroke="#9b7fe8" marker-end="url(#au1)" />
+              <line x1="156" y1="152" x2="198" y2="152" stroke="#9b7fe8" marker-end="url(#au1)" />
+              <line x1="156" y1="252" x2="480" y2="252" stroke="#8b94a1" marker-end="url(#au2)" />
+              <line x1="480" y1="234" x2="480" y2="206" stroke="#8b94a1" marker-end="url(#au2)" />
+              <path d="M 350 52 L 480 52 L 480 98" fill="none" stroke="#9b7fe8" marker-end="url(#au1)" />
+              <path d="M 350 152 L 398 152" fill="none" stroke="#9b7fe8" marker-end="url(#au1)" />
+              <line x1="562" y1="130" x2="604" y2="112" stroke="#9b7fe8" marker-end="url(#au1)" />
+              <line x1="562" y1="170" x2="604" y2="196" stroke="#8b94a1" marker-end="url(#au2)" />
+              <text x="583" y="150" text-anchor="middle" fill="#646b78" font-size="9">optional</text>
+            </g>
+          </svg>
+          <figcaption class="kl-figcaption">
+            Voice and knowledge are independent inputs that only meet inside
+            the persona: a question is answered from retrieved text first,
+            and only spoken through the cloned voice if that step is asked
+            for.
+          </figcaption>
+        </figure>
+
+        <p class="kl-note">
+          The app runs with no API keys configured. Anything left as a
+          placeholder disables that feature cleanly rather than crashing;
+          "Connect Social Profiles" and calendar sync are documented stubs
+          with no ingest pipeline behind them yet.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Detail</p>
+        <h2 class="kl-h2">At a glance</h2>
+        <table class="kl-spec">
+          <tbody>
+            <tr><th>Voice</th><td>ElevenLabs Instant Voice Clone. First cloned voice auto-assigned to the persona; generated audio served back from local storage.</td></tr>
+            <tr><th>Knowledge</th><td>PDFs and text chunked on paragraph boundaries (~1200 chars), stored in SQLite. BM25 retrieval computed in-process, no vector store or embedding key.</td></tr>
+            <tr><th>Persona</th><td>System prompt built from domain, tone, verbosity, expert mode, and ghost mode, plus retrieved chunks and standing rules. Claude Opus 5 streams the reply over SSE with inline citations.</td></tr>
+            <tr><th>Ghost mode</th><td>Instructs the persona to withhold identifying details (employers, clients, locations); generated audio is tagged accordingly.</td></tr>
+            <tr><th>Stack</th><td>Node/Express, SQLite via <code>node:sqlite</code>, vanilla JS frontend.</td></tr>
+            <tr><th>Stage</th><td>Building. Runs locally; not yet deployed.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="kl-foot">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/klabs/">kReative Labs</a>
+        &middot;
+        <a href="/human">Portfolio</a>
+        &middot;
+        <a href="/">Agent home</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

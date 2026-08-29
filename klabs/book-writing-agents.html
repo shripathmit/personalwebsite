@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "y601p4lvkf");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Book writing agents: a Rewrite/Checker agent loop that turns long-form text into a target style and length, with a Noesis policy gate as a deterministic backstop."
+    />
+    <title>Book writing agents: kReative Labs</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/klabs/book-writing-agents" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Book writing agents: kReative Labs" />
+    <meta property="og:url" content="https://www.shridharpathak.me/klabs/book-writing-agents" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/klabs.css" />
+  </head>
+  <body class="klabs-page">
+    <a class="skip-link" href="#detail">Skip to content</a>
+
+    <header class="kl-bar">
+      <a class="kl-bar__brand" href="/klabs/">
+        <span class="kl-bar__mark" aria-hidden="true">k</span>
+        <span>kReative Labs</span>
+      </a>
+      <nav class="kl-bar__nav" aria-label="Primary">
+        <a href="/human">Portfolio</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/">Agent home</a>
+      </nav>
+    </header>
+
+    <main id="detail">
+      <div class="kl-detail-head">
+        <a class="kl-back" href="/klabs/">Back to kReative Labs</a>
+        <p class="kl-card__meta">
+          <span class="kl-status kl-status--building">Building</span>
+          <span class="kl-card__year">2026</span>
+        </p>
+        <h1 class="kl-h1">Book writing agents</h1>
+        <p class="kl-detail-lede">
+          A single-file Streamlit tool that rewrites long-form text into a
+          target style and length, one section at a time, until an automated
+          checker and a deterministic policy gate both agree it is done.
+        </p>
+      </div>
+
+      <section class="kl-section">
+        <p class="kl-section__label">The problem</p>
+        <h2 class="kl-h2">One rewrite pass is never enough, and nobody wants to babysit it</h2>
+        <p>
+          Rewriting a manuscript into a consistent voice at a specific length
+          is not a single generation call. Long input has to be split into
+          sections that each fit a generation budget, each section needs to
+          stay stylistically continuous with the one before it, and "good
+          enough" is a judgment call that a single pass rarely gets right on
+          the first try.
+        </p>
+        <p>
+          The tool automates the part that benefits from automation, the
+          drafting and re-drafting loop, while keeping a hard, non-negotiable
+          line in front of it: a small set of mechanical tells (a banned
+          em-dash, a banned sentence pattern) get blocked before the section
+          is even scored, rather than left to an LLM checker that misses them
+          some of the time.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Architecture</p>
+        <h2 class="kl-h2">Rewrite, gate, score, loop</h2>
+
+        <figure class="kl-diagram">
+          <svg viewBox="0 0 720 320" role="img" aria-labelledby="bw-title bw-desc">
+            <title id="bw-title">Book writing agents loop</title>
+            <desc id="bw-desc">
+              Input text is split into sections. Each section goes to a
+              RewriteAgent that drafts using the target style, the previous
+              iteration's feedback, and a continuity snippet from the prior
+              section. The draft passes through a Noesis policy gate that
+              deterministically blocks banned mechanical patterns. A
+              CheckerAgent then scores the draft for human-likeness, rule
+              adherence, and AI risk. If the score clears the threshold the
+              section is done and stitched into the output; otherwise the
+              feedback loops back to the RewriteAgent, up to a maximum number
+              of iterations.
+            </desc>
+            <defs>
+              <marker id="bw1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#a8632f" />
+              </marker>
+              <marker id="bw2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b94a1" />
+              </marker>
+            </defs>
+
+            <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">
+              <!-- Section input -->
+              <rect x="16" y="132" width="104" height="56" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="68" y="156" text-anchor="middle" fill="#16181d" font-weight="500">Section</text>
+              <text x="68" y="171" text-anchor="middle" fill="#646b78" font-size="10">.txt / .pdf chunk</text>
+
+              <!-- RewriteAgent -->
+              <rect x="158" y="118" width="140" height="84" rx="8" fill="#ffffff" stroke="#a8632f" />
+              <text x="228" y="142" text-anchor="middle" fill="#a8632f" font-weight="500">RewriteAgent</text>
+              <text x="228" y="159" text-anchor="middle" fill="#646b78" font-size="10">style + prior feedback</text>
+              <text x="228" y="172" text-anchor="middle" fill="#646b78" font-size="10">+ continuity snippet</text>
+              <text x="228" y="188" text-anchor="middle" fill="#8b6a4a" font-size="10">(Tinker)</text>
+
+              <!-- Noesis gate -->
+              <rect x="336" y="118" width="128" height="84" rx="8" fill="#fdf6e3" stroke="#c99b34" stroke-width="2" />
+              <text x="400" y="142" text-anchor="middle" fill="#8a5c0f" font-weight="600">Noesis gate</text>
+              <text x="400" y="159" text-anchor="middle" fill="#8a5c0f" font-size="10">deterministic block</text>
+              <text x="400" y="172" text-anchor="middle" fill="#8a5c0f" font-size="10">on banned patterns</text>
+              <text x="400" y="188" text-anchor="middle" fill="#8a5c0f" font-size="10">runs before the checker</text>
+
+              <!-- CheckerAgent -->
+              <rect x="502" y="118" width="140" height="84" rx="8" fill="#ffffff" stroke="#a8632f" />
+              <text x="572" y="142" text-anchor="middle" fill="#a8632f" font-weight="500">CheckerAgent</text>
+              <text x="572" y="159" text-anchor="middle" fill="#646b78" font-size="10">human-like score 1-10</text>
+              <text x="572" y="172" text-anchor="middle" fill="#646b78" font-size="10">rules, length, AI risk</text>
+
+              <!-- Decision -->
+              <rect x="502" y="234" width="140" height="56" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="572" y="258" text-anchor="middle" fill="#16181d" font-weight="500">Score &gt;= threshold?</text>
+              <text x="572" y="273" text-anchor="middle" fill="#646b78" font-size="10">or max iterations hit</text>
+
+              <!-- Stitched output -->
+              <rect x="336" y="234" width="128" height="56" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="400" y="258" text-anchor="middle" fill="#16181d" font-weight="500">Stitched output</text>
+              <text x="400" y="273" text-anchor="middle" fill="#646b78" font-size="10">next section, or download</text>
+
+              <!-- Arrows main path -->
+              <line x1="120" y1="160" x2="156" y2="160" stroke="#a8632f" marker-end="url(#bw1)" />
+              <line x1="298" y1="160" x2="334" y2="160" stroke="#a8632f" marker-end="url(#bw1)" />
+              <line x1="464" y1="160" x2="500" y2="160" stroke="#a8632f" marker-end="url(#bw1)" />
+              <line x1="572" y1="202" x2="572" y2="232" stroke="#a8632f" marker-end="url(#bw1)" />
+              <path d="M 502 262 L 464 262" fill="none" stroke="#0f6f5c" marker-end="url(#bw1)" />
+              <text x="483" y="252" text-anchor="middle" fill="#0f6f5c" font-size="9">yes</text>
+
+              <!-- Loop back -->
+              <path d="M 502 272 L 228 272 L 228 204" fill="none" stroke="#8b94a1" stroke-dasharray="3 3" marker-end="url(#bw2)" />
+              <text x="360" y="292" text-anchor="middle" fill="#646b78" font-size="10">no: feedback loops back to RewriteAgent</text>
+
+              <!-- Gate rejection -->
+              <path d="M 400 118 L 400 96 L 228 96 L 228 116" fill="none" stroke="#c99b34" stroke-dasharray="3 3" marker-end="url(#bw2)" />
+              <text x="314" y="90" text-anchor="middle" fill="#8a5c0f" font-size="10">blocked: skip checker, loop with violation as feedback</text>
+            </g>
+          </svg>
+          <figcaption class="kl-figcaption">
+            The gate sits before the checker on purpose. A model-based checker
+            catches a banned pattern most of the time; the gate catches it
+            every time, and does it without another model call.
+          </figcaption>
+        </figure>
+
+        <p class="kl-note">
+          The Noesis integration was evaluated honestly rather than assumed
+          worth keeping: for this single tool, a few lines of local regex
+          would deliver most of the same value with no network call and no
+          manuscript text leaving the machine. Noesis earns its place if this
+          becomes one of several agents governed centrally over time; for a
+          single local tool the case is closer.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Detail</p>
+        <h2 class="kl-h2">At a glance</h2>
+        <table class="kl-spec">
+          <tbody>
+            <tr><th>Interface</th><td>Single-file Streamlit app (<code>streamlit run rewriter_loop.py</code>).</td></tr>
+            <tr><th>Input</th><td>Uploaded or pasted .txt / .pdf, split into sections for long inputs or large expansion targets.</td></tr>
+            <tr><th>Rewrite step</th><td>RewriteAgent (Tinker) drafts each section from the target style, the previous iteration's feedback, and a continuity snippet carried from the prior section.</td></tr>
+            <tr><th>Policy gate</th><td>A Noesis <code>ingest()</code> check runs as a hard backstop before the checker, blocking mechanical violations deterministically and logging the event.</td></tr>
+            <tr><th>Check step</th><td>CheckerAgent scores human-likeness (1-10), rule adherence including length, and AI risk; loops per section until the score clears the threshold or the iteration cap is hit.</td></tr>
+            <tr><th>Output</th><td>All sections stitched into the final text, downloadable from the app.</td></tr>
+            <tr><th>Stage</th><td>Building. Runs locally; not deployed publicly.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="kl-foot">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/klabs/">kReative Labs</a>
+        &middot;
+        <a href="/human">Portfolio</a>
+        &middot;
+        <a href="/">Agent home</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

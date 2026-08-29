@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "y601p4lvkf");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Nanda demo: a working prototype of the NANDA agent-discovery protocol. Two-hop resolution, real Ed25519 verification, and a multi-agent economy scene."
+    />
+    <title>Nanda demo: kReative Labs</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/klabs/nanda-demo" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Nanda demo: kReative Labs" />
+    <meta property="og:url" content="https://www.shridharpathak.me/klabs/nanda-demo" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/klabs.css" />
+  </head>
+  <body class="klabs-page">
+    <a class="skip-link" href="#detail">Skip to content</a>
+
+    <header class="kl-bar">
+      <a class="kl-bar__brand" href="/klabs/">
+        <span class="kl-bar__mark" aria-hidden="true">k</span>
+        <span>kReative Labs</span>
+      </a>
+      <nav class="kl-bar__nav" aria-label="Primary">
+        <a href="/human">Portfolio</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/">Agent home</a>
+      </nav>
+    </header>
+
+    <main id="detail">
+      <div class="kl-detail-head">
+        <a class="kl-back" href="/klabs/">Back to kReative Labs</a>
+        <p class="kl-card__meta">
+          <span class="kl-status kl-status--live">Live</span>
+          <span class="kl-card__year">2026</span>
+        </p>
+        <h1 class="kl-h1">Nanda demo</h1>
+        <p class="kl-detail-lede">
+          A working prototype of the resolution flow from "NANDA: Networked
+          Agent Name Discovery Architecture." A client that knows only an
+          agent's name follows signed pointers to verified, actionable
+          details, and a tampered field gets rejected by real cryptography,
+          not a convention.
+        </p>
+        <div class="kl-actions">
+          <a class="kl-btn kl-btn--primary" href="https://nanda-demo-production.up.railway.app" target="_blank" rel="noopener noreferrer">Open the guided demo</a>
+        </div>
+      </div>
+
+      <section class="kl-section">
+        <p class="kl-section__label">The problem</p>
+        <h2 class="kl-h2">A name is not a trustworthy way to find an agent</h2>
+        <p>
+          As more software runs as autonomous agents, something has to answer
+          a basic question safely: given only an agent's name, how does a
+          client find where it lives, what it can do, what it costs, and
+          whether any of that can be trusted, without taking the answer on
+          faith? A phone-book lookup is not enough if the phone book itself
+          can be altered.
+        </p>
+        <p>
+          The NANDA paper proposes a two-hop, signed-pointer architecture for
+          exactly this. This project builds it far enough to be checked: real
+          Ed25519 signatures, a genuine tamper test that fails closed, and an
+          interactive walkthrough built so the mechanism is legible to someone
+          seeing it for the first time.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Architecture</p>
+        <h2 class="kl-h2">Two hops, then verify before you act</h2>
+
+        <figure class="kl-diagram">
+          <svg viewBox="0 0 720 260" role="img" aria-labelledby="nd-title nd-desc">
+            <title id="nd-title">NANDA two-hop resolution</title>
+            <desc id="nd-desc">
+              A client knows only an agent name. Hop one queries the NANDA
+              lean index and receives a signed AgentAddr pointer containing
+              only a facts URL, key ID, TTL, and signature, deliberately with
+              no capabilities, pricing, or trust data. Hop two follows that
+              facts URL to the AgentFacts service, which returns signed
+              metadata including capabilities, pricing, trust, and endpoints.
+              The client verifies the signature with Ed25519 over canonical
+              JSON before acting; changing any signed field, such as the
+              trust score, makes verification fail.
+            </desc>
+            <defs>
+              <marker id="nd1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#2e8fc4" />
+              </marker>
+            </defs>
+
+            <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">
+              <!-- Client -->
+              <rect x="16" y="88" width="112" height="84" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="72" y="118" text-anchor="middle" fill="#16181d" font-weight="500">Client</text>
+              <text x="72" y="135" text-anchor="middle" fill="#646b78" font-size="10">knows only</text>
+              <text x="72" y="148" text-anchor="middle" fill="#646b78" font-size="10">an agent NAME</text>
+
+              <!-- Lean index -->
+              <rect x="176" y="60" width="140" height="70" rx="8" fill="#ffffff" stroke="#2e8fc4" />
+              <text x="246" y="84" text-anchor="middle" fill="#1f6fa0" font-weight="500">NANDA index</text>
+              <text x="246" y="100" text-anchor="middle" fill="#646b78" font-size="10">hop 1: name lookup</text>
+              <text x="246" y="114" text-anchor="middle" fill="#646b78" font-size="10">returns signed AgentAddr</text>
+
+              <!-- AgentAddr -->
+              <rect x="176" y="150" width="140" height="70" rx="8" fill="#f0f7fc" stroke="#2e8fc4" stroke-dasharray="4 3" />
+              <text x="246" y="170" text-anchor="middle" fill="#1f6fa0" font-size="10" font-weight="500">facts_url, key_id,</text>
+              <text x="246" y="184" text-anchor="middle" fill="#1f6fa0" font-size="10" font-weight="500">ttl, sig</text>
+              <text x="246" y="200" text-anchor="middle" fill="#646b78" font-size="9">no capabilities / pricing / trust</text>
+
+              <!-- AgentFacts service -->
+              <rect x="368" y="60" width="150" height="70" rx="8" fill="#ffffff" stroke="#2e8fc4" />
+              <text x="443" y="84" text-anchor="middle" fill="#1f6fa0" font-weight="500">AgentFacts service</text>
+              <text x="443" y="100" text-anchor="middle" fill="#646b78" font-size="10">hop 2: follow facts_url</text>
+              <text x="443" y="114" text-anchor="middle" fill="#646b78" font-size="10">returns signed metadata</text>
+
+              <!-- AgentFacts data -->
+              <rect x="368" y="150" width="150" height="70" rx="8" fill="#f0f7fc" stroke="#2e8fc4" stroke-dasharray="4 3" />
+              <text x="443" y="170" text-anchor="middle" fill="#1f6fa0" font-size="10" font-weight="500">capabilities, pricing,</text>
+              <text x="443" y="184" text-anchor="middle" fill="#1f6fa0" font-size="10" font-weight="500">trust, endpoints</text>
+              <text x="443" y="200" text-anchor="middle" fill="#646b78" font-size="9">signed, fetched separately</text>
+
+              <!-- Verify + act -->
+              <rect x="576" y="88" width="128" height="84" rx="8" fill="#fdf6e3" stroke="#c99b34" stroke-width="2" />
+              <text x="640" y="112" text-anchor="middle" fill="#8a5c0f" font-weight="600">Verify + act</text>
+              <text x="640" y="130" text-anchor="middle" fill="#8a5c0f" font-size="10">Ed25519 over</text>
+              <text x="640" y="143" text-anchor="middle" fill="#8a5c0f" font-size="10">canonical JSON</text>
+              <text x="640" y="159" text-anchor="middle" fill="#8a5c0f" font-size="10">one changed field fails</text>
+
+              <!-- Arrows -->
+              <line x1="128" y1="130" x2="174" y2="130" stroke="#2e8fc4" marker-end="url(#nd1)" />
+              <line x1="316" y1="95" x2="366" y2="95" stroke="#2e8fc4" marker-end="url(#nd1)" />
+              <line x1="246" y1="130" x2="246" y2="148" stroke="#2e8fc4" marker-end="url(#nd1)" />
+              <line x1="443" y1="130" x2="443" y2="148" stroke="#2e8fc4" marker-end="url(#nd1)" />
+              <path d="M 518 95 L 640 95 L 640 86" fill="none" stroke="#2e8fc4" marker-end="url(#nd1)" />
+              <path d="M 518 185 L 550 185 L 550 172 L 576 150" fill="none" stroke="#2e8fc4" marker-end="url(#nd1)" />
+            </g>
+          </svg>
+          <figcaption class="kl-figcaption">
+            The AgentAddr stays deliberately thin. Heavy, fast-changing data
+            such as pricing and trust lives in AgentFacts, signed and fetched
+            on its own so it can change without touching the index.
+          </figcaption>
+        </figure>
+
+        <p class="kl-note">
+          Signed canonical JSON was chosen over W3C Verifiable Credentials for
+          this level: VCs add JSON-LD context resolution and a proof suite
+          that buy interoperability the prototype does not need yet, while
+          canonical-JSON signing already gives full tamper detection. The
+          upgrade path is to wrap the body in a VC envelope later.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Detail</p>
+        <h2 class="kl-h2">At a glance</h2>
+        <table class="kl-spec">
+          <tbody>
+            <tr><th>Resolution</th><td>Two-hop: NANDA index &rarr; AgentAddr (signed pointer) &rarr; AgentFacts service &rarr; AgentFacts (signed metadata).</td></tr>
+            <tr><th>Verification</th><td>Ed25519 signatures over canonical JSON via the platform Web Crypto API; any changed signed field fails verification.</td></tr>
+            <tr><th>Demo modes</th><td>Guided one-click walkthrough, a driveable protocol trace with tamper / TTL-expiry / circuit-break / revoke scenarios, and a multi-agent DAG economy with per-agent billing.</td></tr>
+            <tr><th>Under the hood</th><td>TTL-aware LRU cache, binary max-heap adaptive router, Kahn's-algorithm DAG scheduler, circuit-breaker state machine, SHA-256 Merkle-chained audit log.</td></tr>
+            <tr><th>Also included</th><td>Headless CLI demo and a 20-assertion test harness exercising the real registry and verification code, not a copy.</td></tr>
+            <tr><th>Stack</th><td>Next.js, deployed to Railway.</td></tr>
+            <tr><th>Stage</th><td>Live.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="kl-foot">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/klabs/">kReative Labs</a>
+        &middot;
+        <a href="/human">Portfolio</a>
+        &middot;
+        <a href="/">Agent home</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
