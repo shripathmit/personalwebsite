@@ -539,6 +539,26 @@ body.klabs-page .kl-card__thumb--nanda::after {
   border-radius: 4px;
 }
 
+/* Knowledge graph: a scatter of colored nodes joined by thin edges,
+   the palette lifted straight from the graph's own legend. */
+body.klabs-page .kl-card__thumb--kgraph {
+  background-color: #0b0c0e;
+  background-image:
+    radial-gradient(circle at 18% 30%, #2fbf9a 0 4px, transparent 4px),
+    radial-gradient(circle at 34% 58%, #2fbf9a 0 4px, transparent 4px),
+    radial-gradient(circle at 46% 24%, #d8a83c 0 5px, transparent 5px),
+    radial-gradient(circle at 58% 46%, #e8639a 0 6px, transparent 6px),
+    radial-gradient(circle at 72% 26%, #e8639a 0 4px, transparent 4px),
+    radial-gradient(circle at 80% 62%, #5ec8e0 0 4px, transparent 4px),
+    radial-gradient(circle at 26% 78%, #9b7fe8 0 4px, transparent 4px),
+    radial-gradient(circle at 64% 78%, #7d9fd3 0 4px, transparent 4px),
+    linear-gradient(147deg, transparent 48.7%, rgba(232, 99, 154, 0.45) 48.7% 49.5%, transparent 49.5%),
+    linear-gradient(198deg, transparent 48.7%, rgba(47, 191, 154, 0.4) 48.7% 49.5%, transparent 49.5%),
+    linear-gradient(112deg, transparent 48.7%, rgba(216, 168, 60, 0.4) 48.7% 49.5%, transparent 49.5%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 24px),
+    linear-gradient(160deg, #131418, #0b0c0e);
+}
+
 /* ─────────── Closing note ─────────── */
 
 body.klabs-page .kl-more {

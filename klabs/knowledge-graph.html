@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "y601p4lvkf");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Knowledge graph: an interactive force-directed graph of Shridhar Pathak's career, ventures, kReative Labs projects, and writing, and how they connect."
+    />
+    <title>Knowledge graph: kReative Labs</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/klabs/knowledge-graph" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Knowledge graph: kReative Labs" />
+    <meta property="og:url" content="https://www.shridharpathak.me/klabs/knowledge-graph" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/klabs.css" />
+  </head>
+  <body class="klabs-page">
+    <a class="skip-link" href="#detail">Skip to content</a>
+
+    <header class="kl-bar">
+      <a class="kl-bar__brand" href="/klabs/">
+        <span class="kl-bar__mark" aria-hidden="true">k</span>
+        <span>kReative Labs</span>
+      </a>
+      <nav class="kl-bar__nav" aria-label="Primary">
+        <a href="/human">Portfolio</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/">Agent home</a>
+      </nav>
+    </header>
+
+    <main id="detail">
+      <div class="kl-detail-head">
+        <a class="kl-back" href="/klabs/">Back to kReative Labs</a>
+        <p class="kl-card__meta">
+          <span class="kl-status kl-status--live">Live</span>
+          <span class="kl-card__year">2026</span>
+        </p>
+        <h1 class="kl-h1">Knowledge graph</h1>
+        <p class="kl-detail-lede">
+          A resume is a list. This is the same career, ventures, projects,
+          and writing rendered as a graph, with typed, reasoned edges instead
+          of bullet points.
+        </p>
+        <div class="kl-actions">
+          <a class="kl-btn kl-btn--primary" href="https://knowledge-graph-production-9f9f.up.railway.app" target="_blank" rel="noopener noreferrer">Explore the graph</a>
+        </div>
+      </div>
+
+      <section class="kl-section">
+        <p class="kl-section__label">The idea</p>
+        <h2 class="kl-h2">A career is not actually a list</h2>
+        <p>
+          A resume forces everything into one sequence: role, then role, then
+          role. That hides the more interesting structure underneath it. The
+          multi-agent orchestration work at Alexa did not just precede the
+          Noesis advisory role, it directly shaped the argument for treating
+          AI agents as a managed workforce. unslop-text's two-pass design and
+          Book writing agents' Noesis gate are not related because they
+          shipped in the same year; they are related because they landed on
+          the identical pattern (a deterministic check in front of a
+          subjective one) independently.
+        </p>
+        <p>
+          The graph exists to make that structure visible instead of
+          implied. Every node and edge in it traces back to something already
+          public on this site: <code>/profile.json</code>, the
+          <code>/klabs/</code> project pages, and <code>/blog.html</code>.
+          Nothing was invented for the graph. It is a different lens on the
+          same facts, not a new set of them.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Architecture</p>
+        <h2 class="kl-h2">Same facts, rendered two ways</h2>
+
+        <figure class="kl-diagram">
+          <svg viewBox="0 0 720 300" role="img" aria-labelledby="kg-title kg-desc">
+            <title id="kg-title">Knowledge graph architecture</title>
+            <desc id="kg-desc">
+              The personal site's structured data (profile.json, the klabs
+              project pages, and the blog) is manually distilled into a
+              static data.js file of typed nodes and reasoned edges. A D3.js
+              force simulation lays out that data as an SVG graph in the
+              browser: colored dots for nodes, colored labeled lines for
+              relationships. Hovering a node or edge highlights its
+              connections and shows the reason for the link. Clicking a node
+              with a URL opens the real page on the personal site in a new
+              tab.
+            </desc>
+            <defs>
+              <marker id="kg1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b5fb0" />
+              </marker>
+            </defs>
+
+            <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">
+              <!-- Site data -->
+              <rect x="16" y="112" width="150" height="76" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="91" y="136" text-anchor="middle" fill="#16181d" font-weight="500">profile.json</text>
+              <text x="91" y="152" text-anchor="middle" fill="#16181d" font-weight="500">klabs pages</text>
+              <text x="91" y="168" text-anchor="middle" fill="#16181d" font-weight="500">blog.html</text>
+              <text x="91" y="182" text-anchor="middle" fill="#646b78" font-size="10">the site's own facts</text>
+
+              <!-- data.js -->
+              <rect x="212" y="112" width="150" height="76" rx="8" fill="#ffffff" stroke="#8b5fb0" />
+              <text x="287" y="140" text-anchor="middle" fill="#6b3f96" font-weight="500">data.js</text>
+              <text x="287" y="157" text-anchor="middle" fill="#646b78" font-size="10">typed nodes,</text>
+              <text x="287" y="171" text-anchor="middle" fill="#646b78" font-size="10">reasoned edges</text>
+
+              <!-- D3 simulation -->
+              <rect x="408" y="98" width="150" height="104" rx="8" fill="#ffffff" stroke="#8b5fb0" />
+              <text x="483" y="122" text-anchor="middle" fill="#6b3f96" font-weight="500">D3 force layout</text>
+              <text x="483" y="140" text-anchor="middle" fill="#646b78" font-size="10">runs entirely</text>
+              <text x="483" y="154" text-anchor="middle" fill="#646b78" font-size="10">in the browser,</text>
+              <text x="483" y="168" text-anchor="middle" fill="#646b78" font-size="10">no server,</text>
+              <text x="483" y="182" text-anchor="middle" fill="#646b78" font-size="10">no database</text>
+
+              <!-- Hover / click -->
+              <rect x="604" y="98" width="100" height="104" rx="8" fill="#fdf6ff" stroke="#8b5fb0" stroke-width="2" />
+              <text x="654" y="122" text-anchor="middle" fill="#6b3f96" font-weight="600">You</text>
+              <text x="654" y="140" text-anchor="middle" fill="#6b3f96" font-size="10">hover for</text>
+              <text x="654" y="154" text-anchor="middle" fill="#6b3f96" font-size="10">the reason</text>
+              <text x="654" y="172" text-anchor="middle" fill="#6b3f96" font-size="10">click to open</text>
+              <text x="654" y="186" text-anchor="middle" fill="#6b3f96" font-size="10">the real page</text>
+
+              <!-- Arrows -->
+              <line x1="166" y1="150" x2="210" y2="150" stroke="#8b5fb0" marker-end="url(#kg1)" />
+              <line x1="362" y1="150" x2="406" y2="150" stroke="#8b5fb0" marker-end="url(#kg1)" />
+              <line x1="558" y1="150" x2="602" y2="150" stroke="#8b5fb0" marker-end="url(#kg1)" />
+            </g>
+          </svg>
+          <figcaption class="kl-figcaption">
+            The only manual step is distilling site data into <code>data.js</code>.
+            Everything after that, the physics, the coloring, the hover and
+            click behavior, is D3 and plain SVG, no framework.
+          </figcaption>
+        </figure>
+
+        <p class="kl-note">
+          Edges carry one of four types: <strong>progression</strong>
+          (chronological), <strong>informs</strong> (an experience shaped a
+          later thing), <strong>built on</strong> (a project literally uses
+          or extends another), and <strong>related</strong> (a looser
+          thematic link). Each edge also carries a one-sentence reason,
+          visible on hover, so a connection is never just an unexplained
+          line.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Detail</p>
+        <h2 class="kl-h2">At a glance</h2>
+        <table class="kl-spec">
+          <tbody>
+            <tr><th>Stack</th><td>Static HTML/CSS/JS, D3.js v7 for the force simulation and SVG rendering. No build step, no database, no API keys.</td></tr>
+            <tr><th>Data</th><td>32 nodes across six categories (education, career, venture/advisory, kReative Labs project, writing, theme/skill) and 35 typed, reasoned edges, hand-distilled from the site's own structured data.</td></tr>
+            <tr><th>Interaction</th><td>Drag to reposition, scroll to zoom, hover a node or edge to focus its connections and read the reason, click a node to open the real page on shridharpathak.me.</td></tr>
+            <tr><th>Source of truth</th><td>Every fact traces back to <code>/profile.json</code>, a <code>/klabs/</code> page, or <code>/blog.html</code>. The graph is regenerated by hand when those change; it is a view, not a second database.</td></tr>
+            <tr><th>Repo</th><td><a href="https://github.com/shripathmit/knowledge-graph" target="_blank" rel="noopener noreferrer">github.com/shripathmit/knowledge-graph</a></td></tr>
+            <tr><th>Stage</th><td>Live.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="kl-foot">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/klabs/">kReative Labs</a>
+        &middot;
+        <a href="/human">Portfolio</a>
+        &middot;
+        <a href="/">Agent home</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
