@@ -2067,6 +2067,22 @@ body[data-view="human"] .lux-list-panel {
   padding-top: 0.75rem;
 }
 
+/* kReative Labs feature strip: the first thing after the hero, so it reads
+   as "here's what I'm building" before anything resume-shaped. */
+body[data-view="human"] .lux-page-card--klabs-feature {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent-soft);
+}
+
+body[data-view="human"] .lux-page-card--klabs-feature .lux-section-title {
+  color: var(--accent);
+}
+
+body[data-view="human"] .lux-page-card--klabs-feature > .lux-btn--primary {
+  margin-top: 1.25rem;
+  align-self: flex-start;
+}
+
 body[data-view="human"] .lux-list-item {
   display: grid;
   grid-template-columns: 1fr auto;
