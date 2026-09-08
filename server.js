@@ -30,6 +30,16 @@ const canonicalByLowercase = new Map(
 // These paths were published, so keep them working rather than 404ing.
 const MOVED_PAGES = new Map([["/aiagent", "/"]]);
 
+// Short branded aliases to externally-hosted kReative Labs apps. Temporary
+// (302) rather than permanent, since the underlying host could change.
+const EXTERNAL_ALIASES = new Map([
+  ["/voice", "https://voice-kb-app-production.up.railway.app/"],
+]);
+
+app.get([...EXTERNAL_ALIASES.keys()], (req, res) => {
+  res.redirect(302, EXTERNAL_ALIASES.get(req.path));
+});
+
 app.get(/^\/[a-z]+(\.html)?$/i, (req, res, next) => {
   const key = req.path.replace(/\.html$/i, "").toLowerCase();
 

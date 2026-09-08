@@ -1762,6 +1762,15 @@ html[data-theme="dark"] body[data-view="human"] .lux-page-card--elevated {
   background: rgba(255, 255, 255, 0.05);
 }
 
+/* The voice-feature spotlight card commits to its own dark look in both
+   page themes, so it must win over the generic dark-theme card background
+   above despite coming earlier in the file. */
+html[data-theme="dark"] body[data-view="human"] .lux-page-card--voice-feature {
+  background:
+    radial-gradient(circle at 50% 38%, rgba(143, 188, 159, 0.32), transparent 62%),
+    linear-gradient(160deg, #101710, #06090a);
+}
+
 body[data-view="human"] .lux-page-card--hero {
   padding: 0;
   overflow: clip;
@@ -2065,6 +2074,79 @@ body[data-view="human"] .lux-page-card--stack .lux-section-header {
 body[data-view="human"] .lux-list-panel {
   border-top: 1px solid var(--lux-line);
   padding-top: 0.75rem;
+}
+
+/* Ask me anything: a dark, glowing spotlight card so the voice agent reads
+   as a headline feature rather than one more row in a projects list. Commits
+   to a fixed dark treatment regardless of the page theme, on purpose, the
+   same way kReative Labs commits to its own look elsewhere on the site. */
+body[data-view="human"] .lux-page-card--voice-feature {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+  background:
+    radial-gradient(circle at 50% 38%, rgba(143, 188, 159, 0.32), transparent 62%),
+    linear-gradient(160deg, #101710, #06090a);
+  border-color: rgba(143, 188, 159, 0.4);
+  box-shadow: none;
+}
+
+body[data-view="human"] .lux-page-card--voice-feature::before {
+  content: "";
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  width: min(64%, 24rem);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(143, 188, 159, 0.22);
+  pointer-events: none;
+}
+
+body[data-view="human"] .lux-voice-feature {
+  position: relative;
+  z-index: 1;
+  max-width: 34rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  text-align: center;
+}
+
+body[data-view="human"] .lux-voice-feature__label {
+  color: #8fbc9f;
+}
+
+body[data-view="human"] .lux-voice-feature__title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.15;
+  color: #f4f1ea;
+  margin: 0;
+}
+
+body[data-view="human"] .lux-voice-feature__desc {
+  margin: 0;
+  color: rgba(244, 241, 234, 0.72);
+  font-size: var(--lux-fs-body);
+  line-height: 1.6;
+}
+
+body[data-view="human"] .lux-voice-feature__cta {
+  margin-top: 0.5rem;
+  background: #8fbc9f;
+  border-color: #8fbc9f;
+  color: #0d1410;
+}
+
+body[data-view="human"] .lux-voice-feature__cta:hover {
+  background: #a5cdb2;
+  border-color: #a5cdb2;
+  color: #0d1410;
 }
 
 /* kReative Labs feature strip: the first thing after the hero, so it reads
