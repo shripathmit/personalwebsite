@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "y601p4lvkf");
+    </script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Coding practice by Shridhar Pathak. Algorithm and data structure problems, worked through and written up as I go."
+    />
+    <title>Practice: Shridhar Pathak</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/practice.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shridhar Pathak" />
+    <meta property="og:url" content="https://www.shridharpathak.me/practice.html" />
+    <meta property="og:title" content="Practice: Shridhar Pathak" />
+    <meta
+      property="og:description"
+      content="Coding practice: algorithm and data structure problems, worked through and written up as I go."
+    />
+    <meta property="og:image" content="https://www.shridharpathak.me/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Shridhar Pathak: AI Engineering Leader" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Practice: Shridhar Pathak" />
+    <meta
+      name="twitter:description"
+      content="Coding practice: algorithm and data structure problems, worked through and written up as I go."
+    />
+    <meta name="twitter:image" content="https://www.shridharpathak.me/og-image.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="blog-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="lux-blog-top">
+        <a class="lux-blog-brand" href="/human">Shridhar Pathak</a>
+        <nav class="lux-nav" aria-label="Primary">
+          <a href="/human">Home</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/practice.html" class="is-active">Practice</a>
+          <a href="https://shridharpathak.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
+          <a href="/klabs/">kReative Labs</a>
+          <a href="mailto:shripathmit@gmail.com">Contact</a>
+        </nav>
+        <div class="site-header__actions">
+          <button
+            type="button"
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle color theme"
+            title="Theme"
+          >
+            Theme
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section hero" style="border-top: none; margin-top: 0; padding-top: 0">
+        <h1>Practice</h1>
+        <p class="lede">
+          Algorithm and data structure problems, worked through and written
+          up as I go: the problem, my approach, and the solution. Unpolished
+          on purpose. This is where I think out loud, not a highlight reel.
+        </p>
+      </section>
+
+      <article class="blog-post practice-empty">
+        <div class="blog-post__body">
+          <p>
+            Nothing posted yet. New problems land here as I work through
+            them, most recent first.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/human">Back to home</a>
+        &middot;
+        <a href="/klabs/">kReative Labs</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent =
+        new Date().getFullYear();
+    </script>
+    <script>
+      var THEME_KEY = "portfolio-theme";
+      var themeBtn = document.getElementById("theme-toggle");
+      (function () {
+        var s = null;
+        try { s = localStorage.getItem(THEME_KEY); } catch (_) {}
+        if (s === "light") document.documentElement.setAttribute("data-theme", "light");
+        else if (s === "dark") document.documentElement.setAttribute("data-theme", "dark");
+      })();
+      if (themeBtn) {
+        themeBtn.addEventListener("click", function () {
+          var el = document.documentElement;
+          var s = null;
+          try { s = localStorage.getItem(THEME_KEY); } catch (_) {}
+          try {
+            if (s === null) {
+              localStorage.setItem(THEME_KEY, "light");
+              el.setAttribute("data-theme", "light");
+            } else if (s === "light") {
+              localStorage.setItem(THEME_KEY, "dark");
+              el.setAttribute("data-theme", "dark");
+            } else {
+              localStorage.removeItem(THEME_KEY);
+              el.removeAttribute("data-theme");
+            }
+          } catch (_) {}
+        });
+      }
+    </script>
+  </body>
+</html>

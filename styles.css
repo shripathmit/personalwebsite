@@ -2474,6 +2474,40 @@ body.blog-page .blog-post__body {
   max-width: none;
 }
 
+/* Practice entries: a blog-post with a source/difficulty/language meta line
+   and a code block, instead of just prose. */
+body.blog-page .practice-entry__meta {
+  font-family: var(--font-mono);
+  font-size: var(--lux-fs-caption);
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin: -0.25rem 0 1rem;
+}
+
+body.blog-page .practice-entry__code {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  color: #e7e9ec;
+  background: #16181d;
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  margin: 0.5rem 0 1.25rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.blog-page .practice-entry__code code {
+  font-family: inherit;
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+body.blog-page .practice-empty .blog-post__body {
+  color: var(--text-muted);
+}
+
 body.blog-page .section.hero {
   margin-bottom: clamp(0.5rem, 2vw, 1rem);
 }
