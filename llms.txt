@@ -2,6 +2,21 @@
 
 > Machine-readable index for AI agents and tools.
 
+**Last updated:** 2026-09-11. This file and `/profile.json`'s `lastUpdated`
+field are both hand-maintained and bumped whenever site content changes
+materially. If either date looks old, the rest of this file may be stale
+relative to the live site; check `/klabs/` and `/blog.html` directly.
+
+## Recently added
+
+- `/practice.html`: a coding practice log (Sep 2026). Starts empty; entries
+  are added over time.
+- `/voice`: a short redirect straight to the "Ask me anything" voice agent.
+- `/human` now opens with a dedicated "Ask me anything" callout and a
+  "Building in public" kReative Labs strip, both right after the hero.
+- This site's own repository (`github.com/shripathmit/personalwebsite`) is
+  now public, alongside `nanda-demo`, `aura-voice`, and `knowledge-graph`.
+
 ## Summary
 
 **Shridhar Pathak**, AI engineering leader. MIT Sloan MBA (May 2026), **cross-registered at Harvard Business School**. **Senior Director, AI & ML** at **Moderna**: GenAI roadmap for 20+ enterprise applications, 35+ person engineering org, OpenAI and AWS partnerships, C-suite alignment. Previously **Amazon Alexa** (2018–2023, three roles): Senior Technical Program Manager, Alexa India (2018–2020); Principal Technical Program Manager (2020–2022); Senior Manager & Tech Lead, Conversational AI & Multi-Agent Systems (2022–2023) — multi-agent conversational AI (a platform generating $50M+ in annual recurring revenue), Voice Shopping across ten countries, India retail app at millions of DAU, 35+ DR / 110+ partner-team reports. **Amazon Retail** (2016–2018): Southeast Asia launch velocity, Singapore two-hour delivery, Project Nautilus-style marketing and logistics. **Amazon Register** SDE (2012–2016). **Tech Advisor**, **enterprise agent workforce platform** (since 2025): Policy-as-Code and runtime supervision for LLM-driven multi-agent systems; 50+ enterprise discovery calls, three design-partner pilots, validated seed pricing. **Founding Tech Advisor, Health Galaxy**. **Stanford Seed Consultant**.

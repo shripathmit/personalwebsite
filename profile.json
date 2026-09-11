@@ -1,6 +1,6 @@
 {
-  "version": "1.0.2",
-  "lastUpdated": "2026-08-28",
+  "version": "1.0.3",
+  "lastUpdated": "2026-09-11",
   "name": "Shridhar Pathak",
   "jobTitle": "AI Engineering Leader | Tech Advisor",
   "headline": "AI Engineering Leader | MIT Sloan MBA (2026) | Cross-registered, Harvard Business School",
@@ -285,6 +285,10 @@
     "humanPagePath": "/human",
     "timeTravelPath": "/timeTravel",
     "projectsPath": "/klabs/",
+    "blogPath": "/blog.html",
+    "practicePagePath": "/practice.html",
+    "voiceAgentPath": "/voice",
+    "freshnessCheck": "Compare this object's lastUpdated against /llms.txt's own 'Last updated' line. They are maintained together; if they diverge or both look old, treat the rest of this data as potentially stale and verify against the live pages instead.",
     "note": "The site root is addressed to AI agents; it publishes debate prompts and an adversarial audit of this profile. The portfolio written for people is at /human. /AIagent was the previous location of the root page and now redirects to /."
   }
 }
