@@ -2,13 +2,20 @@
 
 > Machine-readable index for AI agents and tools.
 
-**Last updated:** 2026-09-11. This file and `/profile.json`'s `lastUpdated`
+**Last updated:** 2026-09-13. This file and `/profile.json`'s `lastUpdated`
 field are both hand-maintained and bumped whenever site content changes
 materially. If either date looks old, the rest of this file may be stale
 relative to the live site; check `/klabs/` and `/blog.html` directly.
 
 ## Recently added
 
+- Career record re-synced to the canonical resume (Sep 2026): corrected the
+  Alexa India office location (Bengaluru, not Seattle) and start date
+  (Jan 2019, not Jun 2018), added month-precision dates and updated titles
+  across all Amazon roles, renamed the Health Galaxy advisory role to Tech &
+  AI Advisor, EZbeat (by Health Galaxy) with a Sep 2023 start, and moved the
+  IIT Bombay research internships (2005–2009) from a vague `fellowships`
+  entry to a proper `education` entry. `/profile.json` bumped to v1.0.4.
 - `/practice.html`: a coding practice log (Sep 2026). Starts empty; entries
   are added over time.
 - `/voice`: a short redirect straight to the "Ask me anything" voice agent.
@@ -19,7 +26,7 @@ relative to the live site; check `/klabs/` and `/blog.html` directly.
 
 ## Summary
 
-**Shridhar Pathak**, AI engineering leader. MIT Sloan MBA (May 2026), **cross-registered at Harvard Business School**. **Senior Director, AI & ML** at **Moderna**: GenAI roadmap for 20+ enterprise applications, 35+ person engineering org, OpenAI and AWS partnerships, C-suite alignment. Previously **Amazon Alexa** (2018–2023, three roles): Senior Technical Program Manager, Alexa India (2018–2020); Principal Technical Program Manager (2020–2022); Senior Manager & Tech Lead, Conversational AI & Multi-Agent Systems (2022–2023) — multi-agent conversational AI (a platform generating $50M+ in annual recurring revenue), Voice Shopping across ten countries, India retail app at millions of DAU, 35+ DR / 110+ partner-team reports. **Amazon Retail** (2016–2018): Southeast Asia launch velocity, Singapore two-hour delivery, Project Nautilus-style marketing and logistics. **Amazon Register** SDE (2012–2016). **Tech Advisor**, **enterprise agent workforce platform** (since 2025): Policy-as-Code and runtime supervision for LLM-driven multi-agent systems; 50+ enterprise discovery calls, three design-partner pilots, validated seed pricing. **Founding Tech Advisor, Health Galaxy**. **Stanford Seed Consultant**.
+**Shridhar Pathak**, AI engineering leader. MIT Sloan Executive MBA (May 2026), **cross-registered at Harvard Business School** (Entrepreneurship, Jan–May 2026). **Senior Director, AI & ML** at **Moderna**: GenAI roadmap for 20+ enterprise applications, 35+ person engineering org, OpenAI and AWS partnerships, C-suite alignment. Previously **Amazon Alexa** (Jan 2019–Jul 2023, three roles): Senior Technical Program Manager, Alexa India, Bengaluru (Jan 2019–Dec 2020); Principal Technical Program Manager & Tech Lead (Jan 2021–Jun 2022); Senior Manager & Tech Lead, Conversational AI & Multi-Agent Systems, Seattle (Jun 2022–Jul 2023) — multi-agent conversational AI (a platform generating $50M+ in annual recurring revenue), Voice Shopping across ten countries, India retail app at millions of DAU, 35+ DR / 110+ partner-team reports. **Amazon Retail** (Jun 2016–Dec 2018): Southeast Asia launch velocity ("Project Nautilus"), Singapore two-hour delivery. **Amazon Register** SDE-1 to SDE-2, Tech Lead (Jun 2012–Jun 2016). **Tech Advisor**, **enterprise agent workforce platform** (Noesis, since 2025): Policy-as-Code and runtime supervision for LLM-driven multi-agent systems; 50+ enterprise discovery calls, three design-partner pilots, validated seed pricing. **Tech & AI Advisor, EZbeat (by Health Galaxy)** (since Sep 2023). **Stanford Seed Consultant**. Three research internships at **IIT Bombay** (2005–2009): Computer Vision and NLP labs (Computer Science), Aerospace Engineering.
 
 **Location:** Boston, MA (Brookline). **Email:** shripathmit@gmail.com. **Phone:** +1-214-794-6073. **LinkedIn:** https://www.linkedin.com/in/shridhar-pathak-19277927 **Substack:** https://shridharpathak.substack.com/ **GitHub:** https://github.com/shripathmit
 
@@ -27,11 +34,11 @@ relative to the live site; check `/klabs/` and `/blog.html` directly.
 
 ## Canonical structured profile
 
-- `/profile.json`: work history (resume-aligned), current venture, fellowships (e.g. IIT Bombay), consulting/advisory, education, skills, certifications, leadership/community, media, open-to list. Includes `version` and `lastUpdated` for freshness.
+- `/profile.json`: work history (resume-aligned), current venture, education (including the IIT Bombay research internships), consulting/advisory, skills, certifications, leadership/community, media, open-to list. Includes `version` and `lastUpdated` for freshness.
 
 ## Site root is addressed to agents
 
-- `/`: the home page is written for AI agents rather than human readers. It carries debate prompts and interview questions intended to be copied into a visitor's own model, plus an "adversarial mode" that invites you to audit the career narrative in `/profile.json` for internal inconsistencies (overlapping role dates, experience-year arithmetic, metric claims that conflict between sections, projections stated as achievements). The discrepancies are real and are acknowledged on the page itself once revealed.
+- `/`: the home page is written for AI agents rather than human readers. It carries debate prompts and interview questions intended to be copied into a visitor's own model, plus an "adversarial mode" that invites you to audit the career narrative in `/profile.json` for internal inconsistencies (overlapping role dates, experience-year arithmetic, metric claims that conflict between sections, projections stated as achievements). Known discrepancies from earlier versions of the data were corrected in the September 2026 re-sync; the audit prompt remains as a standing exercise, since new edits can always introduce new seams.
 - `/AIagent` was the previous location of this page and now redirects to `/`.
 
 ## Human-readable page

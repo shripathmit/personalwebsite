@@ -1,6 +1,6 @@
 {
-  "version": "1.0.3",
-  "lastUpdated": "2026-09-11",
+  "version": "1.0.4",
+  "lastUpdated": "2026-09-13",
   "name": "Shridhar Pathak",
   "jobTitle": "AI Engineering Leader | Tech Advisor",
   "headline": "AI Engineering Leader | MIT Sloan MBA (2026) | Cross-registered, Harvard Business School",
@@ -8,7 +8,7 @@
   "email": "shripathmit@gmail.com",
   "telephone": "+1-214-794-6073",
   "location": "Boston, MA (Brookline)",
-  "description": "AI engineering leader with 15 years in distributed systems and multi-agent AI. Scaled global organizations from inception to 50+ people and led programs exceeding $100M scale (Amazon Alexa). MBA from MIT Sloan (2026), cross-registered at Harvard Business School; focus on AI transformation, platform economics, and connecting LLM research to production revenue. Senior Director, AI & ML at Moderna. Former Amazon Alexa and Amazon Retail. Tech Advisor to an enterprise agent workforce platform (Policy-as-Code and runtime supervision for AI agents).",
+  "description": "AI engineering leader with 14+ years in distributed systems and multi-agent AI. Scaled global organizations from inception to 50+ people and led programs exceeding $100M scale (Amazon Alexa). MBA from MIT Sloan (2026), cross-registered at Harvard Business School; focus on AI transformation, platform economics, and connecting LLM research to production revenue. Senior Director, AI & ML at Moderna. Former Amazon Alexa and Amazon Retail. Tech Advisor to an enterprise agent workforce platform (Policy-as-Code and runtime supervision for AI agents).",
   "sameAs": [
     "https://www.linkedin.com/in/shridhar-pathak-19277927",
     "https://www.shridharpathak.me/",
@@ -37,35 +37,36 @@
     "role": "Senior Director, AI & ML"
   },
   "currentVenture": {
-    "name": "Noesis (Enterprise Agent Workforce Platform)",
-    "role": "Tech Advisor",
-    "startDate": "2025-01",
-    "tagline": "Workforce management layer for enterprise-scale AI agents, positioning them as a managed digital workforce",
-    "summary": "Advises on a workforce management layer for enterprise-scale AI agents. Policy-as-Code and runtime supervision frameworks provide real-time monitoring, intervention, and compliance for LLM-driven multi-agent systems. Enterprise GTM and pricing validation in progress.",
-    "keyInnovation": "Policy-as-Code and runtime supervision for LLM-driven multi-agent systems, with real-time monitoring, intervention, and compliance built in.",
-    "valueProposition": [
-      "Treat enterprise AI agents as a managed digital workforce",
-      "Real-time monitoring and intervention instead of guessing at a black box",
-      "Policy-as-Code compliance built into agent orchestration"
-    ],
     "achievements": [
       "50+ enterprise discovery calls",
       "Three design-partner pilots",
       "Validated seed-stage pricing model within six months",
       "Technical architecture and MVP development"
+    ],
+    "keyInnovation": "Policy-as-Code and runtime supervision for LLM-driven multi-agent systems, with real-time monitoring, intervention, and compliance built in.",
+    "name": "Noesis (Enterprise Agent Workforce Platform)",
+    "role": "Tech Advisor",
+    "startDate": "2025-01",
+    "summary": "Advises on a workforce management layer for enterprise-scale AI agents. Policy-as-Code and runtime supervision frameworks provide real-time monitoring, intervention, and compliance for LLM-driven multi-agent systems. Enterprise GTM and pricing validation in progress.",
+    "tagline": "Workforce management layer for enterprise-scale AI agents, positioning them as a managed digital workforce",
+    "valueProposition": [
+      "Treat enterprise AI agents as a managed digital workforce",
+      "Real-time monitoring and intervention instead of guessing at a black box",
+      "Policy-as-Code compliance built into agent orchestration"
     ]
   },
   "education": [
     {
-      "degree": "Executive MBA (EMBA)",
-      "institution": "MIT Sloan School of Management",
-      "officialProgramUrl": "https://mitsloan.mit.edu/emba",
-      "schoolAboutUrl": "https://mitsloan.mit.edu/about",
-      "endDate": "2026-05",
-      "status": "Completed",
-      "location": "Cambridge, MA",
+      "coursework": [
+        "15.390 New Enterprises",
+        "15.732 Marketing Management",
+        "15.708 Global Organizations Lab",
+        "15.717 Organizational Processes",
+        "MIT Platform Strategy"
+      ],
       "crossRegisteredAt": "Harvard Business School",
-      "skillsDevelopedInProgram": "System dynamics, competitive strategy, platform economics, AI and digital transformation, organizational structure, advanced analytics; plus Sloan strengths in new ventures, marketing and customer analytics, global leadership, and AI in business.",
+      "degree": "Executive MBA (EMBA)",
+      "endDate": "2026-05",
       "focusAreas": [
         "System Dynamics",
         "Competitive Strategy",
@@ -75,18 +76,26 @@
         "Entrepreneurship & New Ventures",
         "Global Organizations & Cross-Cultural Leadership"
       ],
-      "coursework": [
-        "15.390 New Enterprises",
-        "15.732 Marketing Management",
-        "15.708 Global Organizations Lab",
-        "15.717 Organizational Processes",
-        "MIT Platform Strategy"
-      ]
+      "institution": "MIT Sloan School of Management",
+      "location": "Cambridge, MA",
+      "officialProgramUrl": "https://mitsloan.mit.edu/emba",
+      "schoolAboutUrl": "https://mitsloan.mit.edu/about",
+      "skillsDevelopedInProgram": "System dynamics, competitive strategy, platform economics, AI and digital transformation, organizational structure, advanced analytics; plus Sloan strengths in new ventures, marketing and customer analytics, global leadership, and AI in business.",
+      "startDate": "2024-09",
+      "status": "Completed"
+    },
+    {
+      "degree": "Cross-registration, Entrepreneurship",
+      "endDate": "2026-05",
+      "institution": "Harvard Business School",
+      "location": "Cambridge, MA",
+      "startDate": "2026-01",
+      "summary": "Cross-registered via the MIT Sloan Executive MBA."
     },
     {
       "degree": "Master of Science, Computer Science",
-      "institution": "University of Texas at Dallas",
       "endDate": "2012-05",
+      "institution": "University of Texas at Dallas",
       "specializations": [
         "Distributed Systems",
         "Machine Learning",
@@ -94,59 +103,61 @@
       ]
     },
     {
+      "degree": "Research Internships (3)",
+      "endDate": "2009",
+      "institution": "Indian Institute of Technology Bombay",
+      "location": "Mumbai, India",
+      "startDate": "2005",
+      "summary": "Three research internships: Computer Vision Lab and NLP Lab, Department of Computer Science; Department of Aerospace Engineering."
+    },
+    {
       "degree": "Bachelor of Engineering in Computer Science",
-      "institution": "Pune Institute of Computer Technology",
       "endDate": "2009-07",
-      "location": "India",
       "honors": [
         "Kishore Vaigyanik Protsahan Yojana (KVPY) Fellowship: Young Scientist, Engineering Stream, 2005–09"
-      ]
-    }
-  ],
-  "fellowships": [
-    {
-      "title": "IIT Bombay: Machine Learning and AI research laboratories",
-      "summary": "Three fellowships supporting ML and AI research work in campus laboratories."
+      ],
+      "institution": "Pune Institute of Computer Technology",
+      "location": "India"
     }
   ],
   "consultingAndAdvisory": [
     {
-      "role": "Founding Tech Advisor · Health Galaxy",
       "focus": "AI Heart Score app; AI-ready architecture and scaling",
-      "startDate": "2024-01",
-      "summary": "Founding tech advisor to the CEO on scaling operations and AI-enabled business models."
+      "role": "Tech & AI Advisor · EZbeat (by Health Galaxy)",
+      "startDate": "2023-09",
+      "summary": "Tech advisor to the CEO on scaling operations and AI-enabled business models."
     },
     {
-      "role": "Stanford Seed Consultant",
-      "focus": "Strategic advisor to global founders on scaling and AI-enabled business models",
       "date": "2025-06",
+      "focus": "Strategic advisor to global founders on scaling and AI-enabled business models",
+      "role": "Stanford Seed Consultant",
       "summary": "Consulting for business owners in developing economies on AI, digital transformation, scaling, and operational efficiency."
     }
   ],
   "leadershipAndCommunity": [
     {
-      "role": "Junior Research Fellow",
-      "organization": "Tata Institute of Fundamental Research (TIFR)",
-      "location": "Mumbai, India",
-      "startDate": "2009-07",
       "endDate": "2010-04",
+      "location": "Mumbai, India",
+      "organization": "Tata Institute of Fundamental Research (TIFR)",
+      "role": "Junior Research Fellow",
+      "startDate": "2009-07",
       "summary": "GRAPES-3 / CERN-related detector monitoring algorithms; ROOT and C++."
     },
     {
-      "role": "Orientation Team Mentor",
-      "organization": "University of Texas at Dallas",
       "date": "2011",
+      "organization": "University of Texas at Dallas",
+      "role": "Orientation Team Mentor",
       "summary": "Orientation for ~1,700 freshmen; group leader for 100 students."
     },
     {
-      "role": "Graduate Chair",
       "organization": "National Society of Black Engineers (NSBE), UTD",
+      "role": "Graduate Chair",
       "summary": "Industry–graduate bridge; recruiting and professional development."
     },
     {
-      "role": "Public Relations Officer",
-      "organization": "IEEE student chapter, PICT",
       "date": "2006-2008",
+      "organization": "IEEE student chapter, PICT",
+      "role": "Public Relations Officer",
       "summary": "Communications and events for ~700-member chapter."
     }
   ],
@@ -155,12 +166,24 @@
       "LLMs (GPT, Claude, Llama-class)",
       "LLM orchestration",
       "Agentic and multi-agent frameworks",
+      "Conversational AI",
+      "Fine-tuning & distillation",
+      "Function calling",
+      "Retrieval-Augmented Generation (RAG)",
       "NLP",
       "Speech recognition and voice synthesis",
       "Predictive analytics and ML pipelines",
       "Multimodal AI",
       "MLOps",
       "AI governance and responsible AI"
+    ],
+    "business": [
+      "Product strategy and roadmaps",
+      "GTM and business models",
+      "Financial modeling and TAM/SAM/SOM",
+      "Stakeholder and executive communication",
+      "Cross-functional leadership",
+      "Change management"
     ],
     "cloudAndInfrastructure": [
       "AWS",
@@ -185,14 +208,6 @@
       "Git",
       "CI/CD",
       "Agile"
-    ],
-    "business": [
-      "Product strategy and roadmaps",
-      "GTM and business models",
-      "Financial modeling and TAM/SAM/SOM",
-      "Stakeholder and executive communication",
-      "Cross-functional leadership",
-      "Change management"
     ]
   },
   "certifications": [
@@ -218,54 +233,55 @@
   ],
   "workHistory": [
     {
-      "role": "Senior Director, AI & ML",
-      "organization": "Moderna",
-      "location": "Cambridge, MA",
-      "startDate": "2023-07",
       "endDate": null,
+      "location": "Cambridge, MA",
+      "organization": "Moderna",
+      "role": "Senior Director, AI & ML",
+      "startDate": "2023-07",
       "summary": "GenAI roadmap for 20+ enterprise applications, targeting materially shorter R&D and clinical operations timelines. Built a 35+ person engineering organization delivering production LLM workflows on AWS for global manufacturing. Translated AI capabilities for the C-suite; secured multi-million-dollar investments and partnerships with OpenAI and AWS."
     },
     {
-      "role": "Senior Manager & Tech Lead",
-      "organization": "Amazon Alexa",
-      "team": "Conversational AI & multi-agent systems",
-      "location": "Seattle, WA",
-      "startDate": "2022",
       "endDate": "2023-07",
-      "summary": "Senior engineering leader for large-scale conversational AI and multi-agent orchestration across Alexa, managing 35+ direct reports and 110+ partner-team reports across 8+ countries. Architected and launched Alexa's first multi-agent conversational switching framework (celebrity and Disney partner agents), underpinning a business generating $50M+ in annual recurring revenue. Built and scaled multi-disciplinary teams of 35+ engineers across regions, driving cross-org alignment across Alexa AI, retail, device, and international engineering."
+      "location": "Seattle, WA",
+      "organization": "Amazon Alexa",
+      "role": "Senior Manager & Tech Lead",
+      "startDate": "2022-06",
+      "summary": "Senior engineering leader for large-scale conversational AI and multi-agent orchestration across Alexa, managing 35+ direct reports and 110+ partner-team reports across 8+ countries. Architected and launched Alexa's first multi-agent conversational switching framework (celebrity and Disney partner agents), underpinning a business generating $50M+ in annual recurring revenue. Built and scaled multi-disciplinary teams of 35+ engineers across regions, driving cross-org alignment across Alexa AI, retail, device, and international engineering.",
+      "team": "Conversational AI & multi-agent systems"
     },
     {
-      "role": "Principal Technical Program Manager",
-      "organization": "Amazon Alexa",
+      "endDate": "2022-06",
       "location": "Seattle, WA",
-      "startDate": "2020",
-      "endDate": "2022",
+      "organization": "Amazon Alexa",
+      "role": "Principal Technical Program Manager & Tech Lead",
+      "startDate": "2021-01",
       "summary": "Led the multi-agent conversational AI framework's rollout for monetization and engagement measurement across celebrity personalities. Launched Alexa Voice Shopping across ten countries: US, India, Japan, Canada, France, Italy, Spain, Mexico, Ireland, and Australia. Led integration of speech recognition, NLP, contextual understanding, and response orchestration; defined APIs for ML-powered interactions in the Amazon India retail app at millions of daily active users."
     },
     {
-      "role": "Senior Technical Program Manager",
-      "organization": "Amazon Alexa",
-      "team": "Alexa India",
-      "location": "Seattle, WA",
-      "startDate": "2018-06",
       "endDate": "2020",
-      "summary": "Founding technical member of the Alexa India Retail team, building the organization from scratch to 16+ engineers and analysts. Architected the APIs and ML endpoints that integrated Alexa voice shopping into the Amazon India retail app, enabling millions of users to shop by voice."
+      "location": "Bengaluru, India",
+      "organization": "Amazon Alexa",
+      "role": "Senior Technical Program Manager",
+      "startDate": "2019-01",
+      "summary": "Founding technical member of the Alexa India Retail team, building the organization from scratch to 16+ engineers and analysts. Architected the APIs and ML endpoints that integrated Alexa voice shopping into the Amazon India retail app, enabling millions of users to shop by voice.",
+      "team": "Alexa India"
     },
     {
-      "role": "Manager & Tech Lead",
-      "organization": "Amazon Retail",
-      "location": "Seattle, WA",
-      "startDate": "2016",
       "endDate": "2018-12",
-      "summary": "Reduced a three-year country launch timeline to nine months for Amazon’s first retail entry in Southeast Asia by decoupling legacy US-centric systems; sole technical owner aligning 26 teams and seven global organizations. Designed the region’s first end-to-end digital marketing and last-mile logistics stack, including two-hour delivery in Singapore and automated customer lifecycle marketing."
+      "location": "Seattle, WA",
+      "organization": "Amazon Retail",
+      "role": "Manager & Tech Lead",
+      "startDate": "2016-06",
+      "summary": "Reduced a three-year country launch timeline to nine months for Amazon’s first retail entry in Southeast Asia by decoupling legacy US-centric systems; sole technical owner aligning 26 teams and seven global organizations. Designed the region’s first end-to-end digital marketing and last-mile logistics stack, including two-hour delivery in Singapore and automated customer lifecycle marketing.",
+      "team": "Project Nautilus (Southeast Asia launch)"
     },
     {
-      "role": "Software Development Engineer",
+      "endDate": "2016-06",
+      "location": "Seattle, WA",
       "organization": "Amazon.com",
       "product": "Amazon Register (POS)",
-      "location": "Seattle, WA",
+      "role": "Software Development Engineer (SDE-1 to SDE-2, Tech Lead)",
       "startDate": "2012-06",
-      "endDate": "2016",
       "summary": "Distributed services and fraud detection for Amazon Register; global merchant onboarding and financial portal integrations. Fault-tolerant payment infrastructure in Java and C++. Tech lead across Seattle and Bangalore for cross-site delivery and merchant-facing integrations."
     }
   ],
@@ -277,18 +293,17 @@
     "Conversations on the future of enterprise AI"
   ],
   "agentHints": {
-    "preferredContact": "Email for inbound; phone for established introductions.",
-    "humanReadableSite": "/human is the portfolio written for people; its expandable <details> sections mirror this JSON for deeper narrative.",
-    "llmsTxtPath": "/llms.txt",
-    "profileJsonPath": "/profile.json",
     "agentPagePath": "/",
-    "humanPagePath": "/human",
-    "timeTravelPath": "/timeTravel",
-    "projectsPath": "/klabs/",
     "blogPath": "/blog.html",
-    "practicePagePath": "/practice.html",
-    "voiceAgentPath": "/voice",
     "freshnessCheck": "Compare this object's lastUpdated against /llms.txt's own 'Last updated' line. They are maintained together; if they diverge or both look old, treat the rest of this data as potentially stale and verify against the live pages instead.",
-    "note": "The site root is addressed to AI agents; it publishes debate prompts and an adversarial audit of this profile. The portfolio written for people is at /human. /AIagent was the previous location of the root page and now redirects to /."
+    "humanPagePath": "/human",
+    "humanReadableSite": "/human is the portfolio written for people; its expandable sections mirror this JSON for deeper narrative.",
+    "llmsTxtPath": "/llms.txt",
+    "practicePagePath": "/practice.html",
+    "preferredContact": "Email for inbound; phone for established introductions.",
+    "profileJsonPath": "/profile.json",
+    "projectsPath": "/klabs/",
+    "timeTravelPath": "/timeTravel",
+    "voiceAgentPath": "/voice"
   }
 }
