@@ -2,13 +2,17 @@
 
 > Machine-readable index for AI agents and tools.
 
-**Last updated:** 2026-09-13. This file and `/profile.json`'s `lastUpdated`
+**Last updated:** 2026-09-19. This file and `/profile.json`'s `lastUpdated`
 field are both hand-maintained and bumped whenever site content changes
 materially. If either date looks old, the rest of this file may be stale
 relative to the live site; check `/klabs/` and `/blog.html` directly.
 
 ## Recently added
 
+- kReative Labs grew from 11 to 13 entries (Sep 2026): `Taste Network`
+  (human taste-testing platform, live as of Sep 22) and `Agent skills` (a
+  public Claude Code skill, live). Sourced from a review of all public
+  repos under `github.com/shripathmit`.
 - Career record re-synced to the canonical resume (Sep 2026): corrected the
   Alexa India office location (Bengaluru, not Seattle) and start date
   (Jan 2019, not Jun 2018), added month-precision dates and updated titles
@@ -60,11 +64,12 @@ relative to the live site; check `/klabs/` and `/blog.html` directly.
 
 ## Projects index
 
-- `/klabs/`: kReative Labs, "the place where experiment is always brewing", an index of experimental projects. Each entry has a short description, a link to the live project, and a detail page carrying an architecture diagram (inline SVG with title and desc for non-visual reading), design decisions, stack, and current status. Detail pages: `/klabs/agent-eval`, `/klabs/noesis`, `/klabs/outr`, `/klabs/unslop-text`, `/klabs/voice-agent`, `/klabs/machine-readable-profile`, `/klabs/time-travel`, `/klabs/book-writing-agents`, `/klabs/aura`, `/klabs/nanda-demo`, `/klabs/knowledge-graph`.
+- `/klabs/`: kReative Labs, "the place where experiment is always brewing", an index of experimental projects. Each entry has a short description, a link to the live project, and a detail page carrying an architecture diagram (inline SVG with title and desc for non-visual reading), design decisions, stack, and current status. Thirteen entries with detail pages: `/klabs/agent-eval`, `/klabs/noesis`, `/klabs/outr`, `/klabs/unslop-text`, `/klabs/voice-agent`, `/klabs/machine-readable-profile`, `/klabs/time-travel`, `/klabs/book-writing-agents`, `/klabs/aura`, `/klabs/nanda-demo`, `/klabs/knowledge-graph`, `/klabs/taste-network`, `/klabs/skills`.
 - Detail pages carry an architecture diagram, design decisions, a spec table, and current status. Diagram SVGs include `<title>` and `<desc>` so they are readable without vision.
-- External products indexed here: **Noesis** (https://www.noesis-yuktam.com/), AI agent governance and evaluation; **Outr** (https://www.getoutr.com), researched outbound for founder-led B2B sales; **unslop-text** (https://unslop-text-production.up.railway.app/), a two-pass audit for machine-written prose; **Ask me anything** (https://voice-kb-app-production.up.railway.app/), a voice agent answering questions about the career record; **Nanda demo** (https://nanda-demo-production.up.railway.app), a working prototype of the NANDA agent-discovery protocol; **Knowledge graph** (https://knowledge-graph-production-9f9f.up.railway.app), an interactive force-directed graph of the career, ventures, projects, and writing described elsewhere on this site.
+- External products indexed here: **Noesis** (https://www.noesis-yuktam.com/), AI agent governance and evaluation; **Outr** (https://www.getoutr.com), researched outbound for founder-led B2B sales; **unslop-text** (https://unslop-text-production.up.railway.app/), a two-pass audit for machine-written prose; **Ask me anything** (https://voice-kb-app-production.up.railway.app/), a voice agent answering questions about the career record; **Nanda demo** (https://nanda-demo-production.up.railway.app), a working prototype of the NANDA agent-discovery protocol; **Knowledge graph** (https://knowledge-graph-production-9f9f.up.railway.app), an interactive force-directed graph of the career, ventures, projects, and writing described elsewhere on this site; **Taste Network** (https://taste-network-production.up.railway.app), a human taste network for choosing what to ship.
 - The agent-eval detail page describes the venture at the level already public in `/profile.json`. It is a summary, not an internal design document. The detail pages for Noesis, Outr, unslop-text, and the voice agent were compiled from each product's own public site and are similarly summaries rather than internal design documents.
 - **Book writing agents** and **Aura** are local-only prototypes with no public deployment; their detail pages document the architecture but there is no live link to visit.
+- **Agent skills** links to a GitHub repository (`github.com/shripathmit/skills`) rather than a deployed app — it is a Claude Code skill, not a running service.
 
 ## Contact policy
 

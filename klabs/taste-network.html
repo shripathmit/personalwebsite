@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "y601p4lvkf");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Taste Network: a human taste network that helps you choose what to ship. Real people compare your options and explain why. No AI judges your work."
+    />
+    <title>Taste Network: kReative Labs</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/klabs/taste-network" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Taste Network: kReative Labs" />
+    <meta property="og:url" content="https://www.shridharpathak.me/klabs/taste-network" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/klabs.css" />
+  </head>
+  <body class="klabs-page">
+    <a class="skip-link" href="#detail">Skip to content</a>
+
+    <header class="kl-bar">
+      <a class="kl-bar__brand" href="/klabs/">
+        <span class="kl-bar__mark" aria-hidden="true">k</span>
+        <span>kReative Labs</span>
+      </a>
+      <nav class="kl-bar__nav" aria-label="Primary">
+        <a href="/human">Portfolio</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/practice.html">Practice</a>
+        <a href="/">Agent home</a>
+      </nav>
+    </header>
+
+    <main id="detail">
+      <div class="kl-detail-head">
+        <a class="kl-back" href="/klabs/">Back to kReative Labs</a>
+        <p class="kl-card__meta">
+          <span class="kl-status kl-status--live">Live</span>
+          <span class="kl-card__year">2026</span>
+        </p>
+        <h1 class="kl-h1">Taste Network</h1>
+        <p class="kl-detail-lede">
+          A human taste network that helps you choose what to ship. Upload
+          two to five versions of something you're deciding on; real people
+          compare them and explain why. No AI judges the work.
+        </p>
+        <div class="kl-actions">
+          <a class="kl-btn kl-btn--primary" href="https://taste-network-production.up.railway.app" target="_blank" rel="noopener noreferrer">Try it live</a>
+        </div>
+      </div>
+
+      <section class="kl-section">
+        <p class="kl-section__label">The problem</p>
+        <h2 class="kl-h2">A model can score your options. It cannot want one.</h2>
+        <p>
+          Founders, designers, and marketers ask AI to pick between two
+          headlines, two landing pages, two logos, constantly. A model will
+          always give an answer, confidently, and that answer is a guess
+          about taste dressed up as a verdict. Taste is exactly the thing
+          models are worst at, because it is not a fact to retrieve, it is a
+          reaction a real person has.
+        </p>
+        <p>
+          The fix here is not a better judge. It is removing the judge:
+          route the same two-to-five options to real humans, let them pick
+          and say why, and treat the aggregate of those reactions as the
+          signal, not a single model's opinion.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Architecture</p>
+        <h2 class="kl-h2">A static app in front of real people</h2>
+
+        <figure class="kl-diagram">
+          <svg viewBox="0 0 720 260" role="img" aria-labelledby="tn-title tn-desc">
+            <title id="tn-title">Taste Network architecture</title>
+            <desc id="tn-desc">
+              A creator uploads two to five versions of something they are
+              deciding on. Supabase storage holds the assets and Postgres
+              holds the test definition. Real human respondents, not a
+              model, view the options, pick one, and write why. Responses
+              are aggregated back into a result the creator reads, with row
+              level security scoping each test to its owner.
+            </desc>
+            <defs>
+              <marker id="tn1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#c2554a" />
+              </marker>
+            </defs>
+
+            <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">
+              <!-- Creator -->
+              <rect x="16" y="98" width="130" height="64" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="81" y="122" text-anchor="middle" fill="#16181d" font-weight="500">Creator uploads</text>
+              <text x="81" y="137" text-anchor="middle" fill="#646b78" font-size="10">2 to 5 versions</text>
+              <text x="81" y="151" text-anchor="middle" fill="#646b78" font-size="10">of something</text>
+
+              <!-- Supabase -->
+              <rect x="188" y="84" width="150" height="92" rx="8" fill="#ffffff" stroke="#c2554a" />
+              <text x="263" y="108" text-anchor="middle" fill="#a8382d" font-weight="500">Supabase</text>
+              <text x="263" y="125" text-anchor="middle" fill="#646b78" font-size="10">Postgres: test def</text>
+              <text x="263" y="139" text-anchor="middle" fill="#646b78" font-size="10">Storage: assets</text>
+              <text x="263" y="153" text-anchor="middle" fill="#646b78" font-size="10">Auth + row-level</text>
+              <text x="263" y="167" text-anchor="middle" fill="#646b78" font-size="10">security per test</text>
+
+              <!-- Real humans -->
+              <rect x="384" y="70" width="150" height="120" rx="8" fill="#fdf6e3" stroke="#c99b34" stroke-width="2" />
+              <text x="459" y="96" text-anchor="middle" fill="#8a5c0f" font-weight="600">Real humans</text>
+              <text x="459" y="114" text-anchor="middle" fill="#8a5c0f" font-size="10">view the options</text>
+              <text x="459" y="128" text-anchor="middle" fill="#8a5c0f" font-size="10">pick one</text>
+              <text x="459" y="142" text-anchor="middle" fill="#8a5c0f" font-size="10">write why</text>
+              <text x="459" y="160" text-anchor="middle" fill="#8a5c0f" font-size="9">not a model</text>
+              <text x="459" y="174" text-anchor="middle" fill="#8a5c0f" font-size="9">at any point</text>
+
+              <!-- Result -->
+              <rect x="576" y="98" width="128" height="64" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="640" y="122" text-anchor="middle" fill="#16181d" font-weight="500">Aggregate result</text>
+              <text x="640" y="137" text-anchor="middle" fill="#646b78" font-size="10">what resonated,</text>
+              <text x="640" y="151" text-anchor="middle" fill="#646b78" font-size="10">and why</text>
+
+              <!-- Arrows -->
+              <line x1="146" y1="130" x2="186" y2="130" stroke="#c2554a" marker-end="url(#tn1)" />
+              <line x1="338" y1="130" x2="382" y2="130" stroke="#c2554a" marker-end="url(#tn1)" />
+              <line x1="534" y1="130" x2="574" y2="130" stroke="#c99b34" marker-end="url(#tn1)" />
+            </g>
+          </svg>
+          <figcaption class="kl-figcaption">
+            The only place a model could enter this pipeline is the box
+            labeled "real humans," and it deliberately does not.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Detail</p>
+        <h2 class="kl-h2">At a glance</h2>
+        <table class="kl-spec">
+          <tbody>
+            <tr><th>Stack</th><td>Static frontend, Node static server, Supabase (Postgres + Auth + Storage) as the backend.</td></tr>
+            <tr><th>Test flow</th><td>Upload 2 to 5 versions of a decision; respondents compare, pick, and explain their choice; responses aggregate into a result.</td></tr>
+            <tr><th>Safety model</th><td>Row-level security scopes every test to its owner; environment secrets are injected server-side and never touch git.</td></tr>
+            <tr><th>Repo</th><td><a href="https://github.com/shripathmit/taste-network" target="_blank" rel="noopener noreferrer">github.com/shripathmit/taste-network</a></td></tr>
+            <tr><th>Stage</th><td>Live. Includes a guest 60-second demo test on the homepage, no signup required.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="kl-foot">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/klabs/">kReative Labs</a>
+        &middot;
+        <a href="/human">Portfolio</a>
+        &middot;
+        <a href="/">Agent home</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

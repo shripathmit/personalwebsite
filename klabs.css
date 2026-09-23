@@ -559,6 +559,69 @@ body.klabs-page .kl-card__thumb--kgraph {
     linear-gradient(160deg, #131418, #0b0c0e);
 }
 
+/* Taste Network: two option swatches, one chosen. */
+body.klabs-page .kl-card__thumb--taste {
+  position: relative;
+  background-color: #2a1410;
+  background-image: linear-gradient(150deg, #3d1e17, #1c0d0a);
+}
+
+body.klabs-page .kl-card__thumb--taste::before {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  width: 22%;
+  height: 40%;
+  border-radius: 8px;
+  background: rgba(240, 168, 96, 0.18);
+  border: 1px solid rgba(240, 168, 96, 0.4);
+}
+
+body.klabs-page .kl-card__thumb--taste::after {
+  content: "";
+  position: absolute;
+  left: 52%;
+  top: 30%;
+  width: 22%;
+  height: 40%;
+  border-radius: 8px;
+  background: rgba(240, 168, 96, 0.5);
+  border: 2px solid #f0a860;
+}
+
+/* Agent skills: a blueprint grid with a scan line. */
+body.klabs-page .kl-card__thumb--skills {
+  position: relative;
+  background-color: #101a2e;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(148, 163, 255, 0.16) 0 1px, transparent 1px 20px),
+    repeating-linear-gradient(90deg, rgba(148, 163, 255, 0.16) 0 1px, transparent 1px 20px),
+    linear-gradient(150deg, #16223f, #0c1424);
+}
+
+body.klabs-page .kl-card__thumb--skills::before {
+  content: "";
+  position: absolute;
+  left: 14%;
+  top: 20%;
+  right: 14%;
+  height: 2px;
+  background: rgba(148, 163, 255, 0.7);
+  box-shadow: 0 0 8px 2px rgba(148, 163, 255, 0.5);
+}
+
+body.klabs-page .kl-card__thumb--skills::after {
+  content: "";
+  position: absolute;
+  left: 34%;
+  top: 40%;
+  width: 32%;
+  height: 26%;
+  border: 2px solid #94a3ff;
+  border-radius: 4px;
+}
+
 /* ─────────── Closing note ─────────── */
 
 body.klabs-page .kl-more {
