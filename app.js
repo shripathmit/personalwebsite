@@ -340,27 +340,12 @@
 
   // --- Init ---
 
-  var saved = null;
-  try {
-    saved = localStorage.getItem(STORAGE_KEY);
-  } catch (_) {}
-
-  if (saved === "agent" || saved === "human") {
-    setView(saved);
-  } else {
-    setView("human");
-  }
-
-  if (humanBtn) {
-    humanBtn.addEventListener("click", function () {
-      setView("human");
-    });
-  }
-  if (agentBtn) {
-    agentBtn.addEventListener("click", function () {
-      setView("agent");
-    });
-  }
+  // The Human/Agent header control is now a pair of plain links (Human stays
+  // on /human, Agent goes to /), not a same-page view toggle, so the
+  // Structured Profile / Raw JSON block is always visible rather than gated
+  // behind data-view="agent". Load it unconditionally.
+  setView("human");
+  loadAgentData();
 
   initCopyButtons();
 

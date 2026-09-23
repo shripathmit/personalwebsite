@@ -57,27 +57,36 @@
   </head>
   <body class="blog-page">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <div class="lux-blog-top">
-        <a class="lux-blog-brand" href="/human">Shridhar Pathak</a>
-        <nav class="lux-nav" aria-label="Primary">
-          <a href="/human">Home</a>
-          <a href="/blog.html" class="is-active">Blog</a>
-          <a href="/practice.html">Practice</a>
-          <a href="https://shridharpathak.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
-          <a href="/klabs/">kReative Labs</a>
-          <a href="mailto:shripathmit@gmail.com">Contact</a>
-        </nav>
-        <div class="site-header__actions">
-          <button
-            type="button"
-            class="theme-toggle"
-            id="theme-toggle"
-            aria-label="Toggle color theme"
-            title="Theme"
-          >
-            Theme
-          </button>
+    <header class="site-header lux-header">
+      <div class="lux-page-card lux-page-card--elevated lux-page-card--site-header">
+        <div class="lux-topbar">
+          <a class="lux-brand" href="/human">Shridhar Pathak</a>
+          <nav class="lux-nav" aria-label="Primary">
+            <a href="/human#more">More</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/practice.html">Practice</a>
+            <a href="https://shridharpathak.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
+            <a href="https://github.com/shripathmit" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="/">AI Agent</a>
+            <a href="/timeTravel">Time Travel</a>
+            <a href="/klabs/">kReative Labs</a>
+            <a href="mailto:shripathmit@gmail.com">Contact</a>
+          </nav>
+          <div class="site-header__actions">
+            <button
+              type="button"
+              class="theme-toggle"
+              id="theme-toggle"
+              aria-label="Toggle color theme"
+              title="Theme"
+            >
+              Theme
+            </button>
+            <div class="view-toggle" aria-label="Human or agent version">
+              <a class="view-toggle__btn is-active" href="/human">Human</a>
+              <a class="view-toggle__btn" href="/">Agent</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>

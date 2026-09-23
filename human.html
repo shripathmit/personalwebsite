@@ -134,7 +134,7 @@
     <header class="site-header lux-header">
       <div class="lux-page-card lux-page-card--elevated lux-page-card--site-header">
         <div class="lux-topbar">
-          <a class="lux-brand" href="#">Shridhar Pathak</a>
+          <a class="lux-brand" href="/human">Shridhar Pathak</a>
           <nav class="lux-nav" aria-label="Primary">
             <a href="#more">More</a>
             <a href="/blog.html">Blog</a>
@@ -156,33 +156,9 @@
             >
               Theme
             </button>
-            <div
-              class="view-toggle"
-              role="tablist"
-              aria-label="View mode for humans or agents"
-            >
-              <button
-                type="button"
-                class="view-toggle__btn"
-                role="tab"
-                id="view-human"
-                aria-selected="true"
-                aria-controls="main"
-                tabindex="0"
-              >
-                Human
-              </button>
-              <button
-                type="button"
-                class="view-toggle__btn"
-                role="tab"
-                id="view-agent"
-                aria-selected="false"
-                aria-controls="main"
-                tabindex="-1"
-              >
-                Agent
-              </button>
+            <div class="view-toggle" aria-label="Human or agent version">
+              <a class="view-toggle__btn is-active" href="/human">Human</a>
+              <a class="view-toggle__btn" href="/">Agent</a>
             </div>
           </div>
         </div>
@@ -1526,7 +1502,7 @@
         </div>
       </section>
 
-      <div class="agent-only agent-view">
+      <div class="agent-view">
         <section class="section agent-dashboard" aria-labelledby="agent-dash-heading">
           <div class="agent-status-bar">
             <span class="agent-status-bar__badge">Machine-Readable Interface</span>
