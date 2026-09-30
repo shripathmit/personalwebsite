@@ -13,6 +13,14 @@ app.use(
   helmet({
     contentSecurityPolicy: false,
     crossOriginEmbedderPolicy: false,
+    // Cross-Origin-Opener-Policy: same-origin forces Safari/WebKit to spin
+    // up a fresh isolated browsing-context group whenever the page is
+    // opened from an external context (a link tapped in Messages, WhatsApp,
+    // Notes, etc.), and that first load intermittently fails with "WebKit
+    // encountered an internal error" until the page is manually reloaded.
+    // Nothing here needs cross-origin isolation (no SharedArrayBuffer, no
+    // window.opener security boundary), so turn it off like COEP above.
+    crossOriginOpenerPolicy: false,
   })
 );
 
