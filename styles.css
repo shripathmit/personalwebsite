@@ -46,38 +46,6 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  html:not([data-theme="light"]) {
-    color-scheme: dark;
-    --bg: #121110;
-    --bg-agent: #1a1917;
-    --text: #f2f0eb;
-    --text-muted: #a9a59e;
-    --border: rgba(242, 240, 235, 0.1);
-    --accent: #8fbc9f;
-    --accent-hover: #a8d4b3;
-    --accent-soft: rgba(143, 188, 159, 0.15);
-    --focus-ring: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
-  }
-}
-
-html[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #121110;
-  --bg-agent: #1a1917;
-  --text: #f2f0eb;
-  --text-muted: #a9a59e;
-  --border: rgba(242, 240, 235, 0.1);
-  --accent: #8fbc9f;
-  --accent-hover: #a8d4b3;
-  --accent-soft: rgba(143, 188, 159, 0.15);
-  --focus-ring: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
-}
-
-html[data-theme="light"] {
-  color-scheme: light;
-}
-
 *,
 *::before,
 *::after {
@@ -189,32 +157,6 @@ a:focus-visible {
   align-items: center;
   gap: var(--space-2);
   flex-shrink: 0;
-}
-
-.theme-toggle {
-  font-family: var(--font-sans);
-  font-size: var(--text-xs);
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: var(--space-2) var(--space-3);
-  min-height: var(--touch-min);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--bg);
-  color: var(--text-muted);
-  cursor: pointer;
-  line-height: 1.2;
-}
-
-.theme-toggle:hover {
-  color: var(--text);
-  background: color-mix(in srgb, var(--text) 4%, transparent);
-}
-
-.theme-toggle:focus-visible {
-  outline: none;
-  box-shadow: inset 0 0 0 2px var(--accent);
 }
 
 .site-header__brand {
@@ -1483,12 +1425,7 @@ body[data-view="agent"] main > .section {
     min-width: 0;
   }
 
-  .theme-toggle {
-    min-height: 0;
-    padding: var(--space-2) var(--space-3);
-  }
-
-  main {
+    main {
     padding-top: var(--space-12);
     padding-bottom: var(--space-16);
   }
@@ -1549,12 +1486,7 @@ body[data-view="agent"] main > .section {
     padding: var(--space-1) var(--space-2);
   }
 
-  .theme-toggle {
-    font-size: 0.65rem;
-    padding: var(--space-1) var(--space-2);
-  }
-
-  .site-header__brand {
+    .site-header__brand {
     font-size: var(--text-xs);
   }
 }
@@ -1599,24 +1531,10 @@ body[data-view="agent"] main > .section {
   --lux-card-inset: clamp(1rem, 2.5vw, 1.25rem);
 }
 
-html[data-theme="dark"] {
-  --lux-line: rgba(242, 240, 235, 0.14);
-  --lux-line-strong: rgba(242, 240, 235, 0.22);
-  --lux-panel: #1a1917;
-  --lux-soft: #141413;
-  --lux-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
-  --lux-ink: #f4efe8;
-  --lux-ink-inverse: #171717;
-}
-
 body[data-view="human"] {
   background: linear-gradient(to bottom, #f8f4ef 0%, #f5efe8 100%);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-}
-
-html[data-theme="dark"] body[data-view="human"] {
-  background: linear-gradient(to bottom, #141413 0%, #111110 100%);
 }
 
 body[data-view="human"] main {
@@ -1642,11 +1560,6 @@ body[data-view="human"] main > .section + .section {
 
 body[data-view="human"] main > .lux-shell {
   margin-bottom: 0;
-}
-
-html[data-theme="dark"] body[data-view="human"] main > .section {
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: none;
 }
 
 /* Let copy fill the full card width inside every elevated card. */
@@ -1763,19 +1676,6 @@ body[data-view="human"] .lux-page-card--elevated {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75) inset;
 }
 
-html[data-theme="dark"] body[data-view="human"] .lux-page-card--elevated {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-/* The voice-feature spotlight card commits to its own dark look in both
-   page themes, so it must win over the generic dark-theme card background
-   above despite coming earlier in the file. */
-html[data-theme="dark"] body[data-view="human"] .lux-page-card--voice-feature {
-  background:
-    radial-gradient(circle at 50% 38%, rgba(143, 188, 159, 0.32), transparent 62%),
-    linear-gradient(160deg, #101710, #06090a);
-}
-
 body[data-view="human"] .lux-page-card--hero {
   padding: 0;
   overflow: clip;
@@ -1861,10 +1761,6 @@ body[data-view="human"] .lux-eyebrow {
   line-height: 1.3;
 }
 
-html[data-theme="dark"] body[data-view="human"] .lux-eyebrow {
-  background: rgba(255, 255, 255, 0.06);
-}
-
 body[data-view="human"] .lux-hero h1 {
   font-family: var(--font-serif);
   font-weight: 500;
@@ -1939,10 +1835,6 @@ body[data-view="human"] .lux-btn--primary {
   box-shadow: var(--lux-shadow);
 }
 
-html[data-theme="dark"] body[data-view="human"] .lux-btn--primary {
-  box-shadow: var(--lux-shadow);
-}
-
 body[data-view="human"] .lux-hero__details.disclose {
   margin-top: clamp(1.75rem, 4vw, 2.5rem);
   border: 1px solid var(--lux-line);
@@ -1952,10 +1844,6 @@ body[data-view="human"] .lux-hero__details.disclose {
   padding: 0;
   border-bottom: none;
   text-align: left;
-}
-
-html[data-theme="dark"] body[data-view="human"] .lux-hero__details.disclose {
-  background: rgba(255, 255, 255, 0.04);
 }
 
 body[data-view="human"] .lux-hero__details.disclose[open] > summary {
@@ -2297,10 +2185,6 @@ body[data-view="human"] .lux-pill {
   text-decoration: none;
 }
 
-html[data-theme="dark"] body[data-view="human"] .lux-pill {
-  background: rgba(255, 255, 255, 0.06);
-}
-
 body[data-view="human"] .lux-pill:hover {
   color: var(--text);
   border-color: var(--accent);
@@ -2382,10 +2266,6 @@ body.blog-page {
   line-height: var(--lux-leading-body);
 }
 
-html[data-theme="dark"] body.blog-page {
-  background: linear-gradient(to bottom, #141413 0%, #111110 100%);
-}
-
 body.blog-page .site-header {
   position: static;
   border-bottom: 1px solid var(--lux-line);
@@ -2411,10 +2291,6 @@ body.blog-page .lux-page-card--elevated {
   background: rgba(255, 255, 255, 0.55);
   padding: clamp(1rem, 2.5vw, 1.35rem) var(--lux-card-inset);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75) inset;
-}
-
-html[data-theme="dark"] body.blog-page .lux-page-card--elevated {
-  background: rgba(255, 255, 255, 0.05);
 }
 
 body.blog-page .lux-page-card--site-header {

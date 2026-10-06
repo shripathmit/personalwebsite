@@ -1,6 +1,5 @@
 (function () {
   var STORAGE_KEY = "portfolio-view";
-  var THEME_KEY = "portfolio-theme";
   var body = document.body;
   var humanBtn = document.getElementById("view-human");
   var agentBtn = document.getElementById("view-agent");
@@ -348,32 +347,6 @@
   loadAgentData();
 
   initCopyButtons();
-
-  // --- Theme toggle ---
-
-  var themeBtn = document.getElementById("theme-toggle");
-  function cycleTheme() {
-    var el = document.documentElement;
-    var s = null;
-    try {
-      s = localStorage.getItem(THEME_KEY);
-    } catch (_) {}
-    try {
-      if (s === null) {
-        localStorage.setItem(THEME_KEY, "light");
-        el.setAttribute("data-theme", "light");
-      } else if (s === "light") {
-        localStorage.setItem(THEME_KEY, "dark");
-        el.setAttribute("data-theme", "dark");
-      } else {
-        localStorage.removeItem(THEME_KEY);
-        el.removeAttribute("data-theme");
-      }
-    } catch (_) {}
-  }
-  if (themeBtn) {
-    themeBtn.addEventListener("click", cycleTheme);
-  }
 
   // --- Active nav section tracking ---
 
