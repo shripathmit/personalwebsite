@@ -2,13 +2,17 @@
 
 > Machine-readable index for AI agents and tools.
 
-**Last updated:** 2026-09-19. This file and `/profile.json`'s `lastUpdated`
+**Last updated:** 2026-10-13. This file and `/profile.json`'s `lastUpdated`
 field are both hand-maintained and bumped whenever site content changes
 materially. If either date looks old, the rest of this file may be stale
 relative to the live site; check `/klabs/` and `/blog.html` directly.
 
 ## Recently added
 
+- Site housekeeping (Oct 2026): `/privacy` explains the analytics in use (Plausible
+  and Microsoft Clarity); the site now has a branded 404 page, a web manifest
+  and `favicon.ico`; the sitemap lists every page with `lastmod` dates; the
+  theme toggle was removed in favor of a single light color scheme.
 - kReative Labs grew from 11 to 13 entries (Sep 2026): `Taste Network`
   (human taste-testing platform, live as of Sep 22) and `Agent skills` (a
   public Claude Code skill, live). Sourced from a review of all public

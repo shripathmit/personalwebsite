@@ -1,5 +1,6 @@
 const compression = require("compression");
 const express = require("express");
+const path = require("path");
 const helmet = require("helmet");
 
 const app = express();
@@ -76,6 +77,9 @@ app.use(
       if (filePath.endsWith(".pdf")) {
         res.setHeader("Content-Type", "application/pdf");
       }
+      if (filePath.endsWith(".webmanifest")) {
+        res.setHeader("Content-Type", "application/manifest+json; charset=utf-8");
+      }
       if (filePath.endsWith(".xml")) {
         res.setHeader("Content-Type", "application/xml; charset=utf-8");
       }
@@ -101,6 +105,10 @@ app.use(
     },
   })
 );
+
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(root, "404.html"));
+});
 
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Listening on http://0.0.0.0:${PORT}`);
