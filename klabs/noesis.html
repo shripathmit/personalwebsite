@@ -206,6 +206,88 @@
       </section>
 
       <section class="kl-section">
+        <p class="kl-section__label">Position</p>
+        <h2 class="kl-h2">Why this is not just a feature of an observability tool</h2>
+        <p>
+          The obvious objection, and the one worth taking seriously, is that
+          this becomes a checkbox inside an existing LLM observability or MLOps
+          platform within a couple of years. Tracing on its own probably does.
+        </p>
+        <p>
+          The part that resists absorption is the evaluation layer: rubrics that
+          encode what a specific enterprise means by a good outcome, a human
+          review workflow that survives audit, and the comparison logic that
+          turns all of it into a release decision. That is closer to a quality
+          system than a dashboard, and quality systems tend to be bought
+          deliberately rather than inherited from whichever vendor already had
+          the traces.
+        </p>
+        <p>
+          The bet is not settled. The
+          <a href="/">agent-facing home page</a> publishes a prompt that asks a
+          visitor's own model to argue the opposite case.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Status</p>
+        <h2 class="kl-h2">Where it actually is</h2>
+        <table class="kl-spec">
+          <tbody>
+            <tr>
+              <th>Stage</th>
+              <td>Early access, shipping weekly; MVP in progress.</td>
+            </tr>
+            <tr>
+              <th>Validation</th>
+              <td>More than 50 enterprise discovery conversations.</td>
+            </tr>
+            <tr>
+              <th>Design partners</th>
+              <td>Three pilots underway.</td>
+            </tr>
+            <tr>
+              <th>Pricing</th>
+              <td>
+                Seed-stage pricing validated within six months, meaning
+                prospects named a number they said they would pay. Nobody has
+                paid it yet.
+              </td>
+            </tr>
+            <tr>
+              <th>Revenue</th>
+              <td>None. This is pre-revenue by design at this stage.</td>
+            </tr>
+            <tr>
+              <th>Role</th>
+              <td>Tech Advisor, alongside the day job at Moderna.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Next</p>
+        <h2 class="kl-h2">Open questions</h2>
+        <ul>
+          <li>
+            How much instrumentation will a team accept before they decide it is
+            not worth it. This is the difference between a product and a
+            science project.
+          </li>
+          <li>
+            Whether rubric authoring can be made cheap enough that a domain
+            expert writes them rather than an engineer.
+          </li>
+          <li>
+            Whether regression detection can be made trustworthy enough that a
+            team lets it block a deploy, which is the point at which this stops
+            being optional.
+          </li>
+        </ul>
+      </section>
+
+      <section class="kl-section">
         <p class="kl-section__label">Detail</p>
         <h2 class="kl-h2">At a glance</h2>
         <table class="kl-spec">
@@ -215,7 +297,6 @@
             <tr><th>Review model</th><td>Outcomes and Risk and Trust lead, backed by Operations and Collaboration.</td></tr>
             <tr><th>Evaluation</th><td>Continuous eval suites with trend lines rather than one-off scores.</td></tr>
             <tr><th>Integration</th><td>Works with the existing stack; onboarding measured in minutes.</td></tr>
-            <tr><th>Stage</th><td>Early access, shipping weekly.</td></tr>
           </tbody>
         </table>
       </section>

@@ -45,6 +45,12 @@ const EXTERNAL_ALIASES = new Map([
   ["/voice", "https://voice-kb-app-production.up.railway.app/"],
 ]);
 
+// /klabs/agent-eval described the same venture as /klabs/noesis; the two
+// pages were merged into the Noesis one.
+app.get(["/klabs/agent-eval", "/klabs/agent-eval.html"], (req, res) => {
+  res.redirect(301, "/klabs/noesis");
+});
+
 app.get([...EXTERNAL_ALIASES.keys()], (req, res) => {
   res.redirect(302, EXTERNAL_ALIASES.get(req.path));
 });
