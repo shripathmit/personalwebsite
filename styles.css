@@ -2590,6 +2590,31 @@ body.aiagent-page .ai-gate {
   padding: var(--space-8) var(--page-pad);
 }
 
+body.aiagent-page .ai-gate {
+  position: relative;
+}
+
+body.aiagent-page .ai-modebar {
+  position: absolute;
+  top: max(var(--space-4), env(safe-area-inset-top));
+  left: var(--page-pad);
+  right: var(--page-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+body.aiagent-page .ai-modebar__note {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+body.aiagent-page .ai-modebar .view-toggle {
+  flex-shrink: 0;
+}
+
 body.aiagent-page .ai-gate__prompt {
   font-size: clamp(1.1rem, 0.6rem + 2vw, 1.75rem);
   line-height: 1.45;

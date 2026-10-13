@@ -9,6 +9,13 @@ relative to the live site; check `/klabs/` and `/blog.html` directly.
 
 ## Recently added
 
+- Credibility pass (Oct 2026): Noesis is now named everywhere the advisory
+  role appears (it was previously unnamed in the narrative); headcount claims
+  now match the role cards (35+ person orgs, 110+ including partner teams at
+  Alexa) instead of "50+"; the phone number was removed from the site and
+  `/profile.json` (v1.0.5); on `/human`, Selected outcomes, Signature stories
+  and the Venture section were merged into one "Selected case studies"
+  section (anchors `#highlights` and `#venture` still work).
 - Site housekeeping (Oct 2026): `/privacy` explains the analytics in use (Plausible
   and Microsoft Clarity); the site now has a branded 404 page, a web manifest
   and `favicon.ico`; the sitemap lists every page with `lastmod` dates; the
@@ -36,7 +43,7 @@ relative to the live site; check `/klabs/` and `/blog.html` directly.
 
 **Shridhar Pathak**, AI engineering leader. MIT Sloan Executive MBA (May 2026), **cross-registered at Harvard Business School** (Entrepreneurship, Jan–May 2026). **Senior Director, AI & ML** at **Moderna**: GenAI roadmap for 20+ enterprise applications, 35+ person engineering org, OpenAI and AWS partnerships, C-suite alignment. Previously **Amazon Alexa** (Jan 2019–Jul 2023, three roles): Senior Technical Program Manager, Alexa India, Bengaluru (Jan 2019–Dec 2020); Principal Technical Program Manager & Tech Lead (Jan 2021–Jun 2022); Senior Manager & Tech Lead, Conversational AI & Multi-Agent Systems, Seattle (Jun 2022–Jul 2023) — multi-agent conversational AI (a platform generating $50M+ in annual recurring revenue), Voice Shopping across ten countries, India retail app at millions of DAU, 35+ DR / 110+ partner-team reports. **Amazon Retail** (Jun 2016–Dec 2018): Southeast Asia launch velocity ("Project Nautilus"), Singapore two-hour delivery. **Amazon Register** SDE-1 to SDE-2, Tech Lead (Jun 2012–Jun 2016). **Tech Advisor**, **enterprise agent workforce platform** (Noesis, since 2025): Policy-as-Code and runtime supervision for LLM-driven multi-agent systems; 50+ enterprise discovery calls, three design-partner pilots, validated seed pricing. **Tech & AI Advisor, EZbeat (by Health Galaxy)** (since Sep 2023). **Stanford Seed Consultant**. Three research internships at **IIT Bombay** (2005–2009): Computer Vision and NLP labs (Computer Science), Aerospace Engineering.
 
-**Location:** Boston, MA (Brookline). **Email:** shripathmit@gmail.com. **Phone:** +1-214-794-6073. **LinkedIn:** https://www.linkedin.com/in/shridhar-pathak-19277927 **Substack:** https://shridharpathak.substack.com/ **GitHub:** https://github.com/shripathmit
+**Location:** Boston, MA (Brookline). **Email:** shripathmit@gmail.com. **LinkedIn:** https://www.linkedin.com/in/shridhar-pathak-19277927 **Substack:** https://shridharpathak.substack.com/ **GitHub:** https://github.com/shripathmit
 
 **Live site:** https://www.shridharpathak.me/ (staging: https://shridhar-personal-site-production.up.railway.app)
 
@@ -77,7 +84,7 @@ relative to the live site; check `/klabs/` and `/blog.html` directly.
 
 ## Contact policy
 
-- Prefer **email** for inbound. Phone and LinkedIn as listed on the site.
+- Prefer **email** for inbound. LinkedIn as listed on the site.
 
 ## Technical
 

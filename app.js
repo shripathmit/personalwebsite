@@ -169,7 +169,6 @@
       ["Title", d.jobTitle],
       ["Location", d.location],
       ["Email", d.email, "email"],
-      ["Phone", d.telephone],
       ["Site", d.url, "link"],
       ["LinkedIn", linkedin, "link"]
     ];
@@ -353,7 +352,6 @@
   var navSectionIds = [
     "venture",
     "highlights",
-    "stories",
     "experience",
     "education",
     "more",

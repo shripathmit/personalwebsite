@@ -1,14 +1,13 @@
 {
-  "version": "1.0.4",
+  "version": "1.0.5",
   "lastUpdated": "2026-10-13",
   "name": "Shridhar Pathak",
   "jobTitle": "AI Engineering Leader | Tech Advisor",
   "headline": "AI Engineering Leader | MIT Sloan MBA (2026) | Cross-registered, Harvard Business School",
   "url": "https://www.shridharpathak.me/",
   "email": "shripathmit@gmail.com",
-  "telephone": "+1-214-794-6073",
   "location": "Boston, MA (Brookline)",
-  "description": "AI engineering leader with 14+ years in distributed systems and multi-agent AI. Scaled global organizations from inception to 50+ people and led programs exceeding $100M scale (Amazon Alexa). MBA from MIT Sloan (2026), cross-registered at Harvard Business School; focus on AI transformation, platform economics, and connecting LLM research to production revenue. Senior Director, AI & ML at Moderna. Former Amazon Alexa and Amazon Retail. Tech Advisor to an enterprise agent workforce platform (Policy-as-Code and runtime supervision for AI agents).",
+  "description": "AI engineering leader with 14+ years in distributed systems and multi-agent AI. Built 35+ person engineering organizations (110+ including partner teams at Amazon Alexa) and led programs exceeding $100M scale (Amazon Alexa). MBA from MIT Sloan (2026), cross-registered at Harvard Business School; focus on AI transformation, platform economics, and connecting LLM research to production revenue. Senior Director, AI & ML at Moderna. Former Amazon Alexa and Amazon Retail. Tech Advisor to Noesis, an enterprise agent workforce platform (Policy-as-Code and runtime supervision for AI agents).",
   "sameAs": [
     "https://www.linkedin.com/in/shridhar-pathak-19277927",
     "https://www.shridharpathak.me/",
@@ -47,7 +46,7 @@
     "name": "Noesis (Enterprise Agent Workforce Platform)",
     "role": "Tech Advisor",
     "startDate": "2025-01",
-    "summary": "Advises on a workforce management layer for enterprise-scale AI agents. Policy-as-Code and runtime supervision frameworks provide real-time monitoring, intervention, and compliance for LLM-driven multi-agent systems. Enterprise GTM and pricing validation in progress.",
+    "summary": "Advises Noesis, a workforce management layer for enterprise-scale AI agents. Policy-as-Code and runtime supervision frameworks provide real-time monitoring, intervention, and compliance for LLM-driven multi-agent systems. Enterprise GTM and pricing validation in progress.",
     "tagline": "Workforce management layer for enterprise-scale AI agents, positioning them as a managed digital workforce",
     "valueProposition": [
       "Treat enterprise AI agents as a managed digital workforce",
@@ -289,7 +288,7 @@
     "Advisory board positions in AI and tech startups",
     "Speaking on AI governance and enterprise AI",
     "AI strategy and implementation consulting",
-    "Partnerships for the enterprise agent workforce platform",
+    "Partnerships for Noesis, the enterprise agent workforce platform",
     "Conversations on the future of enterprise AI"
   ],
   "agentHints": {
@@ -300,7 +299,7 @@
     "humanReadableSite": "/human is the portfolio written for people; its expandable sections mirror this JSON for deeper narrative.",
     "llmsTxtPath": "/llms.txt",
     "practicePagePath": "/practice.html",
-    "preferredContact": "Email for inbound; phone for established introductions.",
+    "preferredContact": "Email for inbound.",
     "profileJsonPath": "/profile.json",
     "projectsPath": "/klabs/",
     "timeTravelPath": "/timeTravel",
