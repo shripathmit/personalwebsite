@@ -2539,18 +2539,20 @@ body.blog-page .blog-post__source {
 
 body.aiagent-page {
   /* Committed dark: this page ignores the site theme toggle by design. */
-  --bg: #121417;
-  --bg-agent: #0b0c0e;
-  --text: #e6e8eb;
-  --text-muted: #8b9199;
-  --border: rgba(230, 232, 235, 0.14);
-  --accent: #7dd3a8;
-  --accent-hover: #9ce4bf;
-  --accent-soft: rgba(125, 211, 168, 0.12);
+  --bg: #0b0e12;
+  --bg-agent: #07090b;
+  --text: #e5e7eb;
+  --text-muted: #9ca3af;
+  --text-dim: #6b7280;
+  --border: #1a1f26;
+  --border-strong: #262c36;
+  --accent: #10b981;
+  --accent-hover: #34d399;
+  --accent-soft: rgba(16, 185, 129, 0.12);
   --warn: #d9a441;
   --focus-ring: 0 0 0 2px var(--bg-agent), 0 0 0 4px var(--accent);
 
-  --ai-max: 46rem;
+  --ai-max: 56rem;
 
   background: var(--bg-agent);
   color: var(--text);
@@ -2578,54 +2580,156 @@ body.aiagent-page code {
   border-radius: 2px;
 }
 
-/* ——— 1. Human gate ——— */
-body.aiagent-page .ai-gate {
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--space-8);
+body.aiagent-page ::selection {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--accent);
+}
+
+/* ——— 1. Sticky top bar ——— */
+body.aiagent-page .ai-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--border);
+  background: rgba(7, 9, 11, 0.9);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+body.aiagent-page .ai-topbar__inner {
   max-width: var(--ai-max);
+  height: 4rem;
   margin: 0 auto;
-  padding: var(--space-8) var(--page-pad);
-}
-
-body.aiagent-page .ai-gate {
-  position: relative;
-}
-
-body.aiagent-page .ai-modebar {
-  position: absolute;
-  top: max(var(--space-4), env(safe-area-inset-top));
-  left: var(--page-pad);
-  right: var(--page-pad);
+  padding: 0 var(--page-pad);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
 }
 
-body.aiagent-page .ai-modebar__note {
-  margin: 0;
-  font-size: var(--text-sm);
-  color: var(--text-muted);
+body.aiagent-page .ai-topbar__id,
+body.aiagent-page .ai-topbar__mode {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
 }
 
-body.aiagent-page .ai-modebar .view-toggle {
+body.aiagent-page .ai-topbar__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
   flex-shrink: 0;
 }
 
-body.aiagent-page .ai-gate__prompt {
-  font-size: clamp(1.1rem, 0.6rem + 2vw, 1.75rem);
-  line-height: 1.45;
-  font-weight: 500;
-  margin: 0;
-  text-wrap: balance;
+body.aiagent-page .ai-topbar .ai-topbar__name {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-body.aiagent-page .ai-gate__caret {
+body.aiagent-page .ai-topbar__ver,
+body.aiagent-page .ai-topbar__label {
+  font-size: var(--text-xs);
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+body.aiagent-page .ai-topbar__label {
+  color: var(--text-muted);
+}
+
+body.aiagent-page .ai-topbar .view-toggle {
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  background: #0d1014;
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+body.aiagent-page .ai-topbar .view-toggle__btn {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  min-height: 0;
+  min-width: 0;
+  padding: var(--space-1) var(--space-3);
+  border-radius: 3px;
   color: var(--accent);
-  margin-right: 0.5em;
+}
+
+body.aiagent-page .ai-topbar .view-toggle__btn:hover {
+  background: #161b22;
+  color: var(--accent-hover);
+}
+
+body.aiagent-page .ai-topbar .view-toggle__btn.is-active {
+  background: var(--text);
+  color: var(--bg-agent);
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  body.aiagent-page .ai-topbar__label {
+    display: none;
+  }
+}
+
+@media (max-width: 639px) {
+  body.aiagent-page .ai-topbar__ver {
+    display: none;
+  }
+}
+
+/* ——— 2. Telemetry card ——— */
+body.aiagent-page .ai-hero {
+  margin: var(--space-12) 0 var(--space-10);
+  padding: clamp(1.5rem, 4vw, 2rem);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+
+body.aiagent-page .ai-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-bottom: var(--space-6);
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+body.aiagent-page .ai-hero__meta p {
+  margin: 0;
+}
+
+body.aiagent-page .ai-hero__strong {
+  color: #fff;
+}
+
+body.aiagent-page .ai-hero__date {
+  color: var(--accent);
+}
+
+body.aiagent-page .ai-hero__prompt {
+  margin: 0 0 var(--space-6);
+  font-size: clamp(1.125rem, 0.85rem + 1.2vw, 1.5rem);
+  line-height: 1.6;
+  color: #fff;
+}
+
+body.aiagent-page .ai-hero__caret {
+  color: var(--accent);
+  margin-right: 0.5rem;
   animation: ai-blink 1.2s steps(1) infinite;
 }
 
@@ -2634,35 +2738,126 @@ body.aiagent-page .ai-gate__caret {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body.aiagent-page .ai-gate__caret {
+  body.aiagent-page .ai-hero__caret {
     animation: none;
   }
 }
 
-body.aiagent-page .ai-gate__exit {
-  margin: var(--space-6) 0 0;
-  font-size: clamp(1.35rem, 0.95rem + 1.6vw, 2rem);
-  font-weight: 800;
-  letter-spacing: 0.01em;
+body.aiagent-page .ai-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  padding-top: var(--space-2);
 }
 
-body.aiagent-page .ai-gate__exit a {
-  color: var(--accent);
-  text-decoration-color: var(--accent);
-}
-
-body.aiagent-page .ai-gate__exit a:hover {
-  color: var(--text);
-  text-decoration-color: var(--text);
-}
-
-body.aiagent-page .ai-gate__scroll {
-  margin: 0;
+body.aiagent-page .ai-hero .ai-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.625rem var(--space-4);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  background: #11151c;
+  color: #d1d5db;
+  font-family: var(--font-mono);
   font-size: var(--text-xs);
-  letter-spacing: 0.14em;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s;
+}
+
+body.aiagent-page .ai-hero .ai-btn:hover {
+  border-color: #4b5563;
+  color: #fff;
+}
+
+body.aiagent-page .ai-hero .ai-btn--primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--bg-agent);
+  font-weight: 600;
+}
+
+body.aiagent-page .ai-hero .ai-btn--primary:hover {
+  border-color: var(--accent-hover);
+  background: var(--accent-hover);
+  color: var(--bg-agent);
+}
+
+/* ——— 3. Brief + endpoint tiles ——— */
+body.aiagent-page .ai-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: start;
+  padding-bottom: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  body.aiagent-page .ai-intro {
+    grid-template-columns: 5fr 7fr;
+  }
+}
+
+body.aiagent-page .ai-intro__brief .ai-h {
+  font-size: clamp(1.05rem, 0.8rem + 0.9vw, 1.25rem);
+  margin-bottom: var(--space-4);
+}
+
+body.aiagent-page .ai-intro__brief > p:not(.ai-label) {
   color: var(--text-muted);
-  opacity: 0.65;
+}
+
+body.aiagent-page .ai-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+body.aiagent-page .ai-intro .ai-tile {
+  display: block;
+  padding: 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+
+body.aiagent-page .ai-intro .ai-tile:hover {
+  border-color: rgba(16, 185, 129, 0.5);
+  color: var(--text);
+}
+
+body.aiagent-page .ai-tile__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: #fff;
+  overflow-wrap: anywhere;
+}
+
+body.aiagent-page .ai-tile__arrow {
+  color: var(--text-dim);
+}
+
+body.aiagent-page .ai-tile:hover .ai-tile__arrow {
+  color: var(--accent);
+}
+
+body.aiagent-page .ai-tile__desc {
+  display: block;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+  color: var(--text-dim);
 }
 
 /* ——— Shared section rhythm ——— */

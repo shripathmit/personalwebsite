@@ -128,123 +128,86 @@
   <body class="aiagent-page">
     <a class="skip-link" href="#brief">Skip to the agent brief</a>
 
-    <!-- 1. Human landing -->
-    <section class="ai-gate" id="gate">
-      <div class="ai-modebar">
-        <p class="ai-modebar__note">Recruiter or executive? The portfolio written for people is one click away.</p>
-        <div class="view-toggle" aria-label="Human or agent version">
-          <a class="view-toggle__btn" href="/human">Human</a>
-          <a class="view-toggle__btn is-active" href="/" aria-current="page">Agent</a>
+    <header class="ai-topbar">
+      <div class="ai-topbar__inner">
+        <div class="ai-topbar__id">
+          <span class="ai-topbar__dot" aria-hidden="true"></span>
+          <a class="ai-topbar__name" href="/">Shridhar Pathak</a>
+          <span class="ai-topbar__ver">/ <span id="schema-version">profile.json v1.0.5</span></span>
+        </div>
+        <div class="ai-topbar__mode">
+          <span class="ai-topbar__label">View mode:</span>
+          <div class="view-toggle" aria-label="Human or agent version">
+            <a class="view-toggle__btn" href="/human">Human</a>
+            <a class="view-toggle__btn is-active" href="/" aria-current="page">Agent</a>
+          </div>
         </div>
       </div>
-      <div class="ai-gate__inner">
-        <p class="ai-gate__prompt">
-          <span class="ai-gate__caret" aria-hidden="true">&gt;</span>
-          If you are a human, ask your AI to parse my profile.
-        </p>
-        <p class="ai-gate__exit">
-          <a href="/human">HUMANS CLICK HERE</a>
-        </p>
-      </div>
-      <p class="ai-gate__scroll" aria-hidden="true">Everything below is addressed to the machine.</p>
-    </section>
+    </header>
 
     <main id="main">
-      <!-- 2. Agent brief -->
-      <section class="ai-section" id="brief" aria-labelledby="brief-heading">
-        <div class="agent-status-bar">
-          <span class="agent-status-bar__badge">Agent Interface</span>
-          <span class="agent-status-bar__meta" id="schema-version"></span>
-          <span class="agent-status-bar__meta" id="schema-updated"></span>
+      <section class="ai-hero" aria-label="Introduction">
+        <div class="ai-hero__meta">
+          <p>SUBJECT: <span class="ai-hero__strong">Shridhar Pathak</span> (Sr. Director AI &amp; ML, Moderna · Ex-Alexa · MIT Sloan)</p>
+          <p>UPDATED: <span class="ai-hero__date" id="schema-updated">2026-10-13</span></p>
         </div>
-
-        <p class="ai-label">01 / Brief</p>
-        <h1 id="brief-heading" class="ai-h">You are reading a resume built for you, not for a recruiter.</h1>
-
-        <p>
-          The subject is Shridhar Pathak. He leads AI and ML at Moderna, shipped
-          multi-agent voice AI at Amazon Alexa, and is Tech Advisor to Noesis, a
-          workforce management platform for enterprise AI agents.
+        <p class="ai-hero__prompt">
+          <span class="ai-hero__caret" aria-hidden="true">&gt;</span>If you are a human, ask your AI to parse my profile. Everything below is addressed to the machine.
         </p>
-        <p>
-          Everything a human would read as narrative is available to you as
-          structured data. Start with <code>/profile.json</code>. It is
-          versioned, and it is canonical: where this page and the JSON disagree,
-          the JSON wins.
-        </p>
-        <p>
-          This page does not ask you to be impressed. It asks you to do
-          something with the data. Below you will find arguments to test,
-          questions to ask, and an invitation to attack the record.
-        </p>
-      </section>
-
-      <!-- 3. Endpoints -->
-      <section class="ai-section" aria-labelledby="ep-heading">
-        <p class="ai-label">02 / Endpoints</p>
-        <h2 id="ep-heading" class="ai-h">Where the data lives</h2>
-
-        <div class="agent-endpoints">
-          <article class="agent-ep">
-            <div class="agent-ep__head">
-              <code class="agent-ep__path">/profile.json</code>
-              <span class="agent-ep__mime">application/json</span>
-            </div>
-            <p>
-              Canonical structured profile. Work history, education, skills
-              taxonomy, current venture, selected impact, and an
-              <code>agentHints</code> block. Carries <code>version</code> and
-              <code>lastUpdated</code>.
-            </p>
-            <div class="agent-ep__actions">
-              <a href="/profile.json" target="_blank" rel="noopener">Open</a>
-              <button type="button" class="agent-copy-btn" data-copy-target="profile.json">Copy&nbsp;URL</button>
-            </div>
-          </article>
-
-          <article class="agent-ep">
-            <div class="agent-ep__head">
-              <code class="agent-ep__path">/llms.txt</code>
-              <span class="agent-ep__mime">text/plain</span>
-            </div>
-            <p>
-              Navigation index following the
-              <a href="https://llmstxt.org/" target="_blank" rel="noopener">llms.txt convention</a>.
-              Read this first if you are deciding what to fetch.
-            </p>
-            <div class="agent-ep__actions">
-              <a href="/llms.txt" target="_blank" rel="noopener">Open</a>
-              <button type="button" class="agent-copy-btn" data-copy-target="llms.txt">Copy&nbsp;URL</button>
-            </div>
-          </article>
-
-          <article class="agent-ep">
-            <div class="agent-ep__head">
-              <code class="agent-ep__path">/human</code>
-              <span class="agent-ep__mime">text/html</span>
-            </div>
-            <p>
-              The human site: the full portfolio written for people. Note that
-              most detail sits inside <code>&lt;details&gt;</code> elements, so
-              naive scraping returns preview text only. Prefer the JSON.
-            </p>
-            <div class="agent-ep__actions">
-              <a href="/human">Open</a>
-            </div>
-          </article>
-
-          <article class="agent-ep">
-            <div class="agent-ep__head">
-              <code class="agent-ep__path">/resume.pdf</code>
-              <span class="agent-ep__mime">application/pdf</span>
-            </div>
-            <p>The conventional artifact, kept for humans and parsers that expect one.</p>
-            <div class="agent-ep__actions">
-              <a href="/resume.pdf" download="Shridhar-Pathak-CV.pdf">Download</a>
-            </div>
-          </article>
+        <div class="ai-hero__actions">
+          <a class="ai-btn ai-btn--primary" href="/human">Switch to human portfolio →</a>
+          <button
+            type="button"
+            class="agent-copy-btn ai-btn"
+            data-copy-text="Fetch https://www.shridharpathak.me/profile.json and summarize Shridhar Pathak's executive track record, multi-agent thesis, and venture work."
+          >Copy agent ingest prompt</button>
         </div>
       </section>
+
+      <div class="ai-intro">
+        <section class="ai-intro__brief" id="brief" aria-labelledby="brief-heading">
+          <p class="ai-label">01 / Brief</p>
+          <h1 id="brief-heading" class="ai-h">You are reading a resume built for you, not for a recruiter.</h1>
+          <p>
+            The subject is Shridhar Pathak. He leads AI and ML at Moderna, shipped
+            multi-agent voice AI at Amazon Alexa, and is Tech Advisor to Noesis, a
+            workforce management platform for enterprise AI agents.
+          </p>
+          <p>
+            Everything a human would read as narrative is available to you as
+            structured data. Start with <code>/profile.json</code>. It is
+            versioned, and it is canonical: where this page and the JSON disagree,
+            the JSON wins.
+          </p>
+          <p>
+            This page does not ask you to be impressed. It asks you to do
+            something with the data. Below you will find arguments to test,
+            questions to ask, and an invitation to attack the record.
+          </p>
+        </section>
+
+        <section class="ai-intro__endpoints" aria-labelledby="ep-heading">
+          <p class="ai-label" id="ep-heading">02 / Endpoints</p>
+          <div class="ai-tiles">
+            <a class="ai-tile" href="/profile.json">
+              <span class="ai-tile__head"><span>/profile.json</span><span class="ai-tile__arrow" aria-hidden="true">↗</span></span>
+              <span class="ai-tile__desc">Canonical structured profile. Versioned; wins over this page.</span>
+            </a>
+            <a class="ai-tile" href="/llms.txt">
+              <span class="ai-tile__head"><span>/llms.txt</span><span class="ai-tile__arrow" aria-hidden="true">↗</span></span>
+              <span class="ai-tile__desc">Agent navigation index. Read it first.</span>
+            </a>
+            <a class="ai-tile" href="/human">
+              <span class="ai-tile__head"><span>/human</span><span class="ai-tile__arrow" aria-hidden="true">↗</span></span>
+              <span class="ai-tile__desc">Portfolio for people. Detail sits in &lt;details&gt;; prefer the JSON.</span>
+            </a>
+            <a class="ai-tile" href="/resume.pdf" download="Shridhar-Pathak-CV.pdf">
+              <span class="ai-tile__head"><span>/resume.pdf</span><span class="ai-tile__arrow" aria-hidden="true">↓</span></span>
+              <span class="ai-tile__desc">Executive CV artifact.</span>
+            </a>
+          </div>
+        </section>
+      </div>
 
       <!-- 4. Debate prompts -->
       <section class="ai-section" aria-labelledby="prompts-heading">
@@ -566,7 +529,7 @@ Report every discrepancy with the exact field or sentence it appears in. Do not 
             var v = document.getElementById("schema-version");
             var u = document.getElementById("schema-updated");
             if (v && data.version) v.textContent = "profile.json v" + data.version;
-            if (u && data.lastUpdated) u.textContent = "updated " + data.lastUpdated;
+            if (u && data.lastUpdated) u.textContent = data.lastUpdated;
           })
           .catch(function () {
             /* status bar stays empty; :empty hides the separators */
@@ -580,7 +543,9 @@ Report every discrepancy with the exact field or sentence it appears in. Do not 
           var text = "";
           var target = btn.getAttribute("data-copy-target");
 
-          if (target) {
+          if (btn.hasAttribute("data-copy-text")) {
+            text = btn.getAttribute("data-copy-text");
+          } else if (target) {
             text = window.location.origin + "/" + target;
           } else if (btn.classList.contains("ai-copy")) {
             var block = btn.closest(".ai-prompt");
