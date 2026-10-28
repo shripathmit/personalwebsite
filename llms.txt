@@ -2,13 +2,15 @@
 
 > Machine-readable index for AI agents and tools.
 
-**Last updated:** 2026-10-13. This file and `/profile.json`'s `lastUpdated`
+**Last updated:** 2026-10-27. This file and `/profile.json`'s `lastUpdated`
 field are both hand-maintained and bumped whenever site content changes
 materially. If either date looks old, the rest of this file may be stale
 relative to the live site; check `/klabs/` and `/blog.html` directly.
 
 ## Recently added
 
+- `/human` was redesigned as a simple single-column page (Oct 2026). The
+  previous layout moved to `/oldlook`.
 - `/klabs/agent-eval` and `/klabs/noesis` described the same venture and were
   merged (Oct 2026); kReative Labs now lists 12 projects.
 - Credibility pass (Oct 2026): Noesis is now named everywhere the advisory
@@ -60,7 +62,7 @@ relative to the live site; check `/klabs/` and `/blog.html` directly.
 
 ## Human-readable page
 
-- `/human`: the full portfolio written for people. Minimal layout; each topic shows a **2–3 line preview** when collapsed; **expand** (`<details>`) for full lists and narrative (summary, current venture, impact, each role, education coursework, skills, certifications, leadership, media, philosophy, etc.).
+- `/human`: the portfolio written for people, as one short single-column page: bio, current work (Moderna, Taste Network), selected work, projects, writing, experience, advisory, and education. Nothing is collapsed; for full detail prefer `/profile.json`. The previous, longer layout is kept at `/oldlook` (not indexed).
 
 ## Blog
 

@@ -37,7 +37,10 @@ const canonicalByLowercase = new Map(
 // Pages that have moved. The agent-facing page was promoted to the site root,
 // so /AIagent now lives at /, and the portfolio it displaced moved to /human.
 // These paths were published, so keep them working rather than 404ing.
-const MOVED_PAGES = new Map([["/aiagent", "/"]]);
+const MOVED_PAGES = new Map([
+  ["/aiagent", "/"],
+  ["/newlooks", "/human"],
+]);
 
 // Short branded aliases to externally-hosted kReative Labs apps. Temporary
 // (302) rather than permanent, since the underlying host could change.
