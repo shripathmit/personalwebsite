@@ -622,6 +622,20 @@ body.klabs-page .kl-card__thumb--skills::after {
   border-radius: 4px;
 }
 
+/* Narad: agents on the left, a policy gate in the middle, one verified
+   answer on the right. */
+body.klabs-page .kl-card__thumb--narad {
+  position: relative;
+  background-color: #101a2e;
+  background-image:
+    radial-gradient(circle at 20% 50%, #7dd3a8 0 5px, transparent 5px),
+    radial-gradient(circle at 38% 30%, rgba(125, 211, 168, 0.6) 0 4px, transparent 4px),
+    radial-gradient(circle at 38% 70%, rgba(125, 211, 168, 0.6) 0 4px, transparent 4px),
+    radial-gradient(circle at 80% 50%, #94a3ff 0 6px, transparent 6px),
+    linear-gradient(90deg, transparent 55%, rgba(148, 163, 255, 0.7) 55% 56%, transparent 56%),
+    linear-gradient(150deg, #16223f, #0c1424);
+}
+
 /* ─────────── Closing note ─────────── */
 
 body.klabs-page .kl-more {

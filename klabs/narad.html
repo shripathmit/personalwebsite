@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "y601p4lvkf");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Narad: a governed intelligence layer for multi-agent systems. Every external action passes a policy-as-code gateway, and all state lives in one ACID Postgres database."
+    />
+    <title>Narad: kReative Labs</title>
+    <link rel="canonical" href="https://www.shridharpathak.me/klabs/narad" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Narad: kReative Labs" />
+    <meta property="og:url" content="https://www.shridharpathak.me/klabs/narad" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/klabs.css" />
+      <meta property="og:site_name" content="Shridhar Pathak" />
+    <meta property="og:description" content="Narad: a governed intelligence layer for multi-agent systems. Every external action passes a policy-as-code gateway, and all state lives in one ACID Postgres database." />
+    <meta property="og:image" content="https://www.shridharpathak.me/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Shridhar Pathak: AI Engineering Leader" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Narad: kReative Labs" />
+    <meta name="twitter:description" content="Narad: a governed intelligence layer for multi-agent systems. Every external action passes a policy-as-code gateway, and all state lives in one ACID Postgres database." />
+    <meta name="twitter:image" content="https://www.shridharpathak.me/og-image.png" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#f6f1eb" />
+    <script defer data-domain="shridharpathak.me" src="https://plausible.io/js/script.js"></script>
+  </head>
+  <body class="klabs-page">
+    <a class="skip-link" href="#detail">Skip to content</a>
+
+    <header class="kl-bar">
+      <a class="kl-bar__brand" href="/klabs/">
+        <span class="kl-bar__mark" aria-hidden="true">k</span>
+        <span>kReative Labs</span>
+      </a>
+      <nav class="kl-bar__nav" aria-label="Primary">
+        <a href="/human">Portfolio</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/practice.html">Practice</a>
+        <a href="/">Agent home</a>
+      </nav>
+    </header>
+
+    <main id="detail">
+      <div class="kl-detail-head">
+        <a class="kl-back" href="/klabs/">Back to kReative Labs</a>
+        <p class="kl-card__meta">
+          <span class="kl-status kl-status--live">Live</span>
+          <span class="kl-card__year">2026</span>
+        </p>
+        <h1 class="kl-h1">Narad</h1>
+        <p class="kl-detail-lede">
+          A governed intelligence layer for multi-agent systems. It works
+          like a nervous system for coordinating many agents: every external
+          action passes a policy gateway first, and every answer arrives
+          with its lineage.
+        </p>
+        <div class="kl-actions">
+          <a class="kl-btn kl-btn--primary" href="https://narad-production-b7dd.up.railway.app/" target="_blank" rel="noopener noreferrer">Open the live console</a>
+        </div>
+      </div>
+
+      <section class="kl-section">
+        <p class="kl-section__label">The idea</p>
+        <h2 class="kl-h2">A nervous system, with a gate at the edge</h2>
+        <p>
+          Give several agents the same outside world and the failure mode is
+          predictable: one of them runs an expensive crawl nobody approved,
+          or a wide-reaching action nobody can trace back. Narad puts the
+          governance at the edge, in front of the work. Agents cannot spend
+          compute or touch the outside world until a policy rule has said
+          yes, and the policy check runs before any compute is spent.
+        </p>
+        <p>
+          State lives in one place, a single Postgres database holding the
+          entity graph, the research runs, the vectors, and the ledger of
+          policy decisions and approvals. Vectors, documents, and the entity
+          graph share one transaction boundary, so a rollback can never leave
+          a vector pointing at a document that does not exist.
+        </p>
+        <p>
+          The default policy is plain: no research into personal data about
+          private individuals, agents may not use the pro or ultra
+          processors, and multi-hop crawls or forced refreshes go to a human
+          approval queue. Only human reviewers can clear that queue, and
+          they cannot approve their own requests.
+        </p>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Architecture</p>
+        <h2 class="kl-h2">Gateway first, then memory, then the mesh</h2>
+
+        <figure class="kl-diagram">
+          <svg viewBox="0 0 720 240" role="img" aria-labelledby="narad-title narad-desc">
+            <title id="narad-title">Narad structure</title>
+            <desc id="narad-desc">
+              Agents, dashboards, and humans send requests to a policy
+              gateway, which allows, denies, or sends the request to a human
+              approval queue. Allowed requests reach the trusted action
+              runtime, which reads unified memory in Postgres with pgvector,
+              checks the semantic cache, and dispatches to the execution
+              mesh only on a cache miss. Every answer returns with its
+              lineage in the ledger.
+            </desc>
+            <defs>
+              <marker id="narad1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#3f5fa0" />
+              </marker>
+            </defs>
+
+            <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11">
+              <!-- Callers -->
+              <rect x="16" y="88" width="140" height="80" rx="8" fill="#f6f7f9" stroke="#d2d7de" />
+              <text x="86" y="112" text-anchor="middle" fill="#16181d" font-weight="500">Agents, dashboards,</text>
+              <text x="86" y="128" text-anchor="middle" fill="#16181d" font-weight="500">humans</text>
+              <text x="86" y="144" text-anchor="middle" fill="#646b78" font-size="10">POST /v1/intel</text>
+              <text x="86" y="158" text-anchor="middle" fill="#646b78" font-size="10">API key per principal</text>
+
+              <!-- Gateway -->
+              <rect x="196" y="74" width="150" height="108" rx="8" fill="#fdf6ff" stroke="#3f5fa0" stroke-width="2" />
+              <text x="271" y="98" text-anchor="middle" fill="#2f4a80" font-weight="600">Policy gateway</text>
+              <text x="271" y="114" text-anchor="middle" fill="#2f4a80" font-weight="600">and runtime</text>
+              <text x="271" y="132" text-anchor="middle" fill="#646b78" font-size="10">allow, deny, or review,</text>
+              <text x="271" y="146" text-anchor="middle" fill="#646b78" font-size="10">first matching rule wins,</text>
+              <text x="271" y="160" text-anchor="middle" fill="#646b78" font-size="10">no match means deny</text>
+
+              <!-- Four outputs -->
+              <rect x="392" y="20" width="150" height="46" rx="8" fill="#ffffff" stroke="#3f5fa0" />
+              <text x="467" y="47" text-anchor="middle" fill="#2f4a80" font-size="10">Unified memory</text>
+
+              <rect x="392" y="76" width="150" height="46" rx="8" fill="#ffffff" stroke="#3f5fa0" />
+              <text x="467" y="103" text-anchor="middle" fill="#2f4a80" font-size="10">Semantic cache</text>
+
+              <rect x="392" y="132" width="150" height="46" rx="8" fill="#ffffff" stroke="#3f5fa0" />
+              <text x="467" y="159" text-anchor="middle" fill="#2f4a80" font-size="10">Execution mesh</text>
+
+              <rect x="392" y="188" width="150" height="46" rx="8" fill="#ffffff" stroke="#3f5fa0" />
+              <text x="467" y="215" text-anchor="middle" fill="#2f4a80" font-size="10">Lineage ledger</text>
+
+              <!-- Arrows -->
+              <line x1="156" y1="128" x2="194" y2="128" stroke="#3f5fa0" marker-end="url(#narad1)" />
+              <path d="M 346 100 L 390 43" fill="none" stroke="#3f5fa0" marker-end="url(#narad1)" />
+              <path d="M 346 115 L 390 99" fill="none" stroke="#3f5fa0" marker-end="url(#narad1)" />
+              <path d="M 346 143 L 390 155" fill="none" stroke="#3f5fa0" marker-end="url(#narad1)" />
+              <path d="M 346 158 L 390 211" fill="none" stroke="#3f5fa0" marker-end="url(#narad1)" />
+            </g>
+          </svg>
+          <figcaption class="kl-figcaption">
+            The gateway decides before anything runs. A cache hit serves
+            stored JSON with its original citations and makes zero external
+            calls. A miss takes a Postgres advisory lock per question, so
+            only one crawl runs per question even across replicas, then
+            writes back in a single transaction.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="kl-section">
+        <p class="kl-section__label">Detail</p>
+        <h2 class="kl-h2">At a glance</h2>
+        <table class="kl-spec">
+          <tbody>
+            <tr><th>Stack</th><td>FastAPI, Pydantic, asyncpg, Postgres 16 with pgvector, Docker, Railway.</td></tr>
+            <tr><th>Policy</th><td>Policy-as-code in <code>policies/default.yaml</code>. First matching rule wins: allow, deny, or review. API keys are stored only as SHA-256 hashes.</td></tr>
+            <tr><th>Memory</th><td>One Postgres database for entities and graph edges, JSONB runs with citations, pgvector chunks with an HNSW index, and the policy, approval, and event ledger.</td></tr>
+            <tr><th>Execution mesh</th><td>Parallel.ai Task API with a strict output JSON schema and field-level citations. A mock mesh gives clearly labelled synthetic data for offline work.</td></tr>
+            <tr><th>Embeddings</th><td>Any OpenAI-compatible embeddings endpoint, or a deterministic offline hash embedder.</td></tr>
+            <tr><th>API</th><td><code>POST /v1/intel</code>, <code>GET /v1/approvals</code>, <code>POST /v1/approvals/{id}/decision</code>, <code>GET /v1/events</code>, <code>/v1/stats</code>, <code>/v1/search</code>, <code>/healthz</code>, <code>/v1/meta</code>.</td></tr>
+            <tr><th>Live</th><td>Demo on Railway at <a href="https://narad-production-b7dd.up.railway.app/" target="_blank" rel="noopener noreferrer">narad-production-b7dd.up.railway.app</a>. In-memory state, mock mesh, hash embedder, and state resets on redeploy. The production path is Postgres 16 with pgvector, set as <code>DATABASE_URL</code> on the gateway service.</td></tr>
+            <tr><th>Stage</th><td>Live in demo mode since Nov 8, 2026. Source repo is private.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="kl-foot">
+      <p>&copy; <span id="year"></span> Shridhar Pathak</p>
+      <p>
+        <a href="/klabs/">kReative Labs</a>
+        &middot;
+        <a href="/human">Portfolio</a>
+        &middot;
+        <a href="/">Agent home</a>
+        &middot;
+        <a href="/privacy">Privacy</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
