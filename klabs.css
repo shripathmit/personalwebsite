@@ -636,6 +636,21 @@ body.klabs-page .kl-card__thumb--narad {
     linear-gradient(150deg, #16223f, #0c1424);
 }
 
+/* Carbon Protocol: a 24-hour grid carbon curve, high at the morning and
+   evening peaks, low at the midday solar dip, with the clean window marked. */
+body.klabs-page .kl-card__thumb--carbon {
+  position: relative;
+  background-color: #0d1f1a;
+  background-image:
+    radial-gradient(circle at 12% 35%, #e07856 0 5px, transparent 5px),
+    radial-gradient(circle at 32% 62%, #f5c86b 0 6px, transparent 6px),
+    radial-gradient(circle at 50% 70%, #7dd3a8 0 5px, transparent 5px),
+    radial-gradient(circle at 70% 55%, rgba(125, 211, 168, 0.6) 0 4px, transparent 4px),
+    radial-gradient(circle at 88% 30%, #e07856 0 5px, transparent 5px),
+    linear-gradient(90deg, transparent 49%, rgba(125, 211, 168, 0.7) 49% 51%, transparent 51%),
+    linear-gradient(160deg, #122e26, #0a1712);
+}
+
 /* ─────────── Closing note ─────────── */
 
 body.klabs-page .kl-more {
