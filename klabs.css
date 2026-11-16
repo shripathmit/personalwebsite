@@ -636,7 +636,7 @@ body.klabs-page .kl-card__thumb--narad {
     linear-gradient(150deg, #16223f, #0c1424);
 }
 
-/* Carbon Protocol: a 24-hour grid carbon curve, high at the morning and
+/* CarbonPilot: a 24-hour grid carbon curve, high at the morning and
    evening peaks, low at the midday solar dip, with the clean window marked. */
 body.klabs-page .kl-card__thumb--carbon {
   position: relative;
