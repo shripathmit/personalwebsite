@@ -99,11 +99,13 @@
         <p>
           CarbonPilot is that pitch narrowed to something shippable in weeks:
           a phone and voice app that shifts flexible home loads to hours when
-          the grid is cleaner and power is cheaper. The wedge is the load
-          thermostat programs do not cover well, plug loads and laundry plus
-          dishwasher orchestration across brands, including renters who cannot
-          install a smart thermostat. No new hardware is needed to start. It
-          connects to devices people already own.
+          the grid is cleaner and power is cheaper. The wedge is EV
+          households first. EV charging is the first adapter, with a Tesla
+          Fleet API client, because one overnight charge moves more kWh than
+          a week of laundry. Plug loads come second, with a local Kasa
+          client. The Home Assistant bridge is deferred: I have no smart
+          home hardware at home to dogfood it against. No new hardware is
+          needed to start. It connects to devices people already own.
         </p>
         <p>
           Four parts of the original pitch are out of the MVP on purpose.
@@ -219,7 +221,7 @@
             <tr><th>Auth</th><td>Per-household API tokens, stored as hashes only, so a lost token cannot be recovered. Optional admin token for household creation.</td></tr>
             <tr><th>API</th><td>Households, devices, runs, grid readings, reports, and export and delete of a household's data. One page dashboard at the root, and an interactive what-if at <code>/how-it-works</code> that runs the real solver and stores nothing.</td></tr>
             <tr><th>MCP</th><td>One tool, <code>reschedule_appliance</code>: move a named appliance to the cleanest window before its deadline.</td></tr>
-            <tr><th>Stage</th><td>Week 1 built Nov 14, 2026: grid signal, deadline scheduler, verified report, plugin interfaces, auth, run executor, migrations, and the how-it-works page. Runs locally and in Docker Compose. No live deployment yet. Real device adapters (Kasa/Tapo, Home Assistant, EV), WattTime marginal emissions, Alexa skill, and push notifications not started. Source repo is private.</td></tr>
+            <tr><th>Stage</th><td>Week 2 built Nov 16, 2026, on top of Week 1 (grid signal, deadline scheduler, verified report, run executor). Week 2 adds the framework resolve with commanded state and a disk-persisted off timer, the EV adapter with a Tesla Fleet API client, and the plug adapter with a local Kasa client. 68 tests passing. Honest limits: real hardware untested, Tesla and Kasa tested against mocks only; Tapo not implemented; no live deployment yet. WattTime marginal emissions, Alexa skill, and push notifications still to come. Source repo is private.</td></tr>
           </tbody>
         </table>
       </section>
